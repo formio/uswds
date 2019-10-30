@@ -1,5 +1,5 @@
-import builderComponent from './buiderComponent';
 import builder from './builder';
+import builderComponent from './builderComponent';
 import input from './input';
 
 export default {
