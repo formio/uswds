@@ -1,0 +1,22 @@
+<fieldset class="usa-fieldset">
+  <legend class="usa-sr-only">{{ctx.component.label}}</legend>
+
+  {% ctx.values.forEach(function(item) { %}
+  <div class="usa-radio {{ctx.inline ? 'display-flex' : ''}}" ref="wrapper">
+    <{{ctx.input.type}}
+      ref="input"
+      class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__input" : "usa-radio__input"}}"
+      {% for (var attr in ctx.input.attr) { %}
+      {{attr}}="{{ctx.input.attr[attr]}}"
+      {% } %}
+      value="{{item.value}}"
+      {% if (ctx.value && (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value]))) { %}
+      checked=true
+      {% } %}
+      id="{{ctx.id}}{{ctx.row}}-{{item.value}}"
+      aria-required="{{ctx.input.component.validate.required}}"
+    >
+    <label class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__label" : "usa-radio__label"}}" for="{{ctx.id}}{{ctx.row}}-{{item.value}}">{{ctx.t(item.label)}}</label>
+  </div>
+  {% }) %}
+</fieldset>

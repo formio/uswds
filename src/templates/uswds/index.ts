@@ -9,6 +9,7 @@ import builderWizard from './builderWizard';
 import button from './button';
 import checkbox from './checkbox';
 import input from './input';
+import radio from './radio';
 
 export default {
   builder,
@@ -22,4 +23,5 @@ export default {
   button,
   checkbox,
   input,
+  radio,
 };
