@@ -10,6 +10,8 @@ import button from './button';
 import checkbox from './checkbox';
 import input from './input';
 import radio from './radio';
+import select from './select';
+import selectOption from './selectOption';
 
 export default {
   builder,
@@ -24,4 +26,6 @@ export default {
   checkbox,
   input,
   radio,
+  select,
+  selectOption,
 };
