@@ -5,6 +5,7 @@ import builderEditForm from './builderEditForm';
 import builderPlaceholder from './builderPlaceholder';
 import builderSidebar from './builderSidebar';
 import builderSidebarGroup from './builderSidebarGroup';
+import builderWizard from './builderWizard';
 import button from './button';
 import checkbox from './checkbox';
 import input from './input';
@@ -17,6 +18,7 @@ export default {
   builderPlaceholder,
   builderSidebar,
   builderSidebarGroup,
+  builderWizard,
   button,
   checkbox,
   input,
