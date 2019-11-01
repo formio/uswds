@@ -14,6 +14,7 @@ import datagrid from './datagrid';
 import day from './day';
 import field from './field';
 import input from './input';
+import label from './label';
 import radio from './radio';
 import select from './select';
 import selectOption from './selectOption';
@@ -35,6 +36,7 @@ export default {
   day,
   field,
   input,
+  label,
   radio,
   select,
   selectOption,

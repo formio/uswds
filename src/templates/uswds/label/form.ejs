@@ -1,0 +1,11 @@
+<label
+  ref="label"
+  class="usa-label {{ctx.label.className}} {{ctx.label.hidden ? 'usa-sr-only' : ''}}"
+  id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+  for="{{ctx.instance.id}}-{{ctx.component.key}}{{ctx.component.multiple ? `-${ctx.index}` : ''}}"
+>
+  {{ ctx.t(ctx.component.label) }}
+  {% if (ctx.component.tooltip) { %}
+    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
+  {% } %}
+</label>
