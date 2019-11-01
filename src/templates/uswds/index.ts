@@ -9,6 +9,7 @@ import builderWizard from './builderWizard';
 import button from './button';
 import checkbox from './checkbox';
 import columns from './columns';
+import component from './component';
 import input from './input';
 import radio from './radio';
 import select from './select';
@@ -25,6 +26,7 @@ export default {
   builderWizard,
   button,
   checkbox,
+  component,
   columns,
   input,
   radio,
