@@ -10,6 +10,7 @@ import button from './button';
 import checkbox from './checkbox';
 import columns from './columns';
 import component from './component';
+import datagrid from './datagrid';
 import input from './input';
 import radio from './radio';
 import select from './select';
@@ -26,8 +27,9 @@ export default {
   builderWizard,
   button,
   checkbox,
-  component,
   columns,
+  component,
+  datagrid,
   input,
   radio,
   select,
