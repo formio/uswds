@@ -1,6 +1,6 @@
-<div class="grid-row flex-column">
+<div class="usa-form-group">
   <{{ctx.input.type}}
-    class="usa-input grid-col"
+    class="usa-input"
     ref="{{ctx.input.ref ? ctx.input.ref : 'input'}}"
     {% for (var attr in ctx.input.attr) { %}
     {{attr}}="{{ctx.input.attr[attr]}}"
@@ -28,7 +28,7 @@
   >{{ctx.input.content}}</{{ctx.input.type}}>
 
   {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
-  <div class="display-flex flex-justify-end">
+  <div class="float-right">
   {% } %}
     {% if (ctx.component.showCharCount) { %}
     <span ref="charcount" id="cc-{{ctx.instance.id}}-{{ctx.component.key}}"></span>
