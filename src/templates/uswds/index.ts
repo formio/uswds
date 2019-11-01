@@ -11,6 +11,7 @@ import checkbox from './checkbox';
 import columns from './columns';
 import component from './component';
 import datagrid from './datagrid';
+import day from './day';
 import input from './input';
 import radio from './radio';
 import select from './select';
@@ -30,6 +31,7 @@ export default {
   columns,
   component,
   datagrid,
+  day,
   input,
   radio,
   select,
