@@ -15,6 +15,7 @@ import day from './day';
 import field from './field';
 import input from './input';
 import label from './label';
+import message from './message';
 import radio from './radio';
 import select from './select';
 import selectOption from './selectOption';
@@ -37,6 +38,7 @@ export default {
   field,
   input,
   label,
+  message,
   radio,
   select,
   selectOption,
