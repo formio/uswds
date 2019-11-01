@@ -8,6 +8,7 @@ import builderSidebarGroup from './builderSidebarGroup';
 import builderWizard from './builderWizard';
 import button from './button';
 import checkbox from './checkbox';
+import columns from './columns';
 import input from './input';
 import radio from './radio';
 import select from './select';
@@ -24,6 +25,7 @@ export default {
   builderWizard,
   button,
   checkbox,
+  columns,
   input,
   radio,
   select,
