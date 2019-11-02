@@ -12,6 +12,7 @@ import columns from './columns';
 import component from './component';
 import datagrid from './datagrid';
 import day from './day';
+import editgrid from './editgrid';
 import field from './field';
 import icon from './icon';
 import input from './input';
@@ -40,6 +41,7 @@ export default {
   component,
   datagrid,
   day,
+  editgrid,
   field,
   icon,
   input,
