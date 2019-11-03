@@ -27,6 +27,7 @@ import multiValueTable from './multiValueTable';
 import radio from './radio';
 import select from './select';
 import selectOption from './selectOption';
+import table from './table';
 
 export default {
   builder,
@@ -58,4 +59,5 @@ export default {
   radio,
   select,
   selectOption,
+  table,
 };
