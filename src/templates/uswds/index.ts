@@ -14,6 +14,7 @@ import datagrid from './datagrid';
 import day from './day';
 import editgrid from './editgrid';
 import field from './field';
+import fieldset from './fieldset';
 import file from './file';
 import icon from './icon';
 import input from './input';
@@ -44,6 +45,7 @@ export default {
   day,
   editgrid,
   field,
+  fieldset,
   file,
   icon,
   input,
