@@ -32,6 +32,8 @@ import survey from './survey';
 import table from './table';
 import webform from './webform';
 import wizard from './wizard';
+import wizardHeader from './wizardHeader';
+import wizardNav from './wizardNav';
 
 export default {
   builder,
@@ -68,4 +70,6 @@ export default {
   table,
   webform,
   wizard,
+  wizardHeader,
+  wizardNav,
 };
