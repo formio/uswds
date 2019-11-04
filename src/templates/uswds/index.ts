@@ -25,6 +25,7 @@ import message from './message';
 import multiValueRow from './multiValueRow';
 import multiValueTable from './multiValueTable';
 import radio from './radio';
+import resourceAdd from './resourceAdd';
 import select from './select';
 import selectOption from './selectOption';
 import survey from './survey';
@@ -58,6 +59,7 @@ export default {
   multiValueRow,
   multiValueTable,
   radio,
+  resourceAdd,
   select,
   selectOption,
   survey,
