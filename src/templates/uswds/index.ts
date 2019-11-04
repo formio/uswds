@@ -27,6 +27,7 @@ import multiValueTable from './multiValueTable';
 import radio from './radio';
 import select from './select';
 import selectOption from './selectOption';
+import survey from './survey';
 import table from './table';
 
 export default {
@@ -59,5 +60,6 @@ export default {
   radio,
   select,
   selectOption,
+  survey,
   table,
 };
