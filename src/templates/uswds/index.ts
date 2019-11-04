@@ -31,6 +31,7 @@ import selectOption from './selectOption';
 import survey from './survey';
 import table from './table';
 import webform from './webform';
+import wizard from './wizard';
 
 export default {
   builder,
@@ -66,4 +67,5 @@ export default {
   survey,
   table,
   webform,
+  wizard,
 };
