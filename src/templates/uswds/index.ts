@@ -31,6 +31,7 @@ import selectOption from './selectOption';
 import survey from './survey';
 import table from './table';
 import webform from './webform';
+import well from './well';
 import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
@@ -69,6 +70,7 @@ export default {
   survey,
   table,
   webform,
+  well,
   wizard,
   wizardHeader,
   wizardNav,
