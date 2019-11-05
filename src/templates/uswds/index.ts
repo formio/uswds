@@ -36,6 +36,7 @@ import resourceAdd from './resourceAdd';
 import select from './select';
 import selectOption from './selectOption';
 import survey from './survey';
+import tab from './tab';
 import table from './table';
 import warning from './warning';
 import webform from './webform';
@@ -83,6 +84,7 @@ export default {
   select,
   selectOption,
   survey,
+  tab,
   table,
   warning,
   webform,

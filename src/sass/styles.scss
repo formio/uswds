@@ -11,7 +11,7 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid #000;
   border-radius: .25rem;
 }
 
@@ -25,7 +25,9 @@
 .usa-card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  background-color: #f0f0f0;
 }
 
 .usa-card-title {
@@ -58,3 +60,39 @@
   border-bottom-right-radius: 0.25rem;
 }
 
+.usa-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.usa-card-header-tabs {
+  margin-right: -0.625rem;
+  margin-bottom: -0.75rem;
+  margin-left: -0.625rem;
+  border-bottom: 0;
+}
+
+.usa-nav-tabs .usa-nav-item {
+  margin-bottom: -2px;
+}
+
+.usa-nav-tabs .usa-nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  color: #000;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.usa-nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-bottom: 0;
+}
