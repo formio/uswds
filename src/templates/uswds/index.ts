@@ -33,6 +33,7 @@ import select from './select';
 import selectOption from './selectOption';
 import survey from './survey';
 import table from './table';
+import warning from './warning';
 import webform from './webform';
 import well from './well';
 import wizard from './wizard';
@@ -75,6 +76,7 @@ export default {
   selectOption,
   survey,
   table,
+  warning,
   webform,
   well,
   wizard,
