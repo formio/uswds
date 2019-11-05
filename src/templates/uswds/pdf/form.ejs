@@ -1,0 +1,10 @@
+<div class="position-relative {{ctx.classes}}" ref="webform">
+  <span data-noattach="true" ref="zoomIn" class="usa-button usa-button--secondary position-absolute" style="right:10px;top:10px;">
+    <i class="{{ ctx.iconClass('zoom-in') }}"></i>
+  </span>
+  <span data-noattach="true" ref="zoomOut" class="usa-button usa-button--secondary position-absolute" style="right:10px;top:60px;">
+    <i class="{{ ctx.iconClass('zoom-out') }}"></i>
+  </span>
+  <div data-noattach="true" ref="iframeContainer"></div>
+  <button type="button" class="usa-button" ref="submitButton">{{ctx.t('Submit')}}</button>
+</div>
