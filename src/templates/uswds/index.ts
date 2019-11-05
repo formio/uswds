@@ -27,6 +27,7 @@ import loading from './loading';
 import message from './message';
 import multiValueRow from './multiValueRow';
 import multiValueTable from './multiValueTable';
+import pdfBuilderUpload from './pdfBuilderUpload';
 import radio from './radio';
 import resourceAdd from './resourceAdd';
 import select from './select';
@@ -70,6 +71,7 @@ export default {
   message,
   multiValueRow,
   multiValueTable,
+  pdfBuilderUpload,
   radio,
   resourceAdd,
   select,
