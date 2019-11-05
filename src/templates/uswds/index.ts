@@ -10,12 +10,15 @@ import button from './button';
 import checkbox from './checkbox';
 import columns from './columns';
 import component from './component';
+import container from './container';
 import datagrid from './datagrid';
 import day from './day';
+import dialog from './dialog';
 import editgrid from './editgrid';
 import field from './field';
 import fieldset from './fieldset';
 import file from './file';
+import html from './html';
 import icon from './icon';
 import input from './input';
 import label from './label';
@@ -49,12 +52,15 @@ export default {
   checkbox,
   columns,
   component,
+  container,
   datagrid,
   day,
+  dialog,
   editgrid,
   field,
   fieldset,
   file,
+  html,
   icon,
   input,
   label,
