@@ -27,6 +27,7 @@ import loading from './loading';
 import message from './message';
 import multiValueRow from './multiValueRow';
 import multiValueTable from './multiValueTable';
+import panel from './panel';
 import pdf from './pdf';
 import pdfBuilder from './pdfBuilder';
 import pdfBuilderUpload from './pdfBuilderUpload';
@@ -73,6 +74,7 @@ export default {
   message,
   multiValueRow,
   multiValueTable,
+  panel,
   pdf,
   pdfBuilder,
   pdfBuilderUpload,

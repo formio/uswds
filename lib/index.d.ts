@@ -39,11 +39,17 @@ declare const _default: {
             component: {
                 form: string;
             };
+            container: {
+                form: string;
+            };
             datagrid: {
                 form: string;
                 html: string;
             };
             day: {
+                form: string;
+            };
+            dialog: {
                 form: string;
             };
             editgrid: {
@@ -57,6 +63,9 @@ declare const _default: {
                 form: string;
             };
             file: {
+                form: string;
+            };
+            html: {
                 form: string;
             };
             icon: {
@@ -81,10 +90,25 @@ declare const _default: {
             modaldialog: {
                 form: string;
             };
+            modaledit: {
+                form: string;
+            };
             multiValueRow: {
                 form: string;
             };
             multiValueTable: {
+                form: string;
+            };
+            panel: {
+                form: string;
+            };
+            pdf: {
+                form: string;
+            };
+            pdfBuilder: {
+                form: string;
+            };
+            pdfBuilderUpload: {
                 form: string;
             };
             radio: {
@@ -107,6 +131,9 @@ declare const _default: {
                 html: string;
             };
             table: {
+                form: string;
+            };
+            warning: {
                 form: string;
             };
             webform: {

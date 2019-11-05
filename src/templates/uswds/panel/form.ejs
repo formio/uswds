@@ -1,0 +1,18 @@
+<div class="margin-bottom-1 usa-card">
+  <div class="usa-card-header bg-base-lightest" ref="header">
+    <span class="margin-bottom-0 usa-card-title">
+      {% if (ctx.component.collapsible) { %}
+        <i class="formio-collapse-icon {{ctx.iconClass(ctx.collapsed ? 'plus-square-o' : 'minus-square-o')}} text-base" data-title="Collapse Panel"></i>
+      {% } %}
+      {{ctx.t(ctx.component.title)}}
+      {% if (ctx.component.tooltip) { %}
+        <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>
+      {% } %}
+    </span>
+  </div>
+  {% if (!ctx.collapsed || ctx.builder) { %}
+  <div class="usa-card-body" ref="{{ctx.nestedKey}}">
+    {{ctx.children}}
+  </div>
+  {% } %}
+</div>

@@ -24,7 +24,7 @@ gulp.task('templates', () =>
     .pipe(gulp.dest('lib'))
 );
 
-gulp.task('сss', function(){
+gulp.task('css', function(){
   return gulp.src('src/sass/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('lib/css'))
@@ -34,3 +34,10 @@ gulp.task('sass', function(){
   return gulp.src('src/sass/*.scss')
     .pipe(gulp.dest('lib/sass'))
 });
+
+gulp.task('build', gulp.parallel(
+    'templates',
+    'css',
+    'sass',
+  ),
+);
