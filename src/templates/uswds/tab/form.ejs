@@ -1,17 +1,16 @@
 <div class="usa-card">
-  <div class="usa-card-header display-flex">
-    <ul class="usa-nav usa-nav-tabs usa-card-header-tabs">
-      {% ctx.component.components.forEach(function(tab, index) { %}
-      <li class="usa-nav-item {{ ctx.currentTab === index ? 'active' : ''}}" role="presentation" ref="{{ctx.tabLikey}}">
-        <a class="usa-nav-link padding-2 {{ ctx.currentTab === index ? 'active' : ''}}" href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
-      </li>
-      {% }) %}
-    </ul>
-  </div>
+  <ul class="usa-sidenav">
+    {% ctx.component.components.forEach(function(tab, index) { %}
+    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'active' : ''}}" role="presentation" ref="{{ctx.tabLikey}}">
+      <a href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
+    </li>
+    {% }) %}
+  </ul>
+
   {% ctx.component.components.forEach(function(tab, index) { %}
   <div
     role="tabpanel"
-    class="usa-card-body {{ ctx.currentTab === index ? ' active' : ''}}"
+    class="usa-card-body"
     style="display: {{ctx.currentTab === index ? 'block' : 'none'}}"
     ref="{{ctx.tabKey}}"
   >
