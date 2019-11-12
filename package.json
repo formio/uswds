@@ -8,7 +8,7 @@
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
     "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
     "watch": "tsc -w",
-    "build": "tsc && gulp templates",
+    "build": "tsc && gulp templates && webpack",
     "lint": "tslint -p .",
     "prepublish": "npm run build"
   },
@@ -49,7 +49,9 @@
     "ts-node": "^8.4.1",
     "ts-sinon": "^1.0.24",
     "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "author": "Randall Knutson <randall@form.io>",
   "license": "UNLICENSED",
