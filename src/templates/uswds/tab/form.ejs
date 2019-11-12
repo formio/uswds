@@ -1,0 +1,20 @@
+<div class="usa-card">
+  <ul class="usa-sidenav">
+    {% ctx.component.components.forEach(function(tab, index) { %}
+    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'active' : ''}} border-top-0" role="presentation" ref="{{ctx.tabLikey}}">
+      <a href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
+    </li>
+    {% }) %}
+  </ul>
+
+  {% ctx.component.components.forEach(function(tab, index) { %}
+  <div
+    role="tabpanel"
+    class="usa-card-body"
+    style="display: {{ctx.currentTab === index ? 'block' : 'none'}}"
+    ref="{{ctx.tabKey}}"
+  >
+    {{ctx.tabComponents[index]}}
+  </div>
+  {% }) %}
+</div>

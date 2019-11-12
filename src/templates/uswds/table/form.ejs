@@ -1,0 +1,20 @@
+<table class="usa-table">
+  {% if (ctx.component.header && ctx.component.header.length > 0) { %}
+  <thead>
+    <tr>
+      {% ctx.component.header.forEach(function(header) { %}
+      <th scope="col">{{ctx.t(header)}}</th>
+      {% }) %}
+    </tr>
+  </thead>
+  {% } %}
+  <tbody>
+    {% ctx.tableComponents.forEach(function(row, rowIndex) { %}
+    <tr ref="row-{{ctx.id}}">
+      {% row.forEach(function(column, colIndex) { %}
+      <td ref="{{ctx.tableKey}}-{{rowIndex}}"{% if (ctx.cellClassName) { %} class="{{ctx.cellClassName}}"{% } %}>{{column}}</td>
+      {% }) %}
+    </tr>
+    {% }) %}
+  </tbody>
+</table>

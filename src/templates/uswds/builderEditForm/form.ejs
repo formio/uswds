@@ -1,0 +1,50 @@
+<div class="grid-row grid-gap">
+  <div class="grid-col mobile:grid-col-6">
+    <p class="font-body-md">{{ctx.t(ctx.componentInfo.title)}} {{ctx.t('Component')}}</p>
+  </div>
+  <div class="grid-col mobile:grid-col-6">
+    <div class="float-right" style="margin-right: 20px; margin-top: 10px">
+      <a href="{{ctx.t(ctx.componentInfo.documentation)}}" target="_blank">
+        <i class="{{ctx.iconClass('new-window')}}"> {{ctx.t('Help')}}</i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="grid-row grid-gap">
+  <div class="grid-col {% if (ctx.preview) { %}mobile:grid-col-6{% } else { %}mobile:grid-col-12{% } %}">
+    <div ref="editForm">
+      {{ctx.editForm}}
+    </div>
+    {% if (!ctx.preview) { %}
+    <div style="margin-top: 10px;">
+      <button class="usa-button usa-button--accent-cool" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
+      <button class="usa-button usa-button--base" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
+      <button class="usa-button usa-button--secondary" ref="removeButton">{{ctx.t('Remove')}}</button>
+    </div>
+    {% } %}
+  </div>
+  {% if (ctx.preview) { %}
+  <div class="grid-col mobile:grid-col-6">
+    <div class="usa-card preview-panel">
+      <div class="usa-card-header">
+        <h4 class="usa-card-title margin-bottom-0">{{ctx.t('Preview')}}</h4>
+      </div>
+      <div class="usa-card-body">
+        <div class="component-preview" ref="preview">
+          {{ctx.preview}}
+        </div>
+      </div>
+    </div>
+    {% if (ctx.componentInfo.help) { %}
+    <div class="usa-card usa-card-body bg-base-lightest formio-settings-help">
+      {{ ctx.t(ctx.componentInfo.help) }}
+    </div>
+    {% } %}
+    <div style="margin-top: 10px;">
+      <button class="usa-button usa-button--accent-cool" style="margin-right: 10px;" ref="saveButton">{{ctx.t('Save')}}</button>
+      <button class="usa-button usa-button--base" style="margin-right: 10px;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
+      <button class="usa-button usa-button--secondary" ref="removeButton">{{ctx.t('Remove')}}</button>
+    </div>
+  </div>
+  {% } %}
+</div>

@@ -1,0 +1,29 @@
+<table class="usa-table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      {% ctx.component.values.forEach(function(value) { %}
+      <th scope="col" style="text-align: center;">{{ctx.t(value.label)}}</th>
+      {% }) %}
+    </tr>
+  </thead>
+  <tbody>
+    {% ctx.component.questions.forEach(function(question) { %}
+    <tr>
+      <th scope="row">{{ctx.t(question.label)}}</th>
+      <fieldset class="usa-fieldset usa-sr-only">
+        <legend class="usa-sr-only">{{ctx.t(question.label)}}</legend>
+        {% ctx.component.values.forEach(function(value) { %}
+        <td style="text-align: center;">
+          <div class="usa-radio">
+            <input class="usa-radio__input" type="radio" name="{{ ctx.self.getInputName(question) }}" value="{{value.value}}" id="{{ctx.key}}-{{question.value}}-{{value.value}}" ref="input">
+            <label class="usa-radio__label" for="{{ctx.key}}-{{question.value}}-{{value.value}}"></label>
+            <label class="usa-sr-only" for="{{ctx.key}}-{{question.value}}-{{value.value}}">{{ctx.t(value.label)}}</label>
+          </div>
+        </td>
+        {% }) %}
+      </fieldset>
+    </tr>
+    {% }) %}
+  </tbody>
+</table>

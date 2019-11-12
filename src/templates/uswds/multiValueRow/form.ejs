@@ -1,0 +1,12 @@
+<tr ref="grid-row">
+  <td>
+    {{ctx.element}}
+  </td>
+  {% if (!ctx.disabled) { %}
+  <td>
+    <button type="button" class="usa-button usa-button--secondary" ref="removeRow" aria-label="Remove {{ctx.component.label}} row {{ctx.index + 1}}" title="Remove row">
+      <i class="{{ctx.iconClass('remove-circle')}}"></i>
+    </button>
+  </td>
+  {% } %}
+</tr>

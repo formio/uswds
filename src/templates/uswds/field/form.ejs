@@ -1,0 +1,13 @@
+{% if (ctx.label.labelPosition !== 'bottom' && ctx.component.type !== 'checkbox') { %}
+  {{ ctx.render('label', ctx) }}
+{% } %}
+{{ctx.element}}
+{% if (ctx.label.labelPosition === 'bottom') { %}
+  {{ ctx.render('label', ctx) }}
+{% } %}
+
+{% if (ctx.component.description) { %}
+  <div class="text-base">
+    <span id="d-{{ctx.instance.id}}-{{ctx.component.key}}">{{ctx.t(ctx.component.description)}}</span>
+  </div>
+{% } %}

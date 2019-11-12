@@ -1,0 +1,30 @@
+<ul class="editgrid-listgroup usa-list usa-list--unstyled">
+  {% if (ctx.header) { %}
+  <li class="position-relative display-block padding-105 border">
+    {{ctx.header}}
+  </li>
+  {% } %}
+  {% ctx.rows.forEach(function(row, rowIndex) { %}
+  <li class="position-relative display-block padding-105 border" ref="{{ctx.editgridKey}}">
+    {{row}}
+    {% if (ctx.openRows[rowIndex] && !ctx.readOnly) { %}
+    <div class="editgrid-actions">
+      <button class="usa-button usa-button--accent-cool" ref="{{ctx.editgridKey}}-saveRow">{{ctx.t(ctx.component.saveRow || 'Save')}}</button>
+      {% if (ctx.component.removeRow) { %}
+      <button class="usa-button usa-button--secondary" ref="{{ctx.editgridKey}}-cancelRow">{{ctx.t(ctx.component.removeRow || 'Cancel')}}</button>
+      {% } %}
+    </div>
+    {% } %}
+    <div class="usa-has-error">
+      <div class="editgrid-row-error text-base">
+        {{ctx.errors[rowIndex]}}
+      </div>
+    </div>
+  </li>
+  {% }) %}
+  {% if (ctx.footer) { %}
+  <li class="position-relative display-block padding-105 border">
+    {{ctx.footer}}
+  </li>
+  {% } %}
+</ul>

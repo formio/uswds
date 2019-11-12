@@ -1,0 +1,6 @@
+<div id="{{ctx.id}}" class="usa-form-group {{ctx.classes}}"{% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %} ref="component">
+  {% if (ctx.visible) { %}
+  {{ctx.children}}
+  <div ref="messageContainer" class="text-secondary-dark width-full margin-top-05 formio-errors"></div>
+  {% } %}
+</div>

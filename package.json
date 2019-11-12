@@ -8,7 +8,7 @@
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
     "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
     "watch": "tsc -w",
-    "build": "tsc && gulp templates && webpack",
+    "build": "tsc && gulp build && webpack",
     "lint": "tslint -p .",
     "prepublish": "npm run build"
   },
@@ -41,6 +41,7 @@
     "gulp": "^4.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "gulp-template": "^5.0.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1",

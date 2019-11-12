@@ -1,0 +1,9 @@
+<nav aria-label="navigation" id="{{ ctx.wizardKey }}-header">
+  <ul class="usa-list usa-pagination">
+    {% ctx.panels.forEach(function(panel, index) { %}
+    <li class="usa-page-item">
+      <button class="usa-button {{ctx.currentPage === index ? '' : 'usa-button--outline'}} usa-page-link" ref="{{ctx.wizardKey}}-link">{{panel.title}}</button>
+    </li>
+    {% }) %}
+  </ul>
+</nav>
