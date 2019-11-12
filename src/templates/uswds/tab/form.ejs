@@ -1,7 +1,7 @@
 <div class="usa-card">
   <ul class="usa-sidenav">
     {% ctx.component.components.forEach(function(tab, index) { %}
-    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'active' : ''}}" role="presentation" ref="{{ctx.tabLikey}}">
+    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'active' : ''}} border-top-0" role="presentation" ref="{{ctx.tabLikey}}">
       <a href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
     </li>
     {% }) %}

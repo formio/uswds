@@ -1,11 +1,11 @@
-<ul class="editgrid-listgroup usa-list usa-list--unstyled">
+<ul class="editgrid-listgroup usa-list usa-list--unstyled margin-bottom-105">
   {% if (ctx.header) { %}
-  <li class="position-relative display-block padding-105 border">
+  <li class="position-relative display-block padding-105 border-1px">
     {{ctx.header}}
   </li>
   {% } %}
   {% ctx.rows.forEach(function(row, rowIndex) { %}
-  <li class="position-relative display-block padding-105 border" ref="{{ctx.editgridKey}}">
+  <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px" ref="{{ctx.editgridKey}}">
     {{row}}
     {% if (ctx.openRows[rowIndex] && !ctx.readOnly) { %}
     <div class="editgrid-actions">
@@ -15,7 +15,7 @@
       {% } %}
     </div>
     {% } %}
-    <div class="has-error">
+    <div class="usa-has-error">
       <div class="editgrid-row-error text-base">
         {{ctx.errors[rowIndex]}}
       </div>
@@ -23,7 +23,7 @@
   </li>
   {% }) %}
   {% if (ctx.footer) { %}
-  <li class="position-relative display-block padding-105 border">
+  <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px">
     {{ctx.footer}}
   </li>
   {% } %}

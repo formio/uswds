@@ -11,7 +11,7 @@
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid #000;
   border-radius: .25rem;
 }
 
@@ -23,13 +23,19 @@
 }
 
 .usa-card-header {
-  padding: .75rem 1.25rem;
+  position: relative;
+  display: flex;
+  padding: .5rem;
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-top: 1px;
+  border-bottom: 1px solid #000;
+  border-radius: .25rem .25rem 0 0;
+  background-color: #f0f0f0;
 }
 
 .usa-card-title {
   margin-bottom: 0.75rem;
+  font-size: 1.2rem;
 }
 
 .usa-pagination {
@@ -58,3 +64,31 @@
   border-bottom-right-radius: 0.25rem;
 }
 
+ul.usa-sidenav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1px;
+  border-bottom: 1px solid #000;
+}
+
+.usa-sidenav__item {
+  border-top: 0px;
+}
+
+.usa-sidenav__item.active {
+  position: relative;
+  color: #005ea2;
+  font-weight: bold;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    top: 0.25rem;
+    width: 0.25rem;
+    left: 0;
+    background-color: #005ea2;
+    border-radius: 99rem;
+  }
+}

@@ -2,7 +2,7 @@
   <{{ctx.input.type}}
     id="{{ctx.instance.id}}-{{ctx.component.key}}"
     ref="input"
-    class="usa-checkbox__input"
+    class="usa-checkbox__input "
     {% for (var attr in ctx.input.attr) { %}
     {{attr}}="{{ctx.input.attr[attr]}}"
     {% } %}
@@ -17,7 +17,7 @@
   >
     {% if (!ctx.self.labelIsHidden()) { %}{{ctx.input.label}}{% } %}
     {% if (ctx.component.tooltip) { %}
-    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-muted"></i>
+    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>
     {% } %}
     {{ctx.input.content}}
   </label>

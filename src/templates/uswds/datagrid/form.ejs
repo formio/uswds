@@ -6,13 +6,13 @@
   <thead>
     <tr>
       {% ctx.columns.forEach(function(col) { %}
-        <th class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
+        <th scope="col" class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
           {{ col.hideLabel ? '' : ctx.t(col.label || col.title) }}
           {% if (col.tooltip) { %} <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>{% } %}
         </th>
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}
-      <th>
+      <th scope="col">
         {% if (!ctx.builder && ctx.hasAddButton && ctx.hasTopSubmit) { %}
         <button class="usa-button formio-button-add-row" ref="{{ctx.datagridKey}}-addRow">
           <i class="{{ctx.iconClass('plus')}}"></i>{{ctx.t('Add Another')}}

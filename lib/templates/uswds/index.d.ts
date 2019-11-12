@@ -84,12 +84,6 @@ declare const _default: {
     message: {
         form: string;
     };
-    modaldialog: {
-        form: string;
-    };
-    modaledit: {
-        form: string;
-    };
     multiValueRow: {
         form: string;
     };
@@ -126,6 +120,10 @@ declare const _default: {
     survey: {
         form: string;
         html: string;
+    };
+    tab: {
+        flat: string;
+        form: string;
     };
     table: {
         form: string;

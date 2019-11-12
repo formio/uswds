@@ -2,7 +2,7 @@
   <legend class="usa-sr-only">{{ctx.component.label}}</legend>
 
   {% ctx.values.forEach(function(item) { %}
-  <div class="usa-radio {{ctx.inline ? 'display-flex' : ''}}" ref="wrapper">
+  <div class="usa-radio {{ctx.inline ? 'display-inline float-left margin-right-1' : ''}}" ref="wrapper">
     <{{ctx.input.type}}
       ref="input"
       class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__input" : "usa-radio__input"}}"

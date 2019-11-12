@@ -1,6 +1,6 @@
 <div class="usa-form-group">
   <{{ctx.input.type}}
-    class="usa-input"
+    class="{{ ctx.input.type === 'textarea' ? 'usa-textarea' : 'usa-input' }} width-full"
     ref="{{ctx.input.ref ? ctx.input.ref : 'input'}}"
     {% for (var attr in ctx.input.attr) { %}
     {{attr}}="{{ctx.input.attr[attr]}}"
