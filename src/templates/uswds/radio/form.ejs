@@ -1,11 +1,10 @@
 <fieldset class="usa-fieldset">
   <legend class="usa-sr-only">{{ctx.component.label}}</legend>
-
   {% ctx.values.forEach(function(item) { %}
-  <div class="usa-radio {{ctx.inline ? 'display-inline float-left margin-right-1' : ''}}" ref="wrapper">
+  <div class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}} {{ctx.inline ? 'display-inline float-left margin-right-1' : ''}}" ref="wrapper">
     <{{ctx.input.type}}
       ref="input"
-      class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__input" : "usa-radio__input"}}"
+      class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}}__input"
       {% for (var attr in ctx.input.attr) { %}
       {{attr}}="{{ctx.input.attr[attr]}}"
       {% } %}
