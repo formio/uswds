@@ -1,43 +1,16 @@
-<div class="usa-form-group">
-  <{{ctx.input.type}}
-    class="{{ ctx.input.type === 'textarea' ? 'usa-textarea' : 'usa-input' }} width-full"
-    ref="{{ctx.input.ref ? ctx.input.ref : 'input'}}"
-    {% for (var attr in ctx.input.attr) { %}
-    {{attr}}="{{ctx.input.attr[attr]}}"
-    {% } %}
+<{{ctx.input.type}}
+  class="usa-{{ctx.input.type === 'textarea' ? 'textarea' : 'input'}}"
+  ref="{{ctx.input.ref || 'input'}}"
 
-    {% if (!ctx.input.attr.id) { %}
-    id="{{ctx.instance.id}}-{{ctx.component.key}}{{ctx.component.multiple? `-${ctx.index}` : ''}}"
-    {% } %}
-
-    {% if (ctx.component.hideLabel && ctx.component.type !== "day") { %}
-    aria-label="{{ctx.component.label}}"
-    {% } %}
-
-    {% if (ctx.component.multiple) { %}
-    aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
-    {% } %}
-
-    {% if (!!ctx.component.description || ctx.component.showCharCount || ctx.component.showWordCount) { %}
-    aria-describedby="{{ !!ctx.component.description ? `d-${ctx.instance.id}-${ctx.component.key}` : '' }}
-      {{ ctx.component.showCharCount ? `cc-${ctx.instance.id}-${ctx.component.key}` : '' }}
-      {{ ctx.component.showWordCount ? `wc-${ctx.instance.id}-${ctx.component.key}` : '' }}"
-    {% } %}
-
-    aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required : ctx.component.fields[ctx.input.ref].required}}"
-  >{{ctx.input.content}}</{{ctx.input.type}}>
-
-  {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
-  <div class="float-right">
+  {% for (var attr in ctx.input.attr) { %}
+  {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
-    {% if (ctx.component.showCharCount) { %}
-    <span ref="charcount" id="cc-{{ctx.instance.id}}-{{ctx.component.key}}"></span>
-    {% } %}
 
-    {% if (ctx.component.showWordCount) { %}
-    <span ref="wordcount" id="wc-{{ctx.instance.id}}-{{ctx.component.key}}"></span>
-    {% } %}
-  {% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
-  </div>
+  id="{{ctx.instance.id}}-{{ctx.component.key}}"
+
+  {% if (!!ctx.component.description) { %}
+  aria-describedby="{{ !!ctx.component.description ? `d-${ctx.instance.id}-${ctx.component.key}` : '' }}"
   {% } %}
-</div>
+
+  aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required : ctx.component.fields[ctx.input.ref].required}}"
+>{{ctx.input.content}}</{{ctx.input.type}}>

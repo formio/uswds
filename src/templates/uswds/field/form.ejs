@@ -1,10 +1,13 @@
-{% if (ctx.label.labelPosition !== 'bottom' && ctx.component.type !== 'checkbox') { %}
+{% if (ctx.component.type !== 'checkbox') { %}
   {{ ctx.render('label', ctx) }}
 {% } %}
+
+<div
+  ref="messageContainer"
+  class="text-secondary-dark width-full margin-top-05 formio-errors"
+></div>
+
 {{ctx.element}}
-{% if (ctx.label.labelPosition === 'bottom') { %}
-  {{ ctx.render('label', ctx) }}
-{% } %}
 
 {% if (ctx.component.description) { %}
   <div class="text-base">
