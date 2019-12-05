@@ -12,54 +12,62 @@
     {% } %}
   >
     {% if (ctx.dayFirst && ctx.showDay) { %}
-    <div class="usa-form-group usa-form-group--day">
+    <div class="usa-form-group usa-form-group--day width-auto">
       <label for="{{ctx.component.key}}-day"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.day.required) { %}field-required{% } %}"
       >{{ctx.t('Day')}}</label>
 
       <input class="usa-input usa-input--inline"
+        ref="day"
+        name="day"
         id="{{ctx.component.key}}-day"
         {% if (ctx.component.fields.day.placeholder) { %}placeholder="{{ctx.component.fields.day.placeholder}}"{% } %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-        type="number" min="1" max="31" value="">
+        type="number" min="1" max="31" step="1" value="">
     </div>
     {% } %}
 
     {% if (ctx.showMonth) { %}
-    <div class="usa-form-group usa-form-group--month">
+    <div class="usa-form-group usa-form-group--month width-auto">
       <label for="{{ctx.component.key}}-month"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.month.required) { %}field-required{% } %}"
       >{{ctx.t('Month')}}</label>
 
       <input class="usa-input usa-input--inline"
+        ref="month"
+        name="month"
         id="{{ctx.component.key}}-month"
         {% if (ctx.component.fields.month.placeholder) { %}placeholder="{{ctx.component.fields.month.placeholder}}"{% } %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-        type="number" min="1" max="12" value="">
+        type="number" min="1" max="12" step="1" value="">
     </div>
     {% } %}
 
     {% if (!ctx.dayFirst && ctx.showDay) { %}
-    <div class="usa-form-group usa-form-group--day">
+    <div class="usa-form-group usa-form-group--day width-auto">
       <label for="{{ctx.component.key}}-day"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.day.required) { %}field-required{% } %}"
       >{{ctx.t('Day')}}</label>
 
       <input class="usa-input usa-input--inline"
+        ref="day"
+        name="day"
         id="{{ctx.component.key}}-day"
         {% if (ctx.component.fields.day.placeholder) { %}placeholder="{{ctx.component.fields.day.placeholder}}"{% } %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-        type="number" min="1" max="31" value="">
+        type="number" min="1" max="31" step="1" value="">
     </div>
     {% } %}
 
     {% if (ctx.showYear) { %}
-    <div class="usa-form-group usa-form-group--year">
+    <div class="usa-form-group usa-form-group--year width-auto">
       <label for="{{ctx.component.key}}-year"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.year.required) { %}field-required{% } %}"
       >{{ctx.t('Year')}}</label>
 
       <input class="usa-input usa-input--inline"
+        ref="year"
+        name="year"
         id="{{ctx.component.key}}-year"
         {% if (ctx.component.fields.year.placeholder) { %}placeholder="{{ctx.component.fields.year.placeholder}}"{% } %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
@@ -69,4 +77,5 @@
     </div>
     {% } %}
   </div>
+  <input name="ctx.data[day]" type="hidden" class="form-control" lang="en" value="" ref="input">
 </fieldset>
