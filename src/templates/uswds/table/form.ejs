@@ -1,4 +1,4 @@
-<table class="usa-table">
+<table class="usa-table {{!ctx.component.bordered ? 'usa-table--borderless' : ''}}">
   {% if (ctx.component.header && ctx.component.header.length > 0) { %}
   <thead>
     <tr>
