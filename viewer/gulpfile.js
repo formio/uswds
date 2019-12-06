@@ -29,6 +29,6 @@ gulp.task('deploy', gulp.series('build', function () {
   settings.bucket = 'apps.form.io';
   settings.region = 'us-east-1';
   return gulp.src('./dist/**/*').pipe(s3(settings,  {
-    uploadPath: '/uswds/'
+    uploadPath: '/uswds'
   }));
 }));
