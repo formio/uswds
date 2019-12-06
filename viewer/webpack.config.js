@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/renderer.js',
   resolve: {
     symlinks: false
