@@ -22,3 +22,13 @@ gulp.task('build', gulp.series('clean', gulp.parallel(
   '@formio/uswds',
   '@formio/vpat'
 )));
+
+const s3 = require("gulp-s3");
+gulp.task('deploy', ['build'], function () {
+  var settings = require('../aws.json');
+  settings.bucket = 'apps.form.io';
+  settings.region = 'us-east-1';
+  return gulp.src('./dist/**/*').pipe(s3(settings,  {
+    uploadPath: '/uswds/'
+  }));
+});
