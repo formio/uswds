@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "github:formio/uswds#master",
+      "/Users/travistidwell/Documents/formio/modules/templates/uswds/viewer"
+    ]
+  ],
+  "_from": "github:formio/uswds#master",
+  "_id": "@formio/uswds@github:formio/uswds#28f927b49f98fe346c881171d83b8c15abdd7baa",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/@formio/uswds",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "github:formio/uswds#master",
+    "rawSpec": "github:formio/uswds#master",
+    "saveSpec": "github:formio/uswds#master",
+    "fetchSpec": null,
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:formio/uswds#28f927b49f98fe346c881171d83b8c15abdd7baa",
+  "_spec": "github:formio/uswds#master",
+  "_where": "/Users/travistidwell/Documents/formio/modules/templates/uswds/viewer",
+  "author": {
+    "name": "Randall Knutson",
+    "email": "randall@form.io"
+  },
+  "bugs": {
+    "url": "https://github.com/formio/uswds/issues"
+  },
+  "description": "US Web Design System templates for form.io",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/ejs": "^2.6.3",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.2",
+    "@types/sinon": "^7.5.0",
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-template": "^5.0.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "pre-commit": "^1.2.2",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.4.1",
+    "ts-sinon": "^1.0.24",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/formio/uswds#readme",
+  "keywords": [
+    "Form.io",
+    "USWDS",
+    "Us",
+    "Web",
+    "Design",
+    "Standards"
+  ],
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "name": "@formio/uswds",
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formio/uswds.git"
+  },
+  "scripts": {
+    "build": "tsc && gulp build && webpack",
+    "lint": "tslint -p .",
+    "prepublish": "npm run build",
+    "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
+    "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
+    "watch": "tsc -w"
+  },
+  "version": "1.0.0"
+}
