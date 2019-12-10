@@ -18,7 +18,7 @@
   >
     {{ctx.input.label}}
     {% if (ctx.component.tooltip) { %}
-    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>
+    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
     {% } %}
     {{ctx.input.content}}
   </label>
