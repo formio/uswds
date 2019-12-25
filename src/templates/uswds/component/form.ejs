@@ -1,6 +1,10 @@
 <div
   id="{{ctx.id}}"
-  class="usa-form-group"
+  class="usa-form-group grid-row grid-gap
+    {% if (ctx.component.type !== 'columns') { %}
+      flex-column flex-align-start
+    {% } %}
+  "
   {% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %}
   ref="component"
 >
