@@ -1,5 +1,5 @@
 <{{ctx.input.type}}
-  class="usa-{{ctx.input.type === 'textarea' ? 'textarea' : 'input'}}"
+  class="usa-{{ctx.input.type === 'textarea' ? 'textarea' : 'input'}} maxw-full"
   ref="{{ctx.input.ref || 'input'}}"
 
   {% for (var attr in ctx.input.attr) { %}
