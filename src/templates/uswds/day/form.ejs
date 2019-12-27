@@ -22,7 +22,9 @@
         name="day"
         id="{{ctx.component.key}}-day"
         {% if (ctx.component.fields.day.placeholder) { %}placeholder="{{ctx.component.fields.day.placeholder}}"{% } %}
+        {% if (ctx.component.description) { %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+        {% } %}
         type="number" min="1" max="31" step="1" value="">
     </div>
     {% } %}
@@ -38,7 +40,9 @@
         name="month"
         id="{{ctx.component.key}}-month"
         {% if (ctx.component.fields.month.placeholder) { %}placeholder="{{ctx.component.fields.month.placeholder}}"{% } %}
+        {% if (ctx.component.description) { %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+        {% } %}
         type="number" min="1" max="12" step="1" value="">
     </div>
     {% } %}
@@ -54,7 +58,9 @@
         name="day"
         id="{{ctx.component.key}}-day"
         {% if (ctx.component.fields.day.placeholder) { %}placeholder="{{ctx.component.fields.day.placeholder}}"{% } %}
+        {% if (ctx.component.description) { %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+        {% } %}
         type="number" min="1" max="31" step="1" value="">
     </div>
     {% } %}
@@ -70,7 +76,9 @@
         name="year"
         id="{{ctx.component.key}}-year"
         {% if (ctx.component.fields.year.placeholder) { %}placeholder="{{ctx.component.fields.year.placeholder}}"{% } %}
+        {% if (ctx.component.description) { %}
         aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+        {% } %}
         type="number"
         min="{{ !!ctx.component.fields.year.minYear ? ctx.component.fields.year.minYear : 1900 }}"
         max="{{ !!ctx.component.fields.year.maxYear ? ctx.component.fields.year.maxYear : 2019 }}" value="">
