@@ -1,18 +1,20 @@
-<div class="margin-bottom-1 usa-card">
-  <div class="usa-card-header bg-base-lightest" ref="header">
-    <span class="margin-bottom-0 usa-card-title">
-      {% if (ctx.component.collapsible) { %}
-        <i class="formio-collapse-icon {{ctx.iconClass(ctx.collapsed ? 'plus-square-o' : 'minus-square-o')}} text-base" data-title="Collapse Panel"></i>
-      {% } %}
+<div class="usa-accordion usa-accordion--bordered margin-top-1" aria-multiselectable="true">
+  <h2 class="usa-accordion__heading" ref="header">
+    <button
+      class="usa-accordion__button"
+      aria-expanded="{{ctx.component.collapsible ? ctx.collapsed : true}}"
+      aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
+    >
       {{ctx.t(ctx.component.title)}}
-      {% if (ctx.component.tooltip) { %}
-        <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>
-      {% } %}
-    </span>
-  </div>
-  {% if (!ctx.collapsed || ctx.builder) { %}
-  <div class="usa-card-body" ref="{{ctx.nestedKey}}">
+    </button>
+  </h2>
+
+  <div
+    id="{{ctx.instance.id}}-{{ctx.component.key}}"
+    class="usa-accordion__content usa-prose"
+    ref="{{ctx.nestedKey}}"
+    {% if (ctx.component.collapsible && !ctx.collapsed) { %}hidden{% } %}
+  >
     {{ctx.children}}
   </div>
-  {% } %}
 </div>
