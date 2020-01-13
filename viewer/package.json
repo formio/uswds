@@ -4,7 +4,7 @@
   "description": "A Form.io form viewer application for US Web Design Standards",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build; webpack --config webpack.config.js",
+    "build": "gulp build && webpack --config webpack.config.js",
     "deploy": "npm run build && gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,10 +19,15 @@
   },
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
+    "@formio/bootstrap3": "^1.1.6",
+    "@formio/semantic": "^1.2.5",
     "@formio/uswds": "formio/uswds#master",
     "@formio/vpat": "formio/vpat#master",
     "core-js": "^3.4.7",
-    "formiojs": "^4.8.0-beta.9",
+    "eventemitter2": "^6.0.0",
+    "font-awesome": "^4.7.0",
+    "formiojs": "^4.8.0-rc.8",
+    "i18next": "^19.0.3",
     "seamless": "^1.4.1",
     "uswds": "^2.3.1"
   },
