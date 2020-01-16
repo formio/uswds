@@ -16,7 +16,7 @@
       <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px">
         <div class="grid-row">
           {% if (!ctx.disabled) { %}
-            <div class="tablet:grid-col-1"><i class="{{ctx.iconClass('remove')}}" ref="removeLink"></i></div>
+            <div class="tablet:grid-col-1"><i class="{{ctx.iconClass('remove')}}" ref="removeLink" tabindex="0" aria-label="Remove button. Press to remove {{file.originalName || file.name}} file"></i></div>
           {% } %}
           <div class="tablet:grid-col-{% if (ctx.self.hasTypes) { %}7{% } else { %}9{% } %}">
             {% if (ctx.component.uploadOnly) { %}
