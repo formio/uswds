@@ -6,6 +6,9 @@
       aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
     >
       {{ctx.t(ctx.component.title)}}
+      {% if (ctx.component.tooltip) { %}
+        <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
+      {% } %}
     </button>
   </h2>
 
