@@ -5,12 +5,10 @@
   {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
 >
-{% if (ctx.component.leftIcon) { %}<span class="{{ctx.component.leftIcon}}"></span>&nbsp;{% } %}
-{{ctx.input.content}}
-{% if (ctx.component.tooltip) { %}
-  <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>
-{% } %}
-{% if (ctx.component.rightIcon) { %}&nbsp;<span class="{{ctx.component.rightIcon}}"></span>{% } %}
+  {{ctx.input.content}}
+  {% if (ctx.component.tooltip) { %}
+    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></i>
+  {% } %}
 </{{ctx.input.type}}>
 <div ref="buttonMessageContainer">
   <span class="display-block margin-top-1 margin-bottom-105" ref="buttonMessage"></span>

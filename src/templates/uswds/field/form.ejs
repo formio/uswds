@@ -1,4 +1,4 @@
-{% if (ctx.component.type !== 'checkbox') { %}
+{% if (!ctx.label.hidden) { %}
   {{ ctx.render('label', ctx) }}
 {% } %}
 
