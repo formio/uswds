@@ -16,7 +16,7 @@
     id="{{ctx.instance.id}}-{{ctx.component.key}}"
     class="usa-accordion__content usa-prose"
     ref="{{ctx.nestedKey}}"
-    {% if (ctx.component.collapsible && !ctx.collapsed) { %}hidden{% } %}
+    {% if (ctx.component.collapsible && ctx.collapsed) { %}hidden{% } %}
   >
     {{ctx.children}}
   </div>
