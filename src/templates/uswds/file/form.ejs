@@ -18,7 +18,7 @@
           {% if (!ctx.disabled) { %}
             <div class="tablet:grid-col-1"><i class="{{ctx.iconClass('remove')}}" ref="removeLink" tabindex="0" aria-label="Remove button. Press to remove {{file.originalName || file.name}} file"></i></div>
           {% } %}
-          <div class="tablet:grid-col-{% if (ctx.self.hasTypes) { %}7{% } else { %}9{% } %}">
+          <div class="tablet:grid-col-{% if (ctx.self.hasTypes) { %}7{% } else { %}9{% } %} word-wrap">
             {% if (ctx.component.uploadOnly) { %}
               {{file.originalName || file.name}}
             {% } else { %}
