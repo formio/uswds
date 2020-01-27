@@ -137,3 +137,9 @@ ul.usa-sidenav {
 .word-wrap {
   word-wrap: break-word;
 }
+
+.usa-accordion__button {
+ &.non-collapsible-panel--button {
+   background-image: none;
+ }
+}
