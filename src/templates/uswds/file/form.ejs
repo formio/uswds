@@ -1,4 +1,6 @@
 {% if (!ctx.self.imageUpload) { %}
+  <div class='fielPattern'>{{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}</div>
+
   <ul class="usa-list usa-list--unstyled">
     <li class="position-relative display-block padding-105 border-1px">
       <div class="grid-row">
@@ -66,7 +68,7 @@
           <a href="#" ref="toggleCameraMode"><i class="fa fa-camera"></i> {{ctx.t('Use Camera,')}}</a>
         {% } %}
         {{ctx.t('or')}}
-        <a href="#" ref="fileBrowse" class="browse" aria-label="Browse to attach file for {{ctx.component.label}}">
+        <a href="#" ref="fileBrowse" class="browse" aria-label="Browse to attach file for {{ctx.component.label}}. {{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}">
           {{ctx.t('browse')}}
         </a>
     </div>
