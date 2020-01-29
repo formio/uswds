@@ -1,5 +1,17 @@
-<fieldset class="usa-fieldset">
-  <legend class="usa-sr-only">{{ctx.component.label}}</legend>
+<fieldset
+  class="usa-fieldset"
+  ref="fieldset"
+  {% if (ctx.component.description) { %}
+    aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+  {% } %}
+>
+  <legend ref="label" class="usa-input__label">{{ctx.component.label}}</legend>
+
+  <div
+    ref="messageContainer"
+    class="text-secondary-dark width-full margin-top-05 formio-errors"
+  ></div>
+
   {% ctx.values.forEach(function(item) { %}
   <div class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}} {{ctx.inline ? 'display-inline float-left margin-right-1' : ''}}" ref="wrapper">
     <{{ctx.input.type}}
@@ -18,4 +30,10 @@
     <label class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__label" : "usa-radio__label"}}" for="{{ctx.id}}{{ctx.row}}-{{item.value}}">{{ctx.t(item.label)}}</label>
   </div>
   {% }) %}
+
+  {% if (ctx.component.description) { %}
+    <div class="text-base">
+      <span id="d-{{ctx.instance.id}}-{{ctx.component.key}}">{{ctx.t(ctx.component.description)}}</span>
+    </div>
+  {% } %}
 </fieldset>
