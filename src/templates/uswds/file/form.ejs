@@ -83,7 +83,7 @@
 {% ctx.statuses.forEach(function(status) { %}
   <div class="file {{ctx.statuses.status === 'error' ? 'usa-has-error' : ''}}">
     <div class="grid-row">
-      <div class="fileName mobile:grid-col-10">{{status.originalName}} <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove"></i></div>
+      <div class="fileName mobile:grid-col-10">{{status.originalName}} <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove" tabindex="0" aria-label="Remove button. Press to remove {{status.originalName || status.name}}. {{status.message.replace(';', '.')}}"></i></div>
       <div class="fileSize mobile:grid-col-2 text-right">{{ctx.fileSize(status.size)}}</div>
     </div>
     <div class="grid-row">
