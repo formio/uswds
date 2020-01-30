@@ -1,4 +1,4 @@
-<table class="usa-table {{!ctx.component.bordered ? 'usa-table--borderless' : ''}}">
+<table class="usa-table{{!ctx.component.bordered ? ' usa-table--borderless' : ''}}">
   <caption>{{ctx.t(ctx.component.label)}}</caption>
   {% if (ctx.component.header && ctx.component.header.length > 0) { %}
   <thead>
@@ -13,7 +13,7 @@
     {% ctx.tableComponents.forEach(function(row, rowIndex) { %}
     <tr ref="row-{{ctx.id}}">
       {% row.forEach(function(column, colIndex) { %}
-      <td ref="{{ctx.tableKey}}-{{rowIndex}}"{% if (ctx.cellClassName) { %} class="{{ctx.cellClassName}}"{% } %}>{{column}}</td>
+      <td scope="col" ref="{{ctx.tableKey}}-{{rowIndex}}"{% if (ctx.cellClassName) { %} class="{{ctx.cellClassName}}"{% } %}>{{column}}</td>
       {% }) %}
     </tr>
     {% }) %}
