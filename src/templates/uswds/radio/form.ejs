@@ -5,7 +5,12 @@
     aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
 >
-  <legend ref="label" class="usa-input__label">{{ctx.component.label}}</legend>
+  <legend ref="label" class="usa-input__label">
+    {{ctx.component.label}}
+    {% if (ctx.component.tooltip) { %}
+      <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
+    {% } %}
+  </legend>
 
   <div
     ref="messageContainer"
