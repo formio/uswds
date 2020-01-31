@@ -24,6 +24,7 @@
     "@formio/semantic": "^1.2.5",
     "@formio/uswds": "formio/uswds#master",
     "@formio/vpat": "formio/vpat#master",
+    "autocompleter": "^6.0.1",
     "core-js": "^3.4.7",
     "eventemitter2": "^6.0.0",
     "font-awesome": "^4.7.0",
