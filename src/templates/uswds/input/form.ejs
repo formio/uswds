@@ -8,7 +8,7 @@
 
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
 
-  {% if (ctx.component.description) { %}
+  {% if (ctx.component.type !== 'textarea' && ctx.component.description) { %}
   aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
 
