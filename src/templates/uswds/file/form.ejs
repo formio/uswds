@@ -1,5 +1,5 @@
 {% if (!ctx.self.imageUpload) { %}
-  <div class='fielPattern'>{{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}</div>
+  <div class='filePattern'>{{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}</div>
 
   <ul class="usa-list usa-list--unstyled">
     <li class="position-relative display-block padding-105 border-1px">
@@ -57,12 +57,12 @@
 {% } %}
 {% if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { %}
   {% if (ctx.self.useWebViewCamera) { %}
-    <div class="fileSelector">
+    <div class="border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2">
       <button class="usa-button usa-button--accent-cool" ref="galleryButton"><i class="fa fa-book"></i> {{ctx.t('Gallery')}}</button>
       <button class="usa-button usa-button--accent-cool" ref="cameraButton"><i class="fa fa-camera"></i> {{ctx.t('Camera')}}</button>
     </div>
   {% } else if (!ctx.self.cameraMode) { %}
-    <div class="fileSelector" ref="fileDrop">
+    <div class="border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2" ref="fileDrop">
       <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('Drop files to attach,')}}
         {% if (ctx.self.imageUpload) { %}
           <a href="#" ref="toggleCameraMode"><i class="fa fa-camera"></i> {{ctx.t('Use Camera,')}}</a>
