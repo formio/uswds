@@ -1,3 +1,13 @@
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -148,5 +158,14 @@ ul.usa-sidenav {
   caption {
     caption-side: top;
     color: #000;
+  }
+}
+
+.usa-form-group {
+  .usa-checkbox__label, .usa-radio__label {
+    @include firefox-only {
+      padding-left: 0rem;
+      text-indent: 0rem;
+    }
   }
 }
