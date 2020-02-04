@@ -5,7 +5,7 @@
     aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
 >
-  <legend ref="label" class="usa-input__label {{ctx.component.validate && ctx.component.validate.required ? 'field-required' : ''}}">
+  <legend ref="label" class="usa-input__label position-relative{{ctx.component.validate && ctx.component.validate.required ? ' field-required' : ''}}">
     {{ctx.component.label}}
     {% if (ctx.component.tooltip) { %}
       <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
