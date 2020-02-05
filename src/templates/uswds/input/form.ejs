@@ -8,7 +8,9 @@
 
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
 
-  {% if (ctx.component.type !== 'textarea' && ctx.component.description) { %}
+  {% if (ctx.component.type === 'textarea') { %}
+  aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
+  {% } else if (ctx.component.description) { %}
   aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
 
