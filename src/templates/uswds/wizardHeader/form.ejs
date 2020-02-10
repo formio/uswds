@@ -1,8 +1,8 @@
 <nav aria-label="navigation" id="{{ ctx.wizardKey }}-header">
-  <ul class="usa-list usa-pagination">
+  <ul class="usa-list usa-pagination grid-row padding-left-0">
     {% ctx.panels.forEach(function(panel, index) { %}
-    <li class="usa-page-item">
-      <button class="usa-button {{ctx.currentPage === index ? '' : 'usa-button--outline'}} usa-page-link" ref="{{ctx.wizardKey}}-link">{{panel.title}}</button>
+    <li class="usa-page-item grid-col-12 mobile-lg:grid-col-6 tablet:grid-col-4 desktop:grid-col display-flex flex-align-stretch">
+      <button class="usa-button{{ctx.currentPage === index ? '' : ' usa-button--outline'}} usa-page-link flex-fill" ref="{{ctx.wizardKey}}-link">{{panel.title}}</button>
     </li>
     {% }) %}
   </ul>
