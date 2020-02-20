@@ -90,7 +90,7 @@
         <span ref="notUploaded">{{status.originalName}}</span>
         <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove" tabindex="0">
           <span class="usa-sr-only">{{ctx.t('Remove button. Press to remove ' + status.originalName || status.name + '.')}}</span>
-          <span class="usa-sr-only">{{status.message.replace(';', '.')}}</span>
+          <span class="usa-sr-only">{{status.message ? status.message.replace(';', '.') : ''}}</span>
         </i></div>
       <div class="fileSize mobile:grid-col-2 text-right">{{ctx.fileSize(status.size)}}</div>
     </div>
