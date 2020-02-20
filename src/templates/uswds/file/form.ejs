@@ -1,3 +1,4 @@
+<span tabindex="-1" class="usa-sr-only" id="invisible-{{ctx.instance.id}}-{{ctx.component.key}}"></span>
 {% if (!ctx.self.imageUpload) { %}
   <div class='filePattern'>{{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}</div>
 
@@ -24,7 +25,9 @@
             {% if (ctx.component.uploadOnly) { %}
               {{file.originalName || file.name}}
             {% } else { %}
-              <a href="{{file.url || '#'}}" target="_blank" ref="fileLink">{{file.originalName || file.name}}</a>
+              <a href="{{file.url || '#'}}" target="_blank" ref="fileLink" tabindex="0">
+                <span class="usa-sr-only">{{ctx.t('Press to open ')}}</span>{{file.originalName || file.name}}
+              </a>
             {% } %}
           </div>
           <div class="tablet:grid-col-2">{{ctx.fileSize(file.size)}}</div>
@@ -68,8 +71,8 @@
           <a href="#" ref="toggleCameraMode"><i class="fa fa-camera"></i> {{ctx.t('Use Camera,')}}</a>
         {% } %}
         {{ctx.t('or')}}
-        <a href="#" ref="fileBrowse" class="browse" aria-label="Browse to attach file for {{ctx.component.label}}. {{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}">
-          {{ctx.t('browse')}}
+        <a href="#" ref="fileBrowse" class="browse">
+          <span>{{ctx.t('browse')}}</span><span class="usa-sr-only">{{ctx.t('Browse to attach file for' + ctx.component.label + '. ' + ctx.t('Allowed file types:') + ctx.allowedFileTypes)}}</span>
         </a>
     </div>
   {% } else { %}
@@ -83,7 +86,12 @@
 {% ctx.statuses.forEach(function(status) { %}
   <div class="file {{ctx.statuses.status === 'error' ? 'usa-has-error' : ''}}">
     <div class="grid-row">
-      <div class="fileName mobile:grid-col-10">{{status.originalName}} <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove" tabindex="0" aria-label="Remove button. Press to remove {{status.originalName || status.name}}. {{status.message.replace(';', '.')}}"></i></div>
+      <div class="fileName mobile:grid-col-10">
+        <span ref="notUploaded">{{status.originalName}}</span>
+        <i class="{{ctx.iconClass('remove')}}" ref="fileStatusRemove" tabindex="0">
+          <span class="usa-sr-only">{{ctx.t('Remove button. Press to remove ' + status.originalName || status.name + '.')}}</span>
+          <span class="usa-sr-only">{{status.message.replace(';', '.')}}</span>
+        </i></div>
       <div class="fileSize mobile:grid-col-2 text-right">{{ctx.fileSize(status.size)}}</div>
     </div>
     <div class="grid-row">
