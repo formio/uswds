@@ -7,12 +7,6 @@
   {% } %}
 
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
-
-  {% if (ctx.component.type === 'textarea') { %}
   aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
-  {% } else if (ctx.component.description) { %}
-  aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-  {% } %}
-
   aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required : ctx.component.fields[ctx.input.ref].required}}"
 >{{ctx.input.content}}</{{ctx.input.type}}>
