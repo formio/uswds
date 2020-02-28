@@ -1,3 +1,13 @@
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -62,6 +72,10 @@
 .usa-page-item:last-child .usa-page-link {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+}
+
+.usa-page-item {
+  margin-bottom: 0.25em !important;
 }
 
 ul.usa-sidenav {
@@ -141,6 +155,11 @@ ul.usa-sidenav {
 .usa-accordion__button {
  &.non-collapsible-panel--button {
    background-image: none;
+
+   &:hover {
+      background-color: #f0f0f0;
+      cursor: auto;
+   }
  }
 }
 
@@ -149,4 +168,17 @@ ul.usa-sidenav {
     caption-side: top;
     color: #000;
   }
+}
+
+.usa-form-group {
+  .usa-checkbox__label, .usa-radio__label {
+    @include firefox-only {
+      padding-left: 0rem;
+      text-indent: 0rem;
+    }
+  }
+}
+
+.wizard-page {
+  margin-bottom: 20px;
 }

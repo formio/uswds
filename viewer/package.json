@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "formiojs": "^4.8.0-rc.8",
     "i18next": "^19.0.3",
+    "jwt-decode": "^2.2.0",
     "seamless": "^1.4.1",
     "uswds": "^2.3.1"
   },

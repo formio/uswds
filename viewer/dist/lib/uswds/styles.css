@@ -56,6 +56,9 @@
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
+.usa-page-item {
+  margin-bottom: 0.25em !important; }
+
 ul.usa-sidenav {
   display: flex;
   flex-wrap: wrap;
@@ -123,7 +126,18 @@ ul.usa-sidenav {
 
 .usa-accordion__button.non-collapsible-panel--button {
   background-image: none; }
+  .usa-accordion__button.non-collapsible-panel--button:hover {
+    background-color: #f0f0f0;
+    cursor: auto; }
 
 .usa-table caption {
   caption-side: top;
   color: #000; }
+
+@-moz-document url-prefix() {
+  .usa-form-group .usa-checkbox__label, .usa-form-group .usa-radio__label {
+    padding-left: 0rem;
+    text-indent: 0rem; } }
+
+.wizard-page {
+  margin-bottom: 20px; }
