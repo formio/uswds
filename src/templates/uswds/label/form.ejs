@@ -5,6 +5,9 @@
   for="{{ctx.instance.id}}-{{ctx.component.key}}"
 >
   {{ ctx.t(ctx.component.label) }}
+  {% if (ctx.component.type === 'number') { %}
+  <span class='usa-sr-only'>, {{ctx.t('numeric only')}},</span>
+  {% } %}
   {% if (ctx.component.tooltip) { %}
     <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
   {% } %}

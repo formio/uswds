@@ -24,11 +24,13 @@
     "@formio/semantic": "^1.2.5",
     "@formio/uswds": "formio/uswds#master",
     "@formio/vpat": "formio/vpat#master",
+    "autocompleter": "^6.0.1",
     "core-js": "^3.4.7",
     "eventemitter2": "^6.0.0",
     "font-awesome": "^4.7.0",
     "formiojs": "^4.8.0-rc.8",
     "i18next": "^19.0.3",
+    "jwt-decode": "^2.2.0",
     "seamless": "^1.4.1",
     "uswds": "^2.3.1"
   },

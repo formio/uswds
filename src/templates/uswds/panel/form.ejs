@@ -1,16 +1,24 @@
 <div class="usa-accordion usa-accordion--bordered margin-top-1" aria-multiselectable="true">
   <h2 class="usa-accordion__heading" ref="header">
-    <button
-      class="usa-accordion__button{{!ctx.component.collapsible ? ' non-collapsible-panel--button' : ''}}"
-      aria-expanded="{{ctx.component.collapsible ? !ctx.collapsed : true}}"
-      aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
-      tabindex="{{ctx.component.collapsible ? 0 : 1}}"
-    >
-      {{ctx.t(ctx.component.title)}}
-      {% if (ctx.component.tooltip) { %}
-        <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
-      {% } %}
-    </button>
+    {% if (ctx.component.collapsible) { %}
+      <button
+        class="usa-accordion__button"
+        aria-expanded="{{ctx.component.collapsible ? !ctx.collapsed : true}}"
+        aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
+      >
+        {{ctx.t(ctx.component.title)}}
+        {% if (ctx.component.tooltip) { %}
+          <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
+        {% } %}
+      </button>
+    {% } else { %}
+      <div class="usa-accordion__button non-collapsible-panel--button">
+        {{ctx.t(ctx.component.title)}}
+        {% if (ctx.component.tooltip) { %}
+          <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
+        {% } %}
+      </div>
+    {% } %}
   </h2>
 
   <div
