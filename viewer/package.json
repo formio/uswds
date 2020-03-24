@@ -21,14 +21,15 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/bootstrap3": "^1.1.6",
+    "@formio/premium": "^1.5.0",
     "@formio/semantic": "^1.2.5",
-    "@formio/uswds": "formio/uswds#master",
-    "@formio/vpat": "formio/vpat#master",
+    "@formio/uswds": "github:formio/uswds#master",
+    "@formio/vpat": "github:formio/vpat#master",
     "autocompleter": "^6.0.1",
     "core-js": "^3.4.7",
     "eventemitter2": "^6.0.0",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.8.0-rc.8",
+    "formiojs": "^4.9.6",
     "i18next": "^19.0.3",
     "seamless": "^1.4.1",
     "uswds": "^2.3.1"
