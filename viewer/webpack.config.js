@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   entry: './src/renderer.js',
   resolve: {
@@ -14,9 +14,6 @@ module.exports = {
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
-  externals: {
-    formiojs: 'Formio',
-  },
   module: {
     rules: [
       {
