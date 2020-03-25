@@ -12,7 +12,8 @@ Input.prototype.isIE = function() {
 
 import USWDS from '@formio/uswds';
 import VPAT from '@formio/vpat';
+import Premium from '@formio/premium';
 
 // Use modules.
-Formio.use([USWDS, VPAT]);
+Formio.use([USWDS, VPAT, Premium]);
 Formio.Templates.framework = 'uswds';
