@@ -1,3 +1,5 @@
+## 1.2.4
+### Upgrade viewer to latest versions.
 
 ## 1.2.3
 ### Fixed
