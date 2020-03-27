@@ -141,3 +141,11 @@ ul.usa-sidenav {
 
 .wizard-page {
   margin-bottom: 20px; }
+
+.nav-container {
+  display: flex; }
+  @media not all and (min-width: 30em) {
+    .nav-container {
+      flex-direction: column; } }
+  .nav-container li .usa-button {
+    margin-bottom: 0.25em; }

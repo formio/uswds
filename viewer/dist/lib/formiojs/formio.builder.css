@@ -303,7 +303,8 @@ td > .form-group {
   padding-left: unset;
   padding-right: 16px;
   border-left: unset;
-  border-right: 1px solid #008fa1; }
+  border-right: 1px solid #008fa1;
+  overflow: hidden; }
 
 /* end fix for choices.js deletable items in rtl */
 .formio-component-file .fileSelector {
@@ -1006,6 +1007,11 @@ div[data-oembed-url] {
   .field-wrapper .field-label--right {
     text-align: right; }
 
+.formio-component-modal-wrapper {
+  margin-bottom: 10px; }
+  .formio-component-modal-wrapper .component-rendering-hidden {
+    visibility: hidden; }
+
 .formbuilder {
   position: relative; }
 
@@ -1177,8 +1183,3 @@ div[data-oembed-url] {
 .component-edit-tabs.col-sm-12 .editForm {
   height: calc(100% - 4em);
   overflow-y: auto; }
-
-.formio-component-modal-wrapper {
-  margin-bottom: 10px; }
-  .formio-component-modal-wrapper .component-rendering-hidden {
-    visibility: hidden; }
