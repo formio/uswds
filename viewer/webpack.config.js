@@ -14,6 +14,9 @@ module.exports = {
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
+  externals: {
+    formiojs: 'Formio',
+  },
   module: {
     rules: [
       {
