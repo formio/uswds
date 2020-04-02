@@ -5,6 +5,7 @@ module.exports = {
   output: {
     library: 'uswds',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     path: path.resolve(__dirname, 'dist'),
     filename: 'uswds.js',
   },
