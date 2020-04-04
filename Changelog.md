@@ -1,3 +1,7 @@
+## 1.3.0
+### Changed
+ - Created initial public release.
+
 ## 1.2.4
 ### Upgrade viewer to latest versions.
 
