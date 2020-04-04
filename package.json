@@ -54,7 +54,7 @@
     "webpack-cli": "^3.3.11"
   },
   "author": "Randall Knutson <randall@form.io>",
-  "license": "UNLICENSED",
+  "license": "OSLv3",
   "bugs": {
     "url": "https://github.com/formio/uswds/issues"
   },
