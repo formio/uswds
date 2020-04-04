@@ -9,6 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'uswds.js',
   },
-  mode: 'production',
+  mode: 'development',
   performance: { hints: false },
 };

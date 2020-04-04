@@ -153,5 +153,8 @@ declare const _default: {
             };
         };
     };
+    components: {
+        select: typeof import("./components/Select").default;
+    };
 };
 export default _default;
