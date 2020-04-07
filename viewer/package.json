@@ -21,7 +21,7 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/bootstrap3": "^2.4.0",
-    "@formio/premium": "github:formio/premium#v1.7.0",
+    "@formio/premium": "github:formio/premium#v1.9.0",
     "@formio/semantic": "^2.3.0",
     "@formio/uswds": "github:formio/uswds#master",
     "@formio/vpat": "github:formio/vpat#master",

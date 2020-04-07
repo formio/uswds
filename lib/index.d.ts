@@ -151,6 +151,7 @@ declare const _default: {
             wizardNav: {
                 form: string;
             };
+            size: (size: any) => "" | "mobile-lg" | "tablet" | "desktop";
         };
     };
     components: {

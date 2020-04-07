@@ -171,6 +171,7 @@ ul.usa-sidenav {
 }
 
 .usa-form-group {
+  margin-bottom: 20px;
   .usa-checkbox__label, .usa-radio__label {
     @include firefox-only {
       padding-left: 0rem;
@@ -180,7 +181,7 @@ ul.usa-sidenav {
 }
 
 .wizard-page {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .nav-container {
@@ -214,4 +215,8 @@ ul.usa-sidenav {
 pre {
   background-color: #f0f0f0;
   padding: 1em;
+}
+
+.usa-label {
+  margin-top: 0 !important;
 }
