@@ -1,6 +1,6 @@
 {% ctx.component.columns.forEach(function(column, index) { %}
 <div
-  class="tablet:grid-col-{{column.width}} grid-offset-{{column.offset}}"
+  class="{% if (ctx.size(column.size) !== '') { %}{{ctx.size(column.size)}}:{% } %}grid-col-{{column.width}} grid-offset-{{column.offset}}"
   ref="{{ctx.columnKey}}"
 >
   {{ctx.columnComponents[index]}}
