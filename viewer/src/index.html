@@ -205,6 +205,8 @@
   var formioElem = document.getElementById("formio");
   var titleElem = document.getElementById("form-title");
   preFormElem.innerHTML = loader.innerHTML;
+  var branding = !query.hasOwnProperty('branding') || parseInt(query.branding, 10);
+  Formio.license = !branding;
 
   // You must keep "window.setForm = function(form, submission, options)". This
   // is what the PDF renderer uses to generate a form with predefined form, submission, and options.
@@ -307,7 +309,7 @@
     });
   }
 
-  if (!query.hasOwnProperty('branding') || parseInt(query.branding, 10)) {
+  if (branding) {
     document.write(document.getElementById('branding').innerHTML);
   }
 </script>
