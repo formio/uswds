@@ -1,3 +1,11 @@
+## 1.3.1
+### Changed
+ - Fixed documentation.
+ - Added way to add Form.io license.
+
+### Fixed
+ - Issue with duplicate input labels on Radio components.
+
 ## 1.3.0
 ### Changed
  - Created initial public release.
