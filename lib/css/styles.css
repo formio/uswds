@@ -170,3 +170,5 @@ pre {
 
 .usa-label {
   margin-top: 0 !important; }
+
+.usa-prose>p{max-width:100%}
