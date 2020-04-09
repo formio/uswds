@@ -134,13 +134,16 @@ ul.usa-sidenav {
   caption-side: top;
   color: #000; }
 
+.usa-form-group {
+  margin-bottom: 20px; }
+
 @-moz-document url-prefix() {
   .usa-form-group .usa-checkbox__label, .usa-form-group .usa-radio__label {
     padding-left: 0rem;
     text-indent: 0rem; } }
 
 .wizard-page {
-  margin-bottom: 20px; }
+  margin: 20px 0; }
 
 .nav-container {
   display: flex; }
@@ -149,3 +152,21 @@ ul.usa-sidenav {
       flex-direction: column; } }
   .nav-container li .usa-button {
     margin-bottom: 0.25em; }
+
+.builder-group-button {
+  background-color: #f0f0f0; }
+
+.form-builder-group-header h5 {
+  margin: 0 0 5px 0; }
+
+.form-builder-panel .usa-button {
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+pre {
+  background-color: #f0f0f0;
+  padding: 1em; }
+
+.usa-label {
+  margin-top: 0 !important; }
