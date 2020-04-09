@@ -192,3 +192,45 @@ ul.usa-sidenav {
     margin-bottom: 0.25em;
   }
 }
+
+.stepper-row {
+  display: flex;
+  height: 6px;
+  margin-top: 1rem;
+}
+
+.stepper-item {
+  flex: 1;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #c9c9c9;
+}
+
+.stepper-item-active {
+  background-color: #005ea2;
+}
+
+.stepper-info {
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.stepper-info-step {
+  display: inline-block;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #005ea2;
+  color: #fff;
+  font-weight: 500;
+}
+
+.stepper-info-total {
+  font-weight: 400;
+}
+
+.stepper-info-text {
+  font-weight: 600;
+}
