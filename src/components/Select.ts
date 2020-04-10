@@ -1,4 +1,5 @@
 import SelectComponent from 'formiojs/components/select/Select';
+import SelectComponentForm from 'formiojs/components/select/Select.form';
 export default class USWDSSelectComponent extends SelectComponent {
   choicesOptions() {
     const choicesOptions = super.choicesOptions();
@@ -6,3 +7,5 @@ export default class USWDSSelectComponent extends SelectComponent {
     return choicesOptions;
   }
 }
+
+(USWDSSelectComponent as any).editForm = SelectComponentForm;
