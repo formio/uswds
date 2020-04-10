@@ -10,6 +10,9 @@
 
 $color-primary: #005ea2;
 $color-light: #c9c9c9;
+$color-lighter: #f0f0f0;
+$color-lightest: #fff;
+$color-dark: #000;
 
 .usa-card {
   position: relative;
@@ -22,9 +25,9 @@ $color-light: #c9c9c9;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: $color-lightest;
   background-clip: border-box;
-  border: 1px solid #000;
+  border: 1px solid $color-dark;
   border-radius: .25rem;
 }
 
@@ -41,9 +44,9 @@ $color-light: #c9c9c9;
   padding: .5rem;
   margin-bottom: 0;
   margin-top: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $color-dark;
   border-radius: .25rem .25rem 0 0;
-  background-color: #f0f0f0;
+  background-color: $color-lighter;
 }
 
 .usa-card-title {
@@ -85,7 +88,7 @@ ul.usa-sidenav {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $color-dark;
 }
 
 .usa-sidenav__item {
@@ -94,7 +97,7 @@ ul.usa-sidenav {
 
 .usa-sidenav__item.active {
   position: relative;
-  color: #005ea2;
+  color: $color-primary;
   font-weight: bold;
 
   &::after {
@@ -105,7 +108,7 @@ ul.usa-sidenav {
     top: 0.25rem;
     width: 0.25rem;
     left: 0;
-    background-color: #005ea2;
+    background-color: $color-primary;
     border-radius: 99rem;
   }
 }
@@ -137,9 +140,9 @@ ul.usa-sidenav {
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
-  color: #fff;
+  color: $color-lightest;
   text-align: center;
-  background-color: #000;
+  background-color: $color-dark;
   border-radius: 0.25rem;
 }
 
@@ -160,7 +163,7 @@ ul.usa-sidenav {
    background-image: none;
 
    &:hover {
-      background-color: #f0f0f0;
+      background-color: $color-lighter;
       cursor: auto;
    }
  }
@@ -169,7 +172,7 @@ ul.usa-sidenav {
 .usa-table {
   caption {
     caption-side: top;
-    color: #000;
+    color: $color-dark;
   }
 }
 
@@ -226,7 +229,7 @@ ul.usa-sidenav {
   border-radius: 50%;
   text-align: center;
   background-color: $color-primary;
-  color: #fff;
+  color: $color-lightest;
   font-weight: 500;
 }
 
