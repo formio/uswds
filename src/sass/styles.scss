@@ -8,6 +8,12 @@
   }
 }
 
+$color-primary: #005ea2;
+$color-light: #c9c9c9;
+$color-lighter: #f0f0f0;
+$color-lightest: #fff;
+$color-dark: #000;
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -19,9 +25,9 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: $color-lightest;
   background-clip: border-box;
-  border: 1px solid #000;
+  border: 1px solid $color-dark;
   border-radius: .25rem;
 }
 
@@ -38,9 +44,9 @@
   padding: .5rem;
   margin-bottom: 0;
   margin-top: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $color-dark;
   border-radius: .25rem .25rem 0 0;
-  background-color: #f0f0f0;
+  background-color: $color-lighter;
 }
 
 .usa-card-title {
@@ -82,7 +88,7 @@ ul.usa-sidenav {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $color-dark;
 }
 
 .usa-sidenav__item {
@@ -91,7 +97,7 @@ ul.usa-sidenav {
 
 .usa-sidenav__item.active {
   position: relative;
-  color: #005ea2;
+  color: $color-primary;
   font-weight: bold;
 
   &::after {
@@ -102,7 +108,7 @@ ul.usa-sidenav {
     top: 0.25rem;
     width: 0.25rem;
     left: 0;
-    background-color: #005ea2;
+    background-color: $color-primary;
     border-radius: 99rem;
   }
 }
@@ -134,9 +140,9 @@ ul.usa-sidenav {
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
-  color: #fff;
+  color: $color-lightest;
   text-align: center;
-  background-color: #000;
+  background-color: $color-dark;
   border-radius: 0.25rem;
 }
 
@@ -157,7 +163,7 @@ ul.usa-sidenav {
    background-image: none;
 
    &:hover {
-      background-color: #f0f0f0;
+      background-color: $color-lighter;
       cursor: auto;
    }
  }
@@ -166,7 +172,7 @@ ul.usa-sidenav {
 .usa-table {
   caption {
     caption-side: top;
-    color: #000;
+    color: $color-dark;
   }
 }
 
@@ -191,4 +197,46 @@ ul.usa-sidenav {
   & li .usa-button {
     margin-bottom: 0.25em;
   }
+}
+
+.stepper-row {
+  display: flex;
+  height: 6px;
+  margin-top: 1rem;
+}
+
+.stepper-item {
+  flex: 1;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: $color-light;
+}
+
+.stepper-item-active {
+  background-color: $color-primary;
+}
+
+.stepper-info {
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.stepper-info-step {
+  display: inline-block;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-lightest;
+  font-weight: 500;
+}
+
+.stepper-info-total {
+  font-weight: 400;
+}
+
+.stepper-info-text {
+  font-weight: 600;
 }
