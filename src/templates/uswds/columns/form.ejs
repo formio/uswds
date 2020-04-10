@@ -1,8 +1,7 @@
+<div class="grid-row grid-gap">
 {% ctx.component.columns.forEach(function(column, index) { %}
-<div
-  class="{% if (ctx.size(column.size) !== '') { %}{{ctx.size(column.size)}}:{% } %}grid-col-{{column.width}} grid-offset-{{column.offset}}"
-  ref="{{ctx.columnKey}}"
->
-  {{ctx.columnComponents[index]}}
-</div>
+    <div class="{% if (ctx.size(column.size) !== '') { %}{{ctx.size(column.size)}}:{% } %}grid-col-{{column.width}} grid-offset-{{column.offset}}" ref="{{ctx.columnKey}}">
+        {{ctx.columnComponents[index]}}
+    </div>
 {% }) %}
+</div>
