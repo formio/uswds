@@ -8,6 +8,9 @@
   }
 }
 
+$color-primary: #005ea2;
+$color-light: #c9c9c9;
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -203,11 +206,11 @@ ul.usa-sidenav {
   flex: 1;
   margin-left: 2px;
   margin-right: 2px;
-  background-color: #c9c9c9;
+  background-color: $color-light;
 }
 
 .stepper-item-active {
-  background-color: #005ea2;
+  background-color: $color-primary;
 }
 
 .stepper-info {
@@ -222,7 +225,7 @@ ul.usa-sidenav {
   line-height: 1.2em;
   border-radius: 50%;
   text-align: center;
-  background-color: #005ea2;
+  background-color: $color-primary;
   color: #fff;
   font-weight: 500;
 }
