@@ -44,6 +44,7 @@ import well from './well';
 import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
+import size from './size';
 
 export default {
   builder,
@@ -92,4 +93,5 @@ export default {
   wizard,
   wizardHeader,
   wizardNav,
+  size,
 };

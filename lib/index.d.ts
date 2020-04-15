@@ -151,7 +151,12 @@ declare const _default: {
             wizardNav: {
                 form: string;
             };
+            size: (size: any) => "" | "mobile-lg" | "tablet" | "desktop";
         };
+    };
+    components: {
+        select: typeof import("./components/Select").default;
+        radio: typeof import("./components/Radio").default;
     };
 };
 export default _default;

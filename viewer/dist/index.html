@@ -19,7 +19,7 @@
     <script id="branding" type="text/template">
       <hr />
       <h4 class="text-center text-muted">powered by <img src="assets/logo.png" style="height: 1.2em;vertical-align: middle;" /></h4>
-      <h5 class="text-center text-muted">Application: 1.2.4</h5>
+      <h5 class="text-center text-muted">Application: 1.3.2</h5>
     </script>
     <script id="srcform" type="text/template">
         <div class="well src-form">
@@ -205,6 +205,8 @@
   var formioElem = document.getElementById("formio");
   var titleElem = document.getElementById("form-title");
   preFormElem.innerHTML = loader.innerHTML;
+  var branding = !query.hasOwnProperty('branding') || parseInt(query.branding, 10);
+  Formio.license = !branding;
 
   // You must keep "window.setForm = function(form, submission, options)". This
   // is what the PDF renderer uses to generate a form with predefined form, submission, and options.
@@ -307,7 +309,7 @@
     });
   }
 
-  if (!query.hasOwnProperty('branding') || parseInt(query.branding, 10)) {
+  if (branding) {
     document.write(document.getElementById('branding').innerHTML);
   }
 </script>
