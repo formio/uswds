@@ -230,9 +230,10 @@ pre {
 
 .stepper-row {
   display: flex;
-  height: 12px; 
+  height: 6px; 
   margin-top: 1rem;
-  padding: 3px;
+  outline-width: 1px !important;
+  outline-offset: 3px !important;
 }
 
 .stepper-item {
