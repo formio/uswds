@@ -1,10 +1,18 @@
 <nav aria-label="navigation" id="{{ ctx.wizardKey }}-header">
-  <div ref="{{ ctx.wizardKey }}-progressbar" class="stepper-row" tabindex="0" aria-label="Progress bar Page {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}">
+  <div class="stepper-row" tabindex="0" aria-label="Progress bar Page {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}">
     {% ctx.panels.forEach(function(panel, index) { %}
     <div data-index="{{index}}" class="stepper-item {{ctx.currentPage >= index ? 'stepper-item-active' : ''}}"></div>
     {% }) %}
   </div>
-  <div class="stepper-info">
+  <div ref="{{ ctx.wizardKey }}-progressbar"
+       class="stepper-info"
+       tabindex="-1"
+       role="progressbar"
+       aria-valuemin="1"
+       aria-valuemax="{{ctx.panels.length}}"
+       aria-valuetext="{{ctx.panels[ctx.currentPage].title}}"
+       aria-valuenow="{{ctx.currentPage + 1}}"
+  >
     <div class="stepper-info-step">{{ctx.currentPage + 1}}</div>
     <span class="stepper-info-total"> of {{ctx.panels.length}}</span>
     <span class="stepper-info-text">{{ctx.panels[ctx.currentPage].title}}</span>
