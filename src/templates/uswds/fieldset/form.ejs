@@ -1,6 +1,6 @@
 <fieldset class="usa-fieldset">
   {% if (ctx.component.legend) { %}
-  <legend ref="header" class="usa-legend {{ctx.component.collapsible ? 'formio-clickable' : ''}}">
+  <legend ref="header" class="usa-legend position-relative {{ctx.component.collapsible ? 'formio-clickable' : ''}}">
     {{ctx.t(ctx.component.legend)}}
     {% if (ctx.component.tooltip) { %}
       <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></i>
