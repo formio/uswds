@@ -113,6 +113,10 @@ ul.usa-sidenav {
   }
 }
 
+.usa-input--error.usa-select {
+  height: auto;
+}
+
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -259,6 +263,7 @@ pre {
   margin-left: 0.3rem;
   font-size: 1.2rem;
 }
+
 
 .stepper-info-step {
   display: inline-block;
