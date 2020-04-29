@@ -235,10 +235,11 @@ pre {
 
 .stepper-row {
   display: flex;
-  height: 6px; 
+  height: 8px; 
   margin-top: 1rem;
   outline-width: 1px !important;
-  outline-offset: 3px !important;
+  outline-offset: 2px !important;
+  border: 1px solid transparent;
 }
 
 .stepper-item {
@@ -277,4 +278,3 @@ pre {
 .stepper-info-text {
   font-weight: 600;
 }
-
