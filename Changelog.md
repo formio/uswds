@@ -1,3 +1,13 @@
+## 1.3.3
+### Changed
+ - Redesigned Wizard navigation and made it accessible.
+ - General accessibility improvements.
+
+### Fixed
+ - Issue with legends not being distinguished.
+ - Issue with announcements for numeric fields.
+ - Issue with spacing of components in all forms.
+
 ## 1.3.2
 ### Changed
  - Added column size variable to columns template.

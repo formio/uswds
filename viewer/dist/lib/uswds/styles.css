@@ -83,6 +83,9 @@ ul.usa-sidenav {
     background-color: #005ea2;
     border-radius: 99rem; }
 
+.usa-input--error.usa-select {
+  height: auto; }
+
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -142,6 +145,9 @@ ul.usa-sidenav {
     padding-left: 0rem;
     text-indent: 0rem; } }
 
+.usa-fieldset .usa-legend {
+  font-size: 1.5rem; }
+
 .wizard-page {
   margin: 20px 0; }
 
@@ -169,4 +175,44 @@ pre {
   padding: 1em; }
 
 .usa-label {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+  margin-bottom: 0; }
+
+.stepper-row {
+  display: flex;
+  height: 8px;
+  margin-top: 1rem;
+  outline-width: 1px !important;
+  outline-offset: 2px !important;
+  border: 1px solid transparent; }
+
+.stepper-item {
+  flex: 1;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #c9c9c9; }
+
+.stepper-item-active {
+  background-color: #005ea2; }
+
+.stepper-info {
+  outline: none !important;
+  margin-top: 0.6rem;
+  margin-left: 0.3rem;
+  font-size: 1.2rem; }
+
+.stepper-info-step {
+  display: inline-block;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #005ea2;
+  color: #fff;
+  font-weight: 500; }
+
+.stepper-info-total {
+  font-weight: 400; }
+
+.stepper-info-text {
+  font-weight: 600; }
