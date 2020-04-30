@@ -171,7 +171,6 @@ ul.usa-sidenav {
 }
 
 .usa-form-group {
-  margin-bottom: 20px;
   .usa-checkbox__label, .usa-radio__label {
     @include firefox-only {
       padding-left: 0rem;
@@ -181,7 +180,7 @@ ul.usa-sidenav {
 }
 
 .wizard-page {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .nav-container {
@@ -192,31 +191,4 @@ ul.usa-sidenav {
   & li .usa-button {
     margin-bottom: 0.25em;
   }
-}
-
-.builder-group-button {
-  background-color: #f0f0f0;
-}
-
-.form-builder-group-header {
-  h5 {
-    margin: 0 0 5px 0;
-  }
-}
-
-.form-builder-panel {
-  .usa-button {
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-}
-
-pre {
-  background-color: #f0f0f0;
-  padding: 1em;
-}
-
-.usa-label {
-  margin-top: 0 !important;
 }

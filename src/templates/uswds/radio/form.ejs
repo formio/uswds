@@ -3,7 +3,7 @@
   ref="fieldset"
   aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
 >
-  <legend id="l-{{ctx.instance.id}}-{{ctx.component.key}}" ref="label" class="usa-input__label position-relative{{ctx.component.validate && ctx.component.validate.required ? ' field-required' : ''}}">
+  <legend id="l-{{ctx.instance.id}}-{{ctx.component.key}}" ref="label" class="font-sans-md position-relative{{ctx.component.validate && ctx.component.validate.required ? ' field-required' : ''}}">
     {{ctx.component.label}}
     {% if (ctx.component.tooltip) { %}
       <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>

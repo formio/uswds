@@ -6,17 +6,17 @@
   {% } %}
   {% if (ctx.buttons.previous) { %}
   <li>
-    <button class="usa-button btn-wizard-nav-previous" ref="{{ctx.wizardKey}}-previous">{{ctx.t('previous')}}</button>
+    <button class="usa-button btn-wizard-nav-previous" ref="{{ctx.wizardKey}}-previous" aria-label="{{ctx.t('previous')}} button. Click to go back to the previous tab">{{ctx.t('previous')}}</button>
   </li>
   {% } %}
   {% if (ctx.buttons.next) { %}
   <li>
-    <button class="usa-button btn-wizard-nav-next" ref="{{ctx.wizardKey}}-next">{{ctx.t('next')}}</button>
+    <button class="usa-button btn-wizard-nav-next" ref="{{ctx.wizardKey}}-next" aria-label="{{ctx.t('next')}} button. Click to go to the next tab">{{ctx.t('next')}}</button>
   </li>
   {% } %}
   {% if (ctx.buttons.submit) { %}
   <li>
-    <button class="usa-button btn-wizard-nav-submit" ref="{{ctx.wizardKey}}-submit">{{ctx.t('submit')}}</button>
+    <button class="usa-button btn-wizard-nav-submit" ref="{{ctx.wizardKey}}-submit" aria-label="{{ctx.t('submit')}} button. Click to submit the form">{{ctx.t('submit')}}</button>
   </li>
   {% } %}
 </ul>

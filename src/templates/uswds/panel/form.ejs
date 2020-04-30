@@ -1,7 +1,9 @@
 <div class="usa-accordion usa-accordion--bordered margin-top-1" aria-multiselectable="true">
   <h2 class="usa-accordion__heading" ref="header">
     {% if (ctx.component.collapsible) { %}
-      <button
+      <div
+        tabindex="0"
+        role="button"
         class="usa-accordion__button"
         aria-expanded="{{ctx.component.collapsible ? !ctx.collapsed : true}}"
         aria-controls="{{ctx.instance.id}}-{{ctx.component.key}}"
@@ -10,7 +12,7 @@
         {% if (ctx.component.tooltip) { %}
           <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
         {% } %}
-      </button>
+      </div>
     {% } else { %}
       <div class="usa-accordion__button non-collapsible-panel--button">
         {{ctx.t(ctx.component.title)}}
