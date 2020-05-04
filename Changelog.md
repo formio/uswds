@@ -1,4 +1,4 @@
-## 1.3.3
+## 1.4.0
 ### Changed
  - Redesigned Wizard navigation and made it accessible.
  - General accessibility improvements.
