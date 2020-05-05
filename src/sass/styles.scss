@@ -236,6 +236,10 @@ pre {
   margin-bottom: 0;
 }
 
+.usa-prose > p {
+  max-width: 100% !important;
+}
+
 .stepper-row {
   display: flex;
   height: 8px; 
