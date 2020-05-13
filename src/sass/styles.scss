@@ -285,3 +285,15 @@ pre {
 .stepper-info-text {
   font-weight: 600;
 }
+
+.has-error, .has-success {
+  display: none;
+}
+
+.has-error .help-block {
+  color: #b50909;
+}
+
+.has-success .help-block {
+  color: #00a91c;
+}
