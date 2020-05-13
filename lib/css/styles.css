@@ -178,6 +178,9 @@ pre {
   margin-top: 0 !important;
   margin-bottom: 0; }
 
+.usa-prose > p {
+  max-width: 100% !important; }
+
 .stepper-row {
   display: flex;
   height: 8px;
@@ -216,3 +219,12 @@ pre {
 
 .stepper-info-text {
   font-weight: 600; }
+
+.has-error, .has-success {
+  display: none; }
+
+.has-error .help-block {
+  color: #b50909; }
+
+.has-success .help-block {
+  color: #00a91c; }

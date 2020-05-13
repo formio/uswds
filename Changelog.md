@@ -1,3 +1,11 @@
+## 1.5.0
+### Changed
+ - Columns layout not spanning with the width of the page.
+ - HTML component styles to be in accordance with USWDS.
+
+### Fixed
+ - Issue with components being too close to each other.
+
 ## 1.4.0
 ### Changed
  - Redesigned Wizard navigation and made it accessible.
