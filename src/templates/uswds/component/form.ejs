@@ -1,6 +1,6 @@
 <div
   id="{{ctx.id}}"
-  class="{{ctx.classes}}"
+  class="{{ctx.self.hasInput ? 'usa-form-group ' : 'usa-prose '}}"
   {% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %}
   ref="component"
 >
