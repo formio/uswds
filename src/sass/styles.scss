@@ -297,3 +297,8 @@ pre {
 .has-success .help-block {
   color: #00a91c;
 }
+
+.usa-radio__input:disabled:checked + .usa-radio__label::before{
+  -webkit-box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
+          box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
+}
