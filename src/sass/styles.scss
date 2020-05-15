@@ -297,3 +297,10 @@ pre {
 .has-success .help-block {
   color: #00a91c;
 }
+
+span[role="link"] {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
