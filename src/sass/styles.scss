@@ -302,3 +302,10 @@ pre {
   -webkit-box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
           box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
 }
+
+span[role="link"] {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
