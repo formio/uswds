@@ -13,6 +13,7 @@ $color-light: #c9c9c9;
 $color-lighter: #f0f0f0;
 $color-lightest: #fff;
 $color-dark: #000;
+$color-bg-base: #71767a;
 
 .usa-card {
   position: relative;
@@ -298,9 +299,20 @@ pre {
   color: #00a91c;
 }
 
-.usa-radio__input:disabled:checked + .usa-radio__label::before{
-  -webkit-box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
-          box-shadow:0 0 0 2px $color-light, inset 0 0 0 2px $color-lightest;
+.usa-radio__input:disabled:checked + .usa-radio__label::before {
+  -webkit-box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+          box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+}
+
+@media print {
+  .usa-checkbox__input:checked:disabled + .usa-checkbox__label::before {
+    background-image: none;
+    background-color: $color-light;
+    -webkit-box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+    box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+    -webkit-print-color-adjust: exact;
+    text-indent: 0;
+  }
 }
 
 span[role="link"] {
