@@ -298,6 +298,11 @@ pre {
   color: #00a91c;
 }
 
+.usa-radio__input:disabled:checked + .usa-radio__label::before {
+  -webkit-box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+          box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+}
+
 span[role="link"] {
   &:hover {
     text-decoration: underline;
@@ -388,5 +393,14 @@ span[role="link"] {
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:100%;
+  }
+
+  .usa-checkbox__input:checked:disabled + .usa-checkbox__label::before {
+    background-image: none;
+    background-color: $color-light;
+    -webkit-box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+    box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
+    -webkit-print-color-adjust: exact;
+    text-indent: 0;
   }
 }
