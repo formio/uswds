@@ -1,3 +1,10 @@
+## 1.6.0
+### Fixed
+ - Issue with stacked fields in PDFs
+ - Issue with Radio/Checkbox component not appearing selected in PDF
+ - Issue with Panel component header announcing excessive info on IE
+
+
 ## 1.5.0
 ### Changed
  - Columns layout not spanning with the width of the page.
