@@ -1,9 +1,14 @@
+# Change Log
+All notable changes to this project will be documented in this file
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
+
 ## 1.6.0
 ### Fixed
  - Issue with stacked fields in PDFs
  - Issue with Radio/Checkbox component not appearing selected in PDF
  - Issue with Panel component header announcing excessive info on IE
-
 
 ## 1.5.0
 ### Changed
