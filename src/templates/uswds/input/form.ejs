@@ -13,4 +13,7 @@
 {% if (ctx.component.showCharCount) { %}
 <span aria-live="polite" class="text-base float-right" ref="charcount"></span>
 {% } %}
+{% if (ctx.component.type === 'datetime') { %}
+<span aria-live="assertive" id="{{ctx.instance.id}}-liveRegion" class="usa-sr-only" ref="liveRegion"></span>
+{% } %}
 
