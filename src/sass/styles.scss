@@ -309,6 +309,15 @@ span[role="link"] {
   }
 }
 
+.flatpickr-current-month .flatpickr-monthDropdown-months:focus,
+.flatpickr-current-month input.cur-year:focus {
+  outline: 2px solid $color-primary !important;
+}
+
+.flatpickr-wrapper {
+  display: block !important;
+}
+
 @media print {
   div[class*=":grid-col-1"] {
     -webkit-box-flex:0;
