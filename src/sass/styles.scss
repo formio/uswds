@@ -310,12 +310,21 @@ span[role="link"] {
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
-.flatpickr-current-month input.cur-year:focus {
-  outline: 2px solid $color-primary !important;
+.flatpickr-current-month input.cur-year:focus,
+.flatpickr-days:focus {
+  outline: 1px solid #2491ff !important;
+}
+
+.flatpickr-days {
+  margin: 1px;
 }
 
 .flatpickr-wrapper {
   display: block !important;
+}
+
+.flatpickr-calendar {
+  width: auto !important;
 }
 
 @media print {
