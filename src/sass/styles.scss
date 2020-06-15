@@ -317,6 +317,7 @@ span[role="link"] {
 
 .flatpickr-days {
   margin: 1px;
+  width: 305.875px !important;
 }
 
 .flatpickr-day.selected {
@@ -330,10 +331,6 @@ span[role="link"] {
 
 .flatpickr-wrapper {
   display: block !important;
-}
-
-.flatpickr-calendar {
-  width: auto !important;
 }
 
 @media print {
