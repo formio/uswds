@@ -309,6 +309,40 @@ span[role="link"] {
   }
 }
 
+.flatpickr-current-month .flatpickr-monthDropdown-months:focus,
+.flatpickr-current-month input.cur-year:focus,
+.flatpickr-days:focus {
+  outline: 1px solid #2491ff !important;
+}
+
+.flatpickr-days {
+  margin: 1px;
+  width: 305.875px !important;
+}
+
+.flatpickr-day.selected {
+  background: #0073EC !important;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  color: #71767a !important;
+}
+
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus {
+  background-color: #71767a !important;
+  color: $color-lightest !important;
+}
+
+.flatpickr-wrapper {
+  display: block !important;
+}
+
 @media print {
   div[class*=":grid-col-1"] {
     -webkit-box-flex:0;

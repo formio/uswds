@@ -1,4 +1,5 @@
-import SelectComponent from 'formiojs/components/select/Select';
+declare const SelectComponent: any;
 export default class USWDSSelectComponent extends SelectComponent {
     choicesOptions(): any;
 }
+export {};
