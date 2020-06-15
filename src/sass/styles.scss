@@ -329,6 +329,16 @@ span[role="link"] {
   color: #71767a !important;
 }
 
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus {
+  background-color: #71767a !important;
+  color: $color-lightest !important;
+}
+
 .flatpickr-wrapper {
   display: block !important;
 }
