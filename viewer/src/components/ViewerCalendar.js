@@ -1,5 +1,7 @@
-import CalendarWidget from 'formiojs/widgets/CalendarWidget';
-import Widgets from 'formiojs/widgets';
+import { Widgets } from 'formiojs';
+
+const CalendarWidget = Widgets.widgets.calendar;
+
 export class ViewerCalendar extends CalendarWidget {
   get timezone() {
     // Ensure the displayInTimezone is never viewer since the server "views" the submission...
@@ -10,5 +12,4 @@ export class ViewerCalendar extends CalendarWidget {
   }
 }
 
-// Create the viewer calendar.
-Widgets.viewercalendar = ViewerCalendar;
+Widgets.addWidget('viewercalendar', ViewerCalendar);

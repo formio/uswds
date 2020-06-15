@@ -1,9 +1,9 @@
-import RadioComponent from 'formiojs/components/radio/Radio';
-import RadioComponentForm from 'formiojs/components/radio/Radio.form';
+import { Components } from 'formiojs';
+
+const RadioComponent = Components.components.radio;
+
 export default class USWDSRadioComponent extends RadioComponent {
   get noInputLabel() {
     return true;
   }
 }
-
-(USWDSRadioComponent as any).editForm = RadioComponentForm;
