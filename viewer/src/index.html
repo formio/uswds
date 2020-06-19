@@ -237,7 +237,9 @@
 
     options.show = {};
     options.hide = {};
-    FormioUtils.eachComponent(form.components, function(component) {
+
+    if (options.pdf) {
+      FormioUtils.eachComponent(form.components, function(component) {
       if (component.tags && component.tags.length) {
         if (component.tags.includes('viewer:show')) {
           options.show[component.key] = true;
@@ -246,7 +248,8 @@
           options.hide[component.key] = true;
         }
       }
-    });
+     });
+    }
 
     Formio.icons = 'fontawesome';
     return Formio.createForm(formioElem, form, options)
