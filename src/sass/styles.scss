@@ -303,10 +303,13 @@ pre {
   align-items: stretch;
   width: 100%;
   margin-top: 0.5rem;
-  & .usa-input {
+  & .usa-input, .usa-textarea {
     width: auto;
     flex-grow: 1;
     margin-top: 0;
+  }
+  & .usa-textarea {
+    resize: vertical;
   }
   & .flatpickr-wrapper {
     display: flex;
@@ -332,7 +335,7 @@ pre {
 }
 
 .input-group-prepend,
-.input-group-prepend {
+.input-group-append {
   display: flex;
 }
 
