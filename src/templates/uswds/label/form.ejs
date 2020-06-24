@@ -9,7 +9,7 @@
   {% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
   <span class='usa-sr-only'>, {{ctx.t('numeric only')}},</span>
   {% } %}
-  {% if (ctx.component.tooltip) { %}
+  {% if (ctx.component.tooltip && !ctx.label.hidden) { %}
     <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
   {% } %}
 </label>
