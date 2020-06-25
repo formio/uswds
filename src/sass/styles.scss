@@ -299,6 +299,7 @@ pre {
 
 .input-group {
   display: flex;
+  flex-wrap: nowrap;
   align-items: stretch;
   width: 100%;
   margin-top: 0.5rem;
@@ -339,6 +340,7 @@ pre {
 .input-group-prepend,
 .input-group-append {
   display: flex;
+  flex-shrink: 0;
 }
 
 .usa-radio__input:disabled:checked + .usa-radio__label::before {
