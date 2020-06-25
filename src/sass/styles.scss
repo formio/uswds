@@ -299,12 +299,14 @@ pre {
 
 .input-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
   margin-top: 0.5rem;
   & .usa-input, .usa-textarea {
+    position: relative;
+    z-index: 1;
     width: auto;
+    min-width: 50px;
     flex-grow: 1;
     margin-top: 0;
   }
