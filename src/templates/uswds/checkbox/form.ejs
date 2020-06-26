@@ -1,4 +1,4 @@
-<div class="usa-checkbox">
+<span class="usa-checkbox">
   <{{ctx.input.type}}
     id="{{ctx.instance.id}}-{{ctx.component.key}}"
     ref="input"
@@ -18,9 +18,9 @@
     for="{{ctx.instance.id}}-{{ctx.component.key}}"
   >
     {{ctx.input.label}}
-    {% if (ctx.component.tooltip) { %}
-    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
-    {% } %}
     {{ctx.input.content}}
   </label>
-</div>
+  {% if (ctx.component.tooltip) { %}
+  <i ref="tooltip" aria-haspopup="true" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" title="{{ctx.component.tooltip}}"></i>
+  {% } %}
+</span>
