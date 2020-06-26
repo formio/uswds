@@ -30,3 +30,9 @@
     {{ctx.input.content}}
   </label>
 </div>
+
+{% if (ctx.component.description) { %}
+  <div class="text-base">
+    <span id="d-{{ctx.instance.id}}-{{ctx.component.key}}">{{ctx.t(ctx.component.description)}}</span>
+  </div>
+{% } %}
