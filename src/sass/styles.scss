@@ -189,6 +189,10 @@ ul.usa-sidenav {
   }
 }
 
+.usa-checkbox__input:disabled + .usa-checkbox__label {
+  color: #71767a !important;
+}
+
 .usa-fieldset .usa-legend {
   font-size: 1.5rem;
 }
