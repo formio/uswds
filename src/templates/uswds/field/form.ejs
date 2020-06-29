@@ -1,4 +1,6 @@
-{{ ctx.render('label', ctx) }}
+{% if (ctx.component.label) { %}
+  {{ ctx.render('label', ctx) }}
+{% } %}
 
 <div
   ref="messageContainer"
