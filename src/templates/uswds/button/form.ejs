@@ -4,10 +4,7 @@
   {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
 >
-  {{ctx.input.content}}
-  {% if (ctx.component.tooltip) { %}
-    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></i>
-  {% } %}
+  {{ctx.input.content}}  
 </{{ctx.input.type}}>
 <div ref="buttonMessageContainer">
   <span class="display-block margin-top-1 margin-bottom-105 help-block" ref="buttonMessage"></span>
