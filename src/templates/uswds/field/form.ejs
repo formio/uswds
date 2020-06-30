@@ -1,4 +1,4 @@
-{% if (!ctx.label.hidden) { %}
+{% if (ctx.component.label) { %}
   {{ ctx.render('label', ctx) }}
 {% } %}
 
