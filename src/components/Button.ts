@@ -25,9 +25,6 @@ export default class USWDSButtonComponent extends ButtonComponent {
         info.attr.class += ' usa-button--accent-warm';
         break;
     }
-    if (this.component.block) {
-      info.attr.class += ' flex-fill';
-    }
     if (this.component.customClass) {
       info.attr.class += ` ${this.component.customClass}`;
     }
