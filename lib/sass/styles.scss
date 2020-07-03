@@ -189,6 +189,10 @@ ul.usa-sidenav {
   }
 }
 
+.usa-checkbox__input:disabled + .usa-checkbox__label {
+  color: #71767a !important;
+}
+
 .usa-fieldset .usa-legend {
   font-size: 1.5rem;
 }
@@ -295,6 +299,52 @@ pre {
 
 .has-success .help-block {
   color: #00a91c;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 0.5rem;
+  & .usa-input, .usa-textarea {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    min-width: 50px;
+    flex-grow: 1;
+    margin-top: 0;
+  }
+  & .usa-textarea {
+    resize: vertical;
+  }
+  & .flatpickr-wrapper {
+    display: flex;
+    flex-grow: 1;
+    & .usa-input {
+      width: 100%;
+    }
+  }
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+
+.input-group-prepend,
+.input-group-append {
+  display: flex;
+  flex-shrink: 0;
 }
 
 .usa-radio__input:disabled:checked + .usa-radio__label::before {

@@ -157,6 +157,7 @@ declare const _default: {
     components: {
         select: typeof import("./components/Select").default;
         radio: typeof import("./components/Radio").default;
+        button: typeof import("./components/Button").default;
     };
 };
 export default _default;
