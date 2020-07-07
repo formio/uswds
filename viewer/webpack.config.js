@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const packageJson = require('./package.json');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   entry: './src/renderer.js',
   resolve: {
@@ -13,6 +14,9 @@ module.exports = {
   },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.DefinePlugin({
+      __VERSION__: `"${packageJson.version}"`
+    })
   ],
   externals: {
     formiojs: 'Formio',

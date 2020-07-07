@@ -21,8 +21,8 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/premium": "github:formio/premium#v1.13.6",
-    "@formio/uswds": "^1.7.0",
-    "@formio/vpat": "github:formio/vpat#v1.5.1",
+    "@formio/uswds": "^1.8.0-rc.2",
+    "@formio/vpat": "github:formio/vpat#v1.5.2",
     "autocompleter": "^6.0.3",
     "core-js": "^3.6.5",
     "eventemitter2": "^6.4.3",
@@ -53,6 +53,7 @@
     "gulp-uglify": "^3.0.2",
     "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.43.0",
+    "webpack-auto-inject-version": "^1.2.2",
     "webpack-cli": "^3.3.12"
   }
 }
