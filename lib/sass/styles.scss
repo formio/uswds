@@ -245,7 +245,7 @@ pre {
 
 .stepper-row {
   display: flex;
-  height: 8px; 
+  height: 8px;
   margin-top: 1rem;
   outline-width: 1px !important;
   outline-offset: 2px !important;
@@ -421,7 +421,7 @@ span[role="link"] {
           flex:0 0 auto;
     width:33.3333333333%;
   }
-  
+
   div[class*=":grid-col-5"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
@@ -435,42 +435,42 @@ span[role="link"] {
           flex:0 0 auto;
     width:50%;
   }
-  
+
   div[class*=":grid-col-7"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:58.3333333333%;
   }
-  
+
   div[class*=":grid-col-8"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:66.6666666667%;
   }
-  
+
   div[class*=":grid-col-9"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:75%;
   }
-  
+
   div[class*=":grid-col-10"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:83.3333333333%;
   }
-  
+
   div[class*=":grid-col-11"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:91.6666666667%;
   }
-  
+
   div[class*=":grid-col-12"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
@@ -486,4 +486,8 @@ span[role="link"] {
     -webkit-print-color-adjust: exact;
     text-indent: 0;
   }
+}
+
+.formio-panel-content.usa-accordion__content {
+  overflow: visible;
 }
