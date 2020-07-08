@@ -19,7 +19,7 @@
     <script id="branding" type="text/template">
       <hr />
       <h4 class="text-center text-muted">powered by <img src="assets/logo.png" style="height: 1.2em;vertical-align: middle;" /></h4>
-      <h5 class="text-center text-muted">Application: 1.6.0</h5>
+      <h5 class="text-center text-muted">Application: <span id="uswds-version"></span></h5>
     </script>
     <script id="srcform" type="text/template">
         <div class="well src-form">
@@ -237,7 +237,9 @@
 
     options.show = {};
     options.hide = {};
-    FormioUtils.eachComponent(form.components, function(component) {
+
+    if (options.pdf) {
+      FormioUtils.eachComponent(form.components, function(component) {
       if (component.tags && component.tags.length) {
         if (component.tags.includes('viewer:show')) {
           options.show[component.key] = true;
@@ -246,7 +248,8 @@
           options.hide[component.key] = true;
         }
       }
-    });
+     });
+    }
 
     Formio.icons = 'fontawesome';
     return Formio.createForm(formioElem, form, options)
@@ -311,6 +314,7 @@
 
   if (branding) {
     document.write(document.getElementById('branding').innerHTML);
+    document.getElementById('uswds-version').innerHTML = Formio.USWDS.version;
   }
 </script>
 </body>
