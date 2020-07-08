@@ -374,3 +374,6 @@ span[role="link"]:hover {
     box-shadow: 0 0 0 2px #c9c9c9, inset 0 0 0 3px #fff;
     -webkit-print-color-adjust: exact;
     text-indent: 0; } }
+
+.formio-panel-content.usa-accordion__content {
+  overflow: visible; }
