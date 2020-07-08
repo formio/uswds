@@ -1309,7 +1309,7 @@ eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexpo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default=function(ctx) {\nvar __t, __p = '';\n__p += '<div style=\"position: relative;\">\\n  ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n  <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n    ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n  </div>\\n  ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizard/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default=function(ctx) {\nvar __t, __p = '';\n__p += '<div style=\"position: relative;\">\\n  ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n  <div class=\"wizard-page usa-prose\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n    ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n  </div>\\n  ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizard/form.ejs.js?");
 
 /***/ }),
 
