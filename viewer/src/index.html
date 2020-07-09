@@ -115,7 +115,7 @@
             margin-top: 10px;
         }
 
-        .formio-component {
+        .formio-component, .usa-form-group {
             page-break-inside:avoid;
         }
 
@@ -173,6 +173,14 @@
                 -webkit-transform: rotate(359deg);
                 transform: rotate(359deg);
             }
+        }
+
+        .usa-checkbox__input:disabled+.usa-checkbox__label::before, .usa-radio__input:disabled+.usa-radio__label::before {
+          background-color: white;
+        }
+
+        .usa-radio__input:checked+.usa-radio__label::before, .usa-checkbox__input:checked+.usa-checkbox__label::before {
+          background-color: #999 !important;
         }
     </style>
 </head>

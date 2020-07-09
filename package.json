@@ -1,6 +1,6 @@
 {
   "name": "@formio/uswds",
-  "version": "1.8.0-rc.4",
+  "version": "1.8.0",
   "description": "US Web Design System templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -33,10 +33,10 @@
     "@types/chai": "^4.2.11",
     "@types/ejs": "^3.0.4",
     "@types/mocha": "^7.0.2",
-    "@types/node": "^14.0.19",
+    "@types/node": "^14.0.20",
     "@types/sinon": "^9.0.4",
     "chai": "^4.2.0",
-    "formiojs": "^4.11.0-rc.5",
+    "formiojs": "^4.11.0",
     "gulp": "^4.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-rename": "^2.0.0",

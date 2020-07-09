@@ -174,6 +174,13 @@
                 transform: rotate(359deg);
             }
         }
+
+        .usa-checkbox__input:disabled+.usa-checkbox__label::before, .usa-radio__input:disabled+.usa-radio__label::before {
+          background-color: white;
+        }
+        .usa-radio__input:checked+.usa-radio__label::before, .usa-checkbox__input:checked+.usa-checkbox__label::before {
+          background-color: #999 !important;
+        }
     </style>
 </head>
 <body>
@@ -316,6 +323,131 @@
     document.write(document.getElementById('branding').innerHTML);
     document.getElementById('uswds-version').innerHTML = Formio.USWDS.version;
   }
+</script>
+<script type="text/javascript">
+  // Keep this file as ES5!
+  var Formio;
+  var renderForm = function(form, submission, options, evalOptions) {
+    // Bail with retry if core library isn't loaded yet
+    if (!Formio) {
+      return setTimeout(function() {
+        renderForm(form, submission, options, evalOptions);
+      }, 100);
+    }
+
+    var readyFlagRaised = false;
+
+    // Copied from https://gist.github.com/kamilogorek/8819542
+    var waitForImages = function(_cb) {
+      var imagesLoaded = false;
+      var cb = function() {
+        if (!imagesLoaded) {
+          imagesLoaded = true;
+          _cb();
+        }
+      };
+      var allImgsLength = 0;
+      var allImgsLoaded = 0;
+      var allImgs = [];
+
+      // Add a fallback to render the form even without loading all images.
+      setTimeout(cb, 3000);
+
+      var filtered = Array.prototype.filter.call(document.querySelectorAll('img'), function (item) {
+        if (item.src === '') {
+          return false;
+        }
+
+        // Firefox's `complete` property will always be `true` even if the image has not been downloaded.
+        // Doing it this way works in Firefox.
+        var img = new Image();
+        img.src = item.src;
+        return !img.complete;
+      });
+
+      filtered.forEach(function (item) {
+        allImgs.push({
+          src: item.src,
+          element: item
+        });
+      });
+
+      allImgsLength = allImgs.length;
+      allImgsLoaded = 0;
+
+      // If no images found, don't bother.
+      if (allImgsLength === 0) {
+        cb();
+      }
+
+      allImgs.forEach(function (img) {
+        var image = new Image();
+
+        // Handle the image loading and error with the same callback.
+        image.addEventListener('load', function () {
+          allImgsLoaded++;
+          if (allImgsLoaded === allImgsLength) {
+            cb();
+            return false;
+          }
+        });
+
+        image.src = img.src;
+      });
+    };
+
+    var raiseReadyFlag = function(force) {
+      // Skip if we've already raised the ready flag and aren't forcing a recheck
+      if (readyFlagRaised && force !== true) {
+        return;
+      }
+
+      // Wait for all images to load first.
+      waitForImages(function() {
+        // Mark the ready flag as raised
+        readyFlagRaised = true;
+
+        // If a timezone loading promise exists, wait on that and then force a retry
+        if (!FormioUtils.zonesLoaded() && FormioUtils.moment && FormioUtils.moment.zonesPromise) {
+          return FormioUtils.moment.zonesPromise.then(function() {
+            raiseReadyFlag(true);
+          });
+        }
+
+        // Set window status to ready after a final buffer interval for good measure
+        setTimeout(function() {
+          window.status = 'ready';
+        }, evalOptions.renderBuffer);
+      });
+    };
+
+    // Apply evalOptions and set display mode
+    Formio.setBaseUrl(evalOptions.baseUrl);
+    Formio.setProjectUrl(evalOptions.baseUrl + '/project/' + evalOptions.project);
+
+    if (evalOptions.token) {
+      Formio.setToken(evalOptions.token);
+    }
+
+    form.display = 'form';
+
+    // Set the form
+    window.setForm(form, submission, options).then(raiseReadyFlag)
+      .catch(err => {
+        console.log(err);
+        raiseReadyFlag();
+      });
+
+    // Still generate after 5 seconds if our setForm promise fails to resolve
+    setTimeout(raiseReadyFlag, evalOptions.timeout || 5000);
+  };
+
+  renderForm(
+    {"_id":"5f04c16a66d07500bcfee613","type":"form","tags":[],"deleted":null,"owner":"5ed180f3d360a23ae50b00e8","components":[{"label":"Text Field","tableView":true,"key":"textField","type":"textfield","input":true},{"label":"One","tableView":false,"key":"one","type":"checkbox","input":true,"defaultValue":false},{"label":"Two","tableView":false,"key":"two","type":"checkbox","input":true,"defaultValue":false},{"label":"Radio","optionsLabelPosition":"right","inline":false,"tableView":false,"values":[{"label":"One","value":"one","shortcut":""},{"label":"Two","value":"two","shortcut":""},{"label":"Three","value":"three","shortcut":""}],"key":"radio","type":"radio","input":true},{"label":"Select Boxes","optionsLabelPosition":"right","tableView":false,"values":[{"label":"One","value":"one","shortcut":""},{"label":"Two","value":"two","shortcut":""},{"label":"Three","value":"three","shortcut":""}],"key":"selectBoxes","type":"selectboxes","input":true,"inputType":"checkbox","defaultValue":{"":false}},{"type":"button","label":"Submit","key":"submit","disableOnInvalid":true,"input":true,"tableView":false}],"revisions":"","_vid":0,"title":"WQERQWER","display":"form","access":[{"roles":["5ed1811ad360a23ae50b00fa","5ed1811ad360a23ae50b00fb","5ed1811ad360a23ae50b00fc","5eda92bf002c15abfcd89742"],"type":"read_all"}],"submissionAccess":[],"controller":"","properties":{},"settings":{},"name":"wqerqwer","path":"wqerqwer","project":"5ed1811ad360a23ae50b00f9","created":"2020-07-07T18:39:38.240Z","modified":"2020-07-09T18:14:29.014Z","machineName":"sandbox:wqerqwer","__v":2},
+    {"_id":"5f075e8bb868310aa9f16bdb","owner":"5ed180f3d360a23ae50b00e8","deleted":null,"roles":[],"_vid":0,"_fvid":0,"state":"submitted","data":{"textField":"","one":false,"two":true,"radio":"two","selectBoxes":{"one":true,"two":false,"three":true},"submit":true},"access":[],"metadata":{"timezone":"America/Chicago","offset":-300,"origin":"http://localhost:3001","referrer":"","browserName":"Netscape","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36","pathName":"/","onLine":true},"form":"5f04c16a66d07500bcfee613","project":"5ed1811ad360a23ae50b00f9","externalIds":[],"externalTokens":[],"created":"2020-07-09T18:14:35.720Z","modified":"2020-07-09T18:14:35.720Z","__v":0},
+    {"pdf":true,"readOnly":true,"uploadOnly":true,"defaultOpen":true,"hideButtons":true,"pageOptions":{"format":"A4","scale":1,"width":"800px","height":"1100px","printBackground":true,"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},
+    {"baseUrl":"http://formio-server:3000","project":"5ed1811ad360a23ae50b00f9","timeout":5000,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb3JtIjp7Il9pZCI6IjVlZDE4MGYzZDM2MGEyM2FlNTBiMDBkYSIsInByb2plY3QiOiI1ZWQxODBmMmQzNjBhMjNhZTUwYjAwZDYifSwidXNlciI6eyJfaWQiOiI1ZWQxODBmM2QzNjBhMjNhZTUwYjAwZTgifSwicHJvamVjdCI6eyJfaWQiOiI1ZWQxODBmMmQzNjBhMjNhZTUwYjAwZDYifSwiaWF0IjoxNTk0MzE4NTA0LCJleHAiOjE1OTQzMzI5MDR9.ZJTrQDyLT0p0zHnlpEI4Qu97ZWF2Q1avWEhxuVBHMtI","renderBuffer":100}
+  );
 </script>
 </body>
 </html>

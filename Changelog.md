@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.8.0
+### Changed
+ - Fixed viewer to show checked radios and checkboxes correctly.
+ - Upgrade formiojs@4.11.0
+
 ## 1.8.0-rc.2
 ### Changed
  - Upgrade formiojs@4.11.0-rc.5
