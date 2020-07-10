@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.8.2-rc.1
+### Changed
+ - uswds-viewer Docker base to 2.97.0-rc.6
+
 ## 1.8.1
 ### Changed
  - Reverted docker base back to 2.96.0 for uswds-viewer
