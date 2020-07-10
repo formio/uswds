@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.8.1
+### Changed
+ - Reverted docker base back to 2.96.0 for uswds-viewer
+
 ## 1.8.0
 ### Changed
  - Fixed viewer to show checked radios and checkboxes correctly.
