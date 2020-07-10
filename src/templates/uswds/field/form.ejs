@@ -1,4 +1,4 @@
-{% if (ctx.labelMarkup) { %}
+{% if (ctx.labelMarkup && ctx.component.label) { %}
   {{ ctx.labelMarkup }}
 {% } %}
 
