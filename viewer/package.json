@@ -21,7 +21,7 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/premium": "github:formio/premium#v1.13.6",
-    "@formio/uswds": "1.8.2-rc.5",
+    "@formio/uswds": "1.8.2-rc.6",
     "@formio/vpat": "github:formio/vpat#v1.5.3",
     "autocompleter": "^6.0.3",
     "core-js": "3.5.0",
