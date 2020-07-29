@@ -19,5 +19,5 @@
 ##                                                   ##
 #######################################################
 
-FROM formio/formio-files-core:2.97.0-rc.13
+FROM formio/formio-files-core:2.97.0-rc.14
 COPY ./dist /app/node_modules/formio-viewer/dist/
