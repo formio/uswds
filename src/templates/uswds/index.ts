@@ -10,6 +10,7 @@ import button from './button';
 import checkbox from './checkbox';
 import columns from './columns';
 import component from './component';
+import componentModal from './componentModal';
 import container from './container';
 import datagrid from './datagrid';
 import day from './day';
@@ -25,6 +26,7 @@ import label from './label';
 import loader from './loader';
 import loading from './loading';
 import message from './message';
+import modalPreview from './modalPreview';
 import multiValueRow from './multiValueRow';
 import multiValueTable from './multiValueTable';
 import panel from './panel';
@@ -59,6 +61,7 @@ export default {
   checkbox,
   columns,
   component,
+  componentModal,
   container,
   datagrid,
   day,
@@ -74,6 +77,7 @@ export default {
   loader,
   loading,
   message,
+  modalPreview,
   multiValueRow,
   multiValueTable,
   panel,

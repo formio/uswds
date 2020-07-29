@@ -1,0 +1,18 @@
+<div class="formio-component-modal-wrapper formio-component-modal-wrapper-{{ ctx.component.type }}" ref="componentModalWrapper">
+  <div ref="openModalWrapper"></div>
+  <div class="formio-dialog formio-dialog-theme-default component-rendering-hidden" ref="modalWrapper">
+    <div class="formio-dialog-overlay" ref="modalOverlay"></div>
+    <div class="formio-dialog-content" aria-labelledby="ml-{{ctx.instance.id}}-{{ctx.component.key}}" role="dialog" aria-modal="true" ref="modalContents">
+      <label class="usa-sr-only" id="ml-{{ctx.instance.id}}-{{ctx.component.key}}">{{ ctx.t(ctx.component.label) }}</label>
+      <div ref="modalContents">
+        {% if (ctx.visible) { %}
+        {{ctx.children}}
+        {% } %}
+        <div class="formio-dialog-buttons float-right">
+          <button class="usa-button usa-button--secondary" ref="modalClose" aria-label="Cancel button. Click to cancel the changes and get back to the form.">{{ctx.t('Cancel')}}</button>
+          <button class="usa-button" ref="modalSave" aria-label="Save button. Click to save the changes and get back to the form.">{{ctx.t('Save')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
