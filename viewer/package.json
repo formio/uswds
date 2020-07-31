@@ -1,6 +1,6 @@
 {
   "name": "uswds-viewer",
-  "version": "1.8.2-rc.10",
+  "version": "1.8.2-rc.12",
   "description": "A Form.io form viewer application for US Web Design Standards",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/premium": "github:formio/premium#v1.13.6",
-    "@formio/uswds": "1.8.2-rc.10",
+    "@formio/uswds": "1.8.2-rc.12",
     "@formio/vpat": "github:formio/vpat#v1.5.3",
     "autocompleter": "^6.0.3",
     "core-js": "3.5.0",
