@@ -1,4 +1,4 @@
-<label class="control-label">{{ ctx.t(ctx.component.label) }}</label><br>
-<button lang='en' class='btn btn-light btn-md open-modal-button' ref='openModal'>
+<label id="l-{{ctx.component.key}}" class="control-label">{{ ctx.t(ctx.component.label) }}.<span class="usa-sr-only">{{ ctx.previewText }}</span></label><br>
+<button lang="en" class="btn btn-light btn-md open-modal-button" ref="openModal" aria-labelledby="l-{{ctx.component.key}}">
   {{ ctx.previewText }}
 </button>
