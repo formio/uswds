@@ -386,6 +386,19 @@ span[role="link"] {
   }
 }
 
+.formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close {
+  right: 4px;
+  top: 4px;
+  &:before {
+    font-size: 24px;
+    line-height: 24px;
+    color: #8a8a8a;
+  }
+  &:hover:before, :active:before {
+    color: #6b6b6b;
+  }
+}
+
 .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
 .flatpickr-current-month input.cur-year:focus,
 .flatpickr-days:focus {
