@@ -1,6 +1,6 @@
 {
   "name": "@formio/uswds",
-  "version": "1.8.2-rc.13",
+  "version": "1.8.2-rc.14",
   "description": "US Web Design System templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "@types/node": "^14.0.23",
     "@types/sinon": "^9.0.4",
     "chai": "^4.2.0",
-    "formiojs": "^4.11.1",
+    "formiojs": "^4.11.2-rc.3",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-insert": "^0.5.0",
