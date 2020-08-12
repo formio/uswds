@@ -261,14 +261,14 @@ pre {
   -ms-user-select: none;
   user-select: none;
   background-color: #f8f9fa;
-  border: 1px solid transparent;
+  border: 2px solid #8a8a8a;
   padding: 0.375rem 0.75rem;
   font-size: 0.9375rem;
   line-height: 1.5;
   border-radius: 0;
 
   &:hover {
-    background-color: $color-lighter;
+    background-color: #f0f1f5;
   }
 }
 
