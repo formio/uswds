@@ -2,8 +2,8 @@
   <div ref="openModalWrapper"></div>
   <div class="formio-dialog formio-dialog-theme-default component-rendering-hidden" ref="modalWrapper">
     <div class="formio-dialog-overlay" ref="modalOverlay"></div>
-    <div class="formio-dialog-content" aria-labelledby="ml-{{ctx.instance.id}}-{{ctx.component.key}}" role="dialog" aria-modal="true" ref="modalContents">
-      <label class="usa-sr-only" id="ml-{{ctx.instance.id}}-{{ctx.component.key}}">{{ ctx.t(ctx.component.label) }}</label>
+    <div class="formio-dialog-content" aria-labelledby="ml-{{ctx.instance.id}}-{{ctx.component.key}}" {% if (!ctx.self.isIE()) { %} role="dialog" {% } %} ref="modalContents">
+      <label class="usa-sr-only" id="ml-{{ctx.instance.id}}-{{ctx.component.key}}">{{ ctx.t(ctx.component.label) }}{{ctx.self.isIE() ? ', dialog' : ''}}</label>
       <div ref="modalContents">
         {% if (ctx.visible) { %}
         {{ctx.children}}
