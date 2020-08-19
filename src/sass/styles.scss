@@ -391,9 +391,9 @@ span[role="link"] {
   }
 }
 
-.formio-component-modal-wrapper .formio-dialog.formio-dialog-theme-default {
+.formio-dialog.formio-dialog-theme-default {
   & .formio-dialog-content {
-    padding: 1.5em 1em 1em;
+    padding: 1.5em 1em 1em !important;
 
     & .formio-dialog-close {
       right: 4px;
