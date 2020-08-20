@@ -1,4 +1,6 @@
-<span id="l-{{ctx.component.key}}" class="usa-modal-label">{{ ctx.t(ctx.component.label) }}.<span class="usa-sr-only">{{ ctx.previewText }}</span></span><br>
+<span id="l-{{ctx.component.key}}" class="usa-modal-label">
+  {{ ctx.t(ctx.component.label) }}<span ref="modalLabelValue" class="usa-sr-only">. {{ ctx.previewText }}</span>
+</span><br>
 <div
   ref="modalMessageContainer"
   class="text-secondary-dark width-full formio-errors"
