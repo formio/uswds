@@ -191,6 +191,9 @@ ul.usa-sidenav {
       text-indent: 0rem;
     }
   }
+  @media print {
+    page-break-inside: avoid;
+  }
 }
 
 .usa-hidden {
