@@ -13,6 +13,7 @@ $color-light: #c9c9c9;
 $color-lighter: #f0f0f0;
 $color-lightest: #fff;
 $color-dark: #000;
+$color-tooltip: #1b1b1b;
 
 .usa-card {
   position: relative;
@@ -120,45 +121,49 @@ ul.usa-sidenav {
   height: auto;
 }
 
-.tooltip {
-  position: absolute;
-  z-index: 1070;
-  display: block;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  font-size: 0.875rem;
-  word-wrap: break-word;
-  opacity: 0;
+.tooltip__trigger {
+  cursor: pointer;
 }
 
-.tooltip-inner {
-  max-width: 200px;
-  padding: 0.25rem 0.5rem;
-  color: $color-lightest;
-  text-align: center;
-  background-color: $color-dark;
+.tooltip__body {
+  background-color: $color-tooltip;
   border-radius: 0.25rem;
+  bottom: 0;
+  color: #f0f0f0;
+  display: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  width: auto;
+  white-space: pre;
+  z-index: 1000;
+
+  &.is-set {
+    display: block;
+  }
+  
+  &--whitespace {
+    white-space: normal;
+  }
+
+  &--right {
+    top: auto;
+    transform: translateX(0);
+  }
+
+  &--bottom {
+    bottom: auto;
+    top: 0;
+  }
 }
 
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
+.tooltip__wrapper {
+  position: relative;
+  & > span {
+    font-weight: normal;
+  }
 }
 
 .word-wrap {
@@ -197,12 +202,28 @@ ul.usa-sidenav {
   margin: 0;
 }
 
+.usa-checkbox .usa-checkbox__label {
+  display: initial;
+}
+
 .usa-checkbox__input:disabled + .usa-checkbox__label {
   color: #71767a !important;
 }
 
+.usa-fieldset .usa-checkbox .usa-checkbox__label {
+  display: inherit;
+}
+
 .usa-fieldset .usa-legend {
   font-size: 1.5rem;
+}
+
+.usa-legend__wrapper {
+  display: inline-block;
+  margin-bottom: 6px;
+  & > span {
+    margin-right: 3px;
+  }
 }
 
 .wizard-page {
