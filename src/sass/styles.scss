@@ -205,6 +205,10 @@ ul.usa-sidenav {
   margin: 0;
 }
 
+.usa-form-group > .usa-label > label {
+  display: initial;
+}
+
 .usa-checkbox .usa-checkbox__label {
   display: initial;
 }
