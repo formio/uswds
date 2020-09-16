@@ -146,11 +146,18 @@ ul.usa-sidenav {
   
   &--whitespace {
     white-space: normal;
-    min-width: 400px;
+    width: 250px;
   }
 
   &--right {
     top: auto;
+    transform: translateX(0);
+  }
+  
+  &--left {
+    top: auto;
+    left: 0;
+    right: auto;
     transform: translateX(0);
   }
 
