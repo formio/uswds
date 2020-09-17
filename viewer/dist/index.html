@@ -298,9 +298,8 @@
           }
           timeout = setTimeout(doneChanging, 150);
         };
-        instance.on('change', resetTimer);
         instance.setSubmission(submission).then(function() {
-          resetTimer();
+          instance.on('redraw', () => resetTimer())
           instance.redraw();
           resetTimer();
         });
