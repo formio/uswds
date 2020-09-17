@@ -3,10 +3,12 @@
   {% for (var attr in ctx.input.attr) { %}
   {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
-  aria-labelledby="{{ctx.instance.id}}-{{ctx.component.key}}"
-  aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+  aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+  {% if (ctx.component.description) { %}
+    aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
+  {% } %}
 >
-  {{ctx.input.content}}  
+  {{ctx.input.content}}
 </{{ctx.input.type}}>
 <div ref="buttonMessageContainer">
   <span class="display-block margin-top-1 margin-bottom-105 help-block" ref="buttonMessage"></span>
