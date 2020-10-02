@@ -1,16 +1,17 @@
 {% if (!ctx.self.noInputLabel) { %}
-<label
-  ref="label"
-  class="usa-label {{ctx.label.className}} {{ctx.label.hidden ? 'usa-sr-only' : ''}}"
-  id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
-  for="{{ctx.instance.id}}-{{ctx.component.key}}"
->
-  <span>{{ ctx.t(ctx.component.label) }}</span>
-  {% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
-  <span class='usa-sr-only'>, {{ctx.t('numeric only')}},</span>
-  {% } %}
+<div class="usa-label {{ctx.label.className}} {{ctx.label.hidden ? 'usa-sr-only' : ''}}">
+  <label
+    ref="label"
+    id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+    for="{{ctx.instance.id}}-{{ctx.component.key}}"
+  >
+    <span>{{ ctx.t(ctx.component.label) }}</span>
+    {% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
+    <span class='usa-sr-only'>, {{ctx.t('numeric only')}},</span>
+    {% } %}
+  </label>
   {% if (ctx.component.tooltip && !ctx.label.hidden) { %}
-    <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></i>
+    <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></span>
   {% } %}
-</label>
+</div>
 {% } %}

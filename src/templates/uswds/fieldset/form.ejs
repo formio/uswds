@@ -1,11 +1,16 @@
 <fieldset class="usa-fieldset">
   {% if (ctx.component.legend) { %}
-  <legend ref="header" class="usa-legend position-relative {{ctx.component.collapsible ? 'formio-clickable' : ''}}">
+  <legend ref="header" class="usa-sr-only">
     {{ctx.t(ctx.component.legend)}}
-    {% if (ctx.component.tooltip) { %}
-      <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></i>
-    {% } %}
   </legend>
+  <span class="usa-legend__wrapper usa-legend">
+    <span class="position-relative {{ctx.component.collapsible ? 'formio-clickable' : ''}}">
+      {{ctx.t(ctx.component.legend)}}
+    </span>
+    {% if (ctx.component.tooltip) { %}
+      <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></span>
+    {% } %}
+  </span>
   {% } %}
   {% if (!ctx.collapsed) { %}
   <div class="fieldset-body" ref="{{ctx.nestedKey}}">
