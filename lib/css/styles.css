@@ -186,16 +186,19 @@ ul.usa-sidenav {
   .nav-container li .usa-button {
     margin-bottom: 0.25em; }
 
-.builder-group-button {
-  background-color: #f0f0f0; }
+.builder-sidebar .usa-accordion__content {
+  padding-bottom: 0px; }
 
-.form-builder-group-header h5 {
-  margin: 0 0 5px 0; }
-
-.form-builder-panel .usa-button {
-  margin-right: 0;
-  margin-top: 0;
+.builder-sidebar .form-builder-panel {
   margin-bottom: 5px; }
+  .builder-sidebar .form-builder-panel .form-builder-group-header .form-builder-group-heading {
+    margin: 0; }
+  .builder-sidebar .form-builder-panel .form-builder-group-header .usa-accordion__button.builder-group-button {
+    background-color: #f0f0f0; }
+  .builder-sidebar .form-builder-panel .usa-button {
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 5px; }
 
 pre {
   background-color: #f0f0f0;
