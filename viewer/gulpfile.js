@@ -3,6 +3,7 @@ var del = require('del');
 gulp.task('clean', () => del(['dist/*']));
 gulp.task('html', () => gulp.src('./src/index.html').pipe(gulp.dest('dist')));
 gulp.task('assets', () => gulp.src('./src/assets/**/*').pipe(gulp.dest('dist/assets')));
+gulp.task('flatpickr', () => gulp.src('./node_modules/flatpickr/dist/**/*').pipe(gulp.dest('dist/lib/flatpickr')));
 gulp.task('formiojs', () => gulp.src('./node_modules/formiojs/dist/**/*').pipe(gulp.dest('dist/lib/formiojs')));
 gulp.task('seamless', () => gulp.src('./node_modules/seamless/build/**/*').pipe(gulp.dest('dist/lib/seamless')));
 gulp.task('font-awesome', () => gulp.src('./node_modules/font-awesome/css/font-awesome.css').pipe(gulp.dest('dist/lib/fontawesome')));
@@ -13,6 +14,7 @@ gulp.task('custom', () => gulp.src('./node_modules/@formio/uswds/lib/css/styles.
 gulp.task('build', gulp.series('clean', gulp.parallel(
   'html',
   'assets',
+  'flatpickr',
   'formiojs',
   'seamless',
   'custom',
