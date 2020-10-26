@@ -5,13 +5,13 @@
   </li>
   {% } %}
   {% ctx.rows.forEach(function(row, rowIndex) { %}
-  <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px" ref="{{ctx.editgridKey}}">
+  <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px" ref="{{ctx.ref.row}}">
     {{row}}
     {% if (ctx.openRows[rowIndex] && !ctx.readOnly) { %}
     <div class="editgrid-actions">
-      <button class="usa-button usa-button--accent-cool" ref="{{ctx.editgridKey}}-saveRow">{{ctx.t(ctx.component.saveRow || 'Save')}}</button>
+      <button class="usa-button usa-button--accent-cool" ref="{{ctx.ref.saveRow}}">{{ctx.t(ctx.component.saveRow || 'Save')}}</button>
       {% if (ctx.component.removeRow) { %}
-      <button class="usa-button usa-button--secondary" ref="{{ctx.editgridKey}}-cancelRow">{{ctx.t(ctx.component.removeRow || 'Cancel')}}</button>
+      <button class="usa-button usa-button--secondary" ref="{{ctx.ref.cancelRow}}">{{ctx.t(ctx.component.removeRow || 'Cancel')}}</button>
       {% } %}
     </div>
     {% } %}
@@ -29,7 +29,7 @@
   {% } %}
 </ul>
 {% if (!ctx.readOnly && ctx.hasAddButton) { %}
-<button class="usa-button" ref="{{ctx.editgridKey}}-addRow">
+<button class="usa-button" ref="{{ctx.ref.addRow}}">
   <i class="{{ctx.iconClass('plus')}}"></i> {{ctx.t(ctx.component.addAnother || 'Add Another')}}
 </button>
 {% } %}
