@@ -271,7 +271,7 @@ pre {
   font-size: 1.05em;
   margin: 0 0.5em; }
 
-.has-error, .has-success {
+.usa-button + .has-error, .usa-button + .has-success {
   display: none; }
 
 .has-error .help-block {

@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0-rc.8
+### Changed
+ - Upgrade formiojs@4.12.1-rc.26
+
+### Fixed
+ - VPAT-719 Fixed disappearing fields when failing validation in USWDS
+ - VPAT-697 Added border outlines to layout component in builder
+
 ## 2.0.0-rc.7
 ### Changed
  - Upgrade formiojs@4.12.1-rc.18
