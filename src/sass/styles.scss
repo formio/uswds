@@ -432,6 +432,10 @@ span[role="link"] {
   }
 }
 
+.formio-choices .usa-select {
+  background-image: none;
+}
+
 .formio-dialog.formio-dialog-theme-default {
   & .formio-dialog-content {
     padding: 1.5em 1em 1em !important;

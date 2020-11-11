@@ -5,7 +5,7 @@ const SelectComponent = Components.components.select as any;
 export default class USWDSSelectComponent extends SelectComponent {
   choicesOptions() {
     const choicesOptions = super.choicesOptions();
-    choicesOptions.classNames.containerOuter += ' usa-input';
+    choicesOptions.classNames.containerInner += ' usa-select';
     return choicesOptions;
   }
 }
