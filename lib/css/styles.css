@@ -136,9 +136,11 @@ ul.usa-sidenav {
     background-color: #f0f0f0;
     cursor: auto; }
 
-.usa-table caption {
-  caption-side: top;
-  color: #000; }
+.usa-table {
+  width: 100%; }
+  .usa-table caption {
+    caption-side: top;
+    color: #000; }
 
 .usa-form-group {
   margin-bottom: 20px; }
@@ -326,6 +328,9 @@ pre {
 span[role="link"]:hover {
   text-decoration: underline;
   cursor: pointer; }
+
+.formio-choices .usa-select {
+  background-image: none; }
 
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
   padding: 1.5em 1em 1em !important; }

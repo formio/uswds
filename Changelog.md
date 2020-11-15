@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0
+### Changed
+ - Upgrade formiojs@4.12.1
+
+### Fixed
+ - VPAT-592 Changed data grid table to populate all available space
+ - VPAT-594 Applied USWDS select styling to choicesjs selects
+
 ## 2.0.0-rc.9
 ### Changed
  - Upgrade formiojs@4.12.1-rc.28
