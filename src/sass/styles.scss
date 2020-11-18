@@ -195,6 +195,9 @@ ul.usa-sidenav {
     caption-side: top;
     color: $color-dark;
   }
+  & td {
+    background-color: inherit;
+  }
 }
 
 .usa-form-group {
