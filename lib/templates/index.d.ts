@@ -1,5 +1,8 @@
 declare const _default: {
     uswds: {
+        address: {
+            form: string;
+        };
         builder: {
             form: string;
         };

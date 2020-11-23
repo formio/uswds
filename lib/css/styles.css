@@ -141,6 +141,8 @@ ul.usa-sidenav {
   .usa-table caption {
     caption-side: top;
     color: #000; }
+  .usa-table td {
+    background-color: inherit; }
 
 .usa-form-group {
   margin-bottom: 20px; }
@@ -330,7 +332,8 @@ span[role="link"]:hover {
   cursor: pointer; }
 
 .formio-choices .usa-select {
-  background-image: none; }
+  background-image: none;
+  border: 1px solid #565c65; }
 
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
   padding: 1.5em 1em 1em !important; }
@@ -343,6 +346,9 @@ span[role="link"]:hover {
       color: #8a8a8a; }
     .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close:hover:before, .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close :active:before {
       color: #6b6b6b; }
+
+.formio-component-address .usa-checkbox {
+  margin: 0.5em 0 0.3em; }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
 .flatpickr-current-month input.cur-year:focus,

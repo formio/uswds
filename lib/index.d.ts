@@ -2,6 +2,9 @@ declare const _default: {
     framework: string;
     templates: {
         uswds: {
+            address: {
+                form: string;
+            };
             builder: {
                 form: string;
             };

@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.1-rc.1
+### Fixed
+ - VPAT-623 Added address component to USWDS templates with correct styles
+ - VPAT-592 Fixed incorrect presentation of the last cell in a table in IE/FF
+ - VPAT-623 Fixed incorrect display of choicesjs selects in some cases
+
+### Chnaged
+ - Upgrade formiojs@4.12.2-rc.3
+
 ## 2.0.0
 ### Changed
  - Upgrade formiojs@4.12.1
