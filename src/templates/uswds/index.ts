@@ -1,3 +1,4 @@
+import address from './address';
 import builder from './builder';
 import builderComponent from './builderComponent';
 import builderComponents from './builderComponents';
@@ -49,6 +50,7 @@ import wizardNav from './wizardNav';
 import size from './size';
 
 export default {
+  address,
   builder,
   builderComponent,
   builderComponents,
