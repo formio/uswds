@@ -37,6 +37,9 @@ declare const _default: {
         component: {
             form: string;
         };
+        componentModal: {
+            form: string;
+        };
         container: {
             form: string;
         };
@@ -83,6 +86,9 @@ declare const _default: {
             form: string;
         };
         message: {
+            form: string;
+        };
+        modalPreview: {
             form: string;
         };
         multiValueRow: {

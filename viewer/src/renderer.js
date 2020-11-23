@@ -1,4 +1,6 @@
 import { Formio } from 'formiojs/formio.form.js';
+import Flatpickr from 'flatpickr';
+window.flatpickr = window['flatpickr-css'] = Flatpickr;
 import USWDS from '@formio/uswds';
 import VPAT from '@formio/vpat';
 import Premium from '@formio/premium';

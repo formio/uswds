@@ -91,6 +91,7 @@
         localStorage.removeItem('formioUser');
       }
     </script>
+    <link rel="stylesheet" href="lib/flatpickr/flatpickr.min.css" />
     <link rel="stylesheet" href="lib/formiojs/formio.form.min.css" />
     <link rel="stylesheet" href="lib/uswds/styles.css" />
     <link rel="stylesheet" href="lib/uswds/uswds.min.css" />
@@ -113,14 +114,6 @@
             display: block;
             page-break-before: always;
             margin-top: 10px;
-        }
-
-        .formio-component {
-            page-break-inside:avoid;
-        }
-
-        .formio-component-form {
-            page-break-inside: auto;
         }
 
         .main {
@@ -150,6 +143,10 @@
             margin-bottom: 0px;
         }
 
+        [ref="input"] {
+            white-space: pre-wrap;
+        }
+
         .fa-spin-custom, .glyphicon-spin {
             -webkit-animation: spin 1000ms infinite linear;
             animation: spin 1000ms infinite linear;
@@ -174,6 +171,14 @@
                 transform: rotate(359deg);
             }
         }
+
+        .usa-checkbox__input:disabled+.usa-checkbox__label::before, .usa-radio__input:disabled+.usa-radio__label::before {
+          background-color: white;
+        }
+
+        .usa-radio__input:checked+.usa-radio__label::before, .usa-checkbox__input:checked+.usa-checkbox__label::before {
+          background-color: #999 !important;
+        }
     </style>
 </head>
 <body>
@@ -191,6 +196,15 @@
   }
   if (bodyClass) {
     document.body.className = bodyClass;
+  }
+
+  // Add the auto page break styles to the header unless they turn them off.
+  if (!query.autoPageBreak || query.autoPageBreak !== 'none') {
+    var style = document.createElement('style');
+    style.setAttribute('style', 'text/css');
+    style.innerHTML = ".formio-component, .usa-form-group { page-break-inside:avoid; } " +
+      ".formio-component-form { page-break-inside:auto; }";
+    document.getElementsByTagName('head')[0].appendChild(style);
   }
 </script>
 <div class="grid-container main" id="main">
@@ -240,15 +254,15 @@
 
     if (options.pdf) {
       FormioUtils.eachComponent(form.components, function(component) {
-      if (component.tags && component.tags.length) {
-        if (component.tags.includes('viewer:show')) {
-          options.show[component.key] = true;
+        if (component.tags && component.tags.length) {
+          if (component.tags.includes('viewer:show')) {
+            options.show[component.key] = true;
+          }
+          if (component.tags.includes('viewer:hide')) {
+            options.hide[component.key] = true;
+          }
         }
-        if (component.tags.includes('viewer:hide')) {
-          options.hide[component.key] = true;
-        }
-      }
-     });
+     }, true);
     }
 
     Formio.icons = 'fontawesome';
@@ -270,16 +284,26 @@
         return instance;
       }
 
-      return instance.setSubmission(submission).then(function() {
-        instance.redraw();
-        return instance.dataReady.then(function() {
-          instance.checkData(instance.data, {
-            noValidate: true
+      return new Formio.Promise(function(resolve) {
+        var timeout = null;
+        var doneChanging = function() {
+          instance.dataReady.then(function() {
+            instance.checkData(instance.data, {
+              noValidate: true
+            });
+            window.requestAnimationFrame(resolve);
           });
-          return new Promise(function(resolve) {
-            // Wait for window to stop rendering
-            return window.requestAnimationFrame(resolve);
-          });
+        };
+        var resetTimer = function() {
+          if (timeout) {
+            clearTimeout(timeout);
+          }
+          timeout = setTimeout(doneChanging, 150);
+        };
+        instance.setSubmission(submission).then(function() {
+          instance.on('redraw', () => resetTimer())
+          instance.redraw();
+          resetTimer();
         });
       });
     });

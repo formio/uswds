@@ -143,7 +143,7 @@ ul.usa-sidenav {
   &.is-set {
     display: block;
   }
-  
+
   &--whitespace {
     white-space: normal;
     width: 250px;
@@ -153,7 +153,7 @@ ul.usa-sidenav {
     top: auto;
     transform: translateX(0);
   }
-  
+
   &--left {
     top: auto;
     left: 0;
@@ -190,6 +190,7 @@ ul.usa-sidenav {
 }
 
 .usa-table {
+  width: 100%;
   caption {
     caption-side: top;
     color: $color-dark;
@@ -255,21 +256,26 @@ ul.usa-sidenav {
   }
 }
 
-.builder-group-button {
-  background-color: #f0f0f0;
-}
-
-.form-builder-group-header {
-  h5 {
-    margin: 0 0 5px 0;
+.builder-sidebar {
+  .usa-accordion__content {
+    padding-bottom: 0px;
   }
-}
 
-.form-builder-panel {
-  .usa-button {
-    margin-right: 0;
-    margin-top: 0;
+  .form-builder-panel {
     margin-bottom: 5px;
+    .form-builder-group-header {
+      .form-builder-group-heading {
+        margin: 0;
+      }
+      .usa-accordion__button.builder-group-button {
+        background-color: #f0f0f0;
+      }
+    }
+    .usa-button {
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -311,7 +317,7 @@ pre {
 
 .stepper-row {
   display: flex;
-  height: 8px; 
+  height: 8px;
   margin-top: 1rem;
   outline-width: 1px !important;
   outline-offset: 2px !important;
@@ -357,7 +363,7 @@ pre {
   margin: 0 0.5em;
 }
 
-.has-error, .has-success {
+.usa-button + .has-error, .usa-button + .has-success {
   display: none;
 }
 
@@ -425,6 +431,10 @@ span[role="link"] {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+.formio-choices .usa-select {
+  background-image: none;
 }
 
 .formio-dialog.formio-dialog-theme-default {
@@ -510,7 +520,7 @@ span[role="link"] {
           flex:0 0 auto;
     width:33.3333333333%;
   }
-  
+
   div[class*=":grid-col-5"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
@@ -524,42 +534,42 @@ span[role="link"] {
           flex:0 0 auto;
     width:50%;
   }
-  
+
   div[class*=":grid-col-7"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:58.3333333333%;
   }
-  
+
   div[class*=":grid-col-8"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:66.6666666667%;
   }
-  
+
   div[class*=":grid-col-9"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:75%;
   }
-  
+
   div[class*=":grid-col-10"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:83.3333333333%;
   }
-  
+
   div[class*=":grid-col-11"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
           flex:0 0 auto;
     width:91.6666666667%;
   }
-  
+
   div[class*=":grid-col-12"] {
     -webkit-box-flex:0;
       -ms-flex:0 0 auto;
@@ -575,4 +585,8 @@ span[role="link"] {
     -webkit-print-color-adjust: exact;
     text-indent: 0;
   }
+}
+
+.formio-panel-content.usa-accordion__content {
+  overflow: visible;
 }

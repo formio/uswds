@@ -4,6 +4,74 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0
+### Changed
+ - Upgrade formiojs@4.12.1
+
+### Fixed
+ - VPAT-592 Changed data grid table to populate all available space
+ - VPAT-594 Applied USWDS select styling to choicesjs selects
+
+## 2.0.0-rc.9
+### Changed
+ - Upgrade formiojs@4.12.1-rc.28
+
+## 2.0.0-rc.8
+### Changed
+ - Upgrade formiojs@4.12.1-rc.26
+
+### Fixed
+ - VPAT-719 Fixed disappearing fields when failing validation in USWDS
+ - VPAT-697 Added border outlines to layout component in builder
+
+## 2.0.0-rc.7
+### Changed
+ - Upgrade formiojs@4.12.1-rc.18
+
+### Fixed
+ - VPAT-672 Fixed failing EditGrid in builder options
+
+## 2.0.0
+### Added
+ - Further accessibility support for DateTime component.
+ - Accessibility support for modal edit.
+
+### Changed
+ - Reworked tooltips to make them accessible.
+
+### Fixed
+ - Several accessibility and PDF issues.
+
+## 1.8.2-rc.5
+### Changed
+ - Upgrade uswds-viewer base to 2.97.0-rc.11
+
+## 1.8.2-rc.4
+### Changed
+ - uswds-viewer Docker base to 2.97.0-rc.10
+ - formiojs@4.11.1-rc.5
+
+## 1.8.2-rc.3
+### Changed
+ - uswds-viewer Docker base to 2.97.0-rc.9
+
+## 1.8.2-rc.2
+### Changed
+ - uswds-viewer Docker base to 2.97.0-rc.7
+
+## 1.8.2-rc.1
+### Changed
+ - uswds-viewer Docker base to 2.97.0-rc.6
+
+## 1.8.1
+### Changed
+ - Reverted docker base back to 2.96.0 for uswds-viewer
+
+## 1.8.0
+### Changed
+ - Fixed viewer to show checked radios and checkboxes correctly.
+ - Upgrade formiojs@4.11.0
+
 ## 1.8.0-rc.2
 ### Changed
  - Upgrade formiojs@4.11.0-rc.5

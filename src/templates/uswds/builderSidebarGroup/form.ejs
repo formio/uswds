@@ -1,6 +1,6 @@
 <div class="form-builder-panel" ref="group-panel-{{ctx.groupKey}}">
   <div class="usa-accordion__heading form-builder-group-header" id="heading-{{ctx.groupKey}}">
-    <h5 class="mb-0 mt-0">
+    <h5 class="mb-0 mt-0 form-builder-group-heading">
       <button
         class="usa-accordion__button builder-group-button"
         type="button"
@@ -17,7 +17,7 @@
   </div>
   <div
     id="group-{{ctx.groupKey}}"
-    class="{{ctx.group.default ? ' show' : ''}}"
+    class="collapse {{ctx.group.default ? ' show' : ''}}"
     data-parent="#{{ctx.groupId}}"
     data-default="{{ctx.group.default}}"
     aria-labelledby="heading-{{ctx.groupKey}}"

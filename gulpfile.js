@@ -4,6 +4,10 @@ const insert = require('gulp-insert');
 const rename = require('gulp-rename');
 const template = require('gulp-template');
 const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+
+// Clean lib folder.
+gulp.task('clean', require('del').bind(null, ['dist', 'lib']));
 
 // Compile all *.ejs files to pre-compiled templates and append *.js to the filename.
 gulp.task('templates', () =>
@@ -35,9 +39,28 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('lib/sass'))
 });
 
-gulp.task('build', gulp.parallel(
+gulp.task('copy-css', function(){
+  return gulp.src('lib/css/styles.css')
+    .pipe(rename('uswds.css'))
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('minify-css', () => {
+  return gulp.src('dist/uswds.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({
+      extname: '.min.css'
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', gulp.series(
+  'clean',
+  gulp.parallel(
     'templates',
     'css',
-    'sass',
+    'sass'
   ),
-);
+  'copy-css',
+  'minify-css'
+));
