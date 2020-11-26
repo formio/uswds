@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.1-rc.3
+### Fixed
+ - VPAT-758 Removed styling modifications for disabled dates in Datepicker
+ - VPAT-757 Fixed text in li being wrapped at set width
+ - VPAT-756 Made font weight bold for headings using strong tag in FMG
+
+### Changed
+ - Upgrade formiojs@4.12.2-rc.5
+
 ## 2.0.1-rc.2
 ### Changed
  - Changed renderer to official 4.12.1

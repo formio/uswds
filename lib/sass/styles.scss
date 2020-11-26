@@ -15,6 +15,10 @@ $color-lightest: #fff;
 $color-dark: #000;
 $color-tooltip: #1b1b1b;
 
+b, strong {
+  font-weight: bold !important;
+}
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -293,7 +297,9 @@ pre {
   max-width: 100% !important;
 }
 
-.usa-prose > p {
+.usa-prose > p,
+.usa-prose > ul li,
+.usa-prose > ol li {
   max-width: 100% !important;
 }
 
@@ -479,11 +485,6 @@ span[role="link"] {
 
 .flatpickr-day.selected {
   background: #0073EC !important;
-}
-
-.flatpickr-day.prevMonthDay,
-.flatpickr-day.nextMonthDay {
-  color: #71767a !important;
 }
 
 .flatpickr-day:hover,
