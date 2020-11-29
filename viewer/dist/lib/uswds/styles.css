@@ -1,3 +1,6 @@
+b, strong {
+  font-weight: bold !important; }
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -136,9 +139,13 @@ ul.usa-sidenav {
     background-color: #f0f0f0;
     cursor: auto; }
 
-.usa-table caption {
-  caption-side: top;
-  color: #000; }
+.usa-table {
+  width: 100%; }
+  .usa-table caption {
+    caption-side: top;
+    color: #000; }
+  .usa-table td {
+    background-color: inherit; }
 
 .usa-form-group {
   margin-bottom: 20px; }
@@ -209,7 +216,9 @@ pre {
   margin-bottom: 0;
   max-width: 100% !important; }
 
-.usa-prose > p {
+.usa-prose > p,
+.usa-prose > ul li,
+.usa-prose > ol li {
   max-width: 100% !important; }
 
 .open-modal-button {
@@ -327,6 +336,10 @@ span[role="link"]:hover {
   text-decoration: underline;
   cursor: pointer; }
 
+.formio-choices .usa-select {
+  background-image: none;
+  border: 1px solid #565c65; }
+
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
   padding: 1.5em 1em 1em !important; }
   .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close {
@@ -339,6 +352,9 @@ span[role="link"]:hover {
     .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close:hover:before, .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close :active:before {
       color: #6b6b6b; }
 
+.formio-component-address .usa-checkbox {
+  margin: 0.5em 0 0.3em; }
+
 .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
 .flatpickr-current-month input.cur-year:focus,
 .flatpickr-days:focus {
@@ -350,10 +366,6 @@ span[role="link"]:hover {
 
 .flatpickr-day.selected {
   background: #0073EC !important; }
-
-.flatpickr-day.prevMonthDay,
-.flatpickr-day.nextMonthDay {
-  color: #71767a !important; }
 
 .flatpickr-day:hover,
 .flatpickr-day.prevMonthDay:hover,
