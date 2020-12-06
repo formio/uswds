@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.1
+### Fixed
+ - VPAT-775 Changed wizardHeader from nav to div and fixed focus on progressbar
+
+### Changed
+ - Upgrade formiojs@4.12.2
+
 ## 2.0.1-rc.3
 ### Fixed
  - VPAT-758 Removed styling modifications for disabled dates in Datepicker
