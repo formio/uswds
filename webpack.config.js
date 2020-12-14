@@ -10,6 +10,7 @@ module.exports = {
     filename: 'uswds.js',
   },
   mode: 'development',
+  target: 'es5',
   performance: { hints: false },
   externals: {
     formiojs: 'Formio'

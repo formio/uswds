@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.2-rc.3
+### Fixed
+ - Adding target to webpack so builds work with IE11.
+ - Fixed viewer not working in IE
+
 ## 2.0.2-rc.2
 ### Changed
  - Upgrade formiojs@4.12.4-rc.2
@@ -11,7 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## 2.0.2-rc.1
 ### Fixed
  - FJS-1488: Adding tabindex to datagrid elements.
- 
+
 ### Changed
  - Upgrade formiojs@4.12.4-rc.1
  - Upgrade @types/node@14.14.12, sinon@9.2.2, ts-node@9.1.1, @types/mocha@8.2.0
