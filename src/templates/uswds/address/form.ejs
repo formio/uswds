@@ -1,0 +1,43 @@
+{% if (ctx.mode.autocomplete) { %}
+  <div class="address-autocomplete-container">
+    <input
+      ref="{{ ctx.ref.searchInput }}"
+      class="usa-input maxw-full",
+      {% for (var attr in ctx.inputAttributes) { %}
+        {{attr}}="{{ctx.inputAttributes[attr]}}"
+      {% } %}
+      value="{{ ctx.displayValue }}"
+      autocomplete="off"
+    >
+    {% if (!ctx.component.disableClearIcon) { %}
+      <i
+        class="address-autocomplete-remove-value-icon fa fa-times"
+        tabindex="{{ ctx.inputAttributes.tabindex }}"
+        ref="{{ ctx.ref.removeValueIcon }}"
+      ></i>
+    {% } %}
+  </div>
+{% } %}
+{% if (ctx.self.manualModeEnabled) { %}
+  <div class="usa-checkbox">
+    <input
+      id="cb-{{ctx.instance.id}}-{{ctx.component.key}}"
+      ref="{{ ctx.ref.modeSwitcher }}"
+      type="checkbox"
+      class="usa-checkbox__input"
+      {% if (ctx.mode.manual) { %}checked=true{% } %}
+      {% if (ctx.disabled) { %}disabled=true{% } %}
+    ></input>
+    <label
+      class="usa-checkbox__label padding-left-0 text-indent-0"
+      for="cb-{{ctx.instance.id}}-{{ctx.component.key}}"
+    >
+      {{ ctx.component.switchToManualModeLabel }}
+    </label>
+  </div>
+{% } %}
+{% if (ctx.self.manualMode) { %}
+  <div ref="{{ ctx.nestedKey }}">
+    {{ ctx.children }}
+  </div>
+{% } %}

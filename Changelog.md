@@ -4,6 +4,47 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.2-rc.2
+### Changed
+ - Upgrade formiojs@4.12.4-rc.2
+
+## 2.0.2-rc.1
+### Fixed
+ - FJS-1488: Adding tabindex to datagrid elements.
+ 
+### Changed
+ - Upgrade formiojs@4.12.4-rc.1
+ - Upgrade @types/node@14.14.12, sinon@9.2.2, ts-node@9.1.1, @types/mocha@8.2.0
+
+## 2.0.1
+### Fixed
+ - VPAT-775 Changed wizardHeader from nav to div and fixed focus on progressbar
+
+### Changed
+ - Upgrade formiojs@4.12.2
+
+## 2.0.1-rc.3
+### Fixed
+ - VPAT-758 Removed styling modifications for disabled dates in Datepicker
+ - VPAT-757 Fixed text in li being wrapped at set width
+ - VPAT-756 Made font weight bold for headings using strong tag in FMG
+
+### Changed
+ - Upgrade formiojs@4.12.2-rc.5
+
+## 2.0.1-rc.2
+### Changed
+ - Changed renderer to official 4.12.1
+
+## 2.0.1-rc.1
+### Fixed
+ - VPAT-623 Added address component to USWDS templates with correct styles
+ - VPAT-592 Fixed incorrect presentation of the last cell in a table in IE/FF
+ - VPAT-623 Fixed incorrect display of choicesjs selects in some cases
+
+### Chnaged
+ - Upgrade formiojs@4.12.2-rc.3
+
 ## 2.0.0
 ### Changed
  - Upgrade formiojs@4.12.1

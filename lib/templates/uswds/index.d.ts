@@ -1,4 +1,7 @@
 declare const _default: {
+    address: {
+        form: string;
+    };
     builder: {
         form: string;
     };

@@ -15,6 +15,10 @@ $color-lightest: #fff;
 $color-dark: #000;
 $color-tooltip: #1b1b1b;
 
+b, strong {
+  font-weight: bold !important;
+}
+
 .usa-card {
   position: relative;
   display: -webkit-box;
@@ -195,6 +199,9 @@ ul.usa-sidenav {
     caption-side: top;
     color: $color-dark;
   }
+  & td {
+    background-color: inherit;
+  }
 }
 
 .usa-form-group {
@@ -290,7 +297,9 @@ pre {
   max-width: 100% !important;
 }
 
-.usa-prose > p {
+.usa-prose > p,
+.usa-prose > ul li,
+.usa-prose > ol li {
   max-width: 100% !important;
 }
 
@@ -435,6 +444,7 @@ span[role="link"] {
 
 .formio-choices .usa-select {
   background-image: none;
+  border: 1px solid #565c65;
 }
 
 .formio-dialog.formio-dialog-theme-default {
@@ -458,6 +468,10 @@ span[role="link"] {
   }
 }
 
+.formio-component-address .usa-checkbox {
+  margin: 0.5em 0 0.3em;
+}
+
 .flatpickr-current-month .flatpickr-monthDropdown-months:focus,
 .flatpickr-current-month input.cur-year:focus,
 .flatpickr-days:focus {
@@ -471,11 +485,6 @@ span[role="link"] {
 
 .flatpickr-day.selected {
   background: #0073EC !important;
-}
-
-.flatpickr-day.prevMonthDay,
-.flatpickr-day.nextMonthDay {
-  color: #71767a !important;
 }
 
 .flatpickr-day:hover,
