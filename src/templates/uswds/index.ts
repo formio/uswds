@@ -1,4 +1,5 @@
 import address from './address';
+import alert from './alert';
 import builder from './builder';
 import builderComponent from './builderComponent';
 import builderComponents from './builderComponents';
@@ -17,6 +18,7 @@ import datagrid from './datagrid';
 import day from './day';
 import dialog from './dialog';
 import editgrid from './editgrid';
+import errorsList from './errorsList';
 import field from './field';
 import fieldset from './fieldset';
 import file from './file';
@@ -51,6 +53,7 @@ import size from './size';
 
 export default {
   address,
+  alert,
   builder,
   builderComponent,
   builderComponents,
@@ -69,6 +72,7 @@ export default {
   day,
   dialog,
   editgrid,
+  errorsList,
   field,
   fieldset,
   file,
