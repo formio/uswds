@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.3
+### Fixed
+ - Issue where the PDF upload is not showing the progress indicator.
+
 ## 2.0.2
 ### Changed
  - Upgrade formiojs@4.12.4
