@@ -1,0 +1,20 @@
+<p>
+  {{ctx.t('error')}}
+  <span ref="errorTooltip" class="{{ctx.iconClass('question-sign')}}" tabindex="0"></span>
+</p>
+<ul>
+  {% ctx.errors.forEach(function(err) { %}
+  <li>
+    <span
+      data-component-key = "{{err.keyOrPath}}"
+      ref = "errorRef"
+      tabIndex = "0"
+      role="link"
+    >
+      {{err.message}}
+    </span>
+    <span class="usa-sr-only">{{ctx.t('errorsListNavigationMessage')}}</span>
+  </li>
+  {% }) %}
+</ul>
+<p></p>
