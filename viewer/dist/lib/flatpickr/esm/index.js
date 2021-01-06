@@ -2,7 +2,7 @@ import { defaults as defaultOptions, HOOKS, } from "./types/options";
 import English from "./l10n/default";
 import { arrayify, debounce, int, pad } from "./utils";
 import { clearNode, createElement, createNumberInput, findParent, toggleClass, getEventTarget, } from "./utils/dom";
-import { compareDates, createDateParser, createDateFormatter, duration, isBetween, } from "./utils/dates";
+import { compareDates, createDateParser, createDateFormatter, duration, isBetween, getDefaultHours, } from "./utils/dates";
 import { tokenRegex, monthToStr } from "./utils/formatting";
 import "./utils/polyfills";
 const DEBOUNCED_CHANGE_MS = 300;
@@ -53,9 +53,7 @@ function FlatpickrInstance(element, instanceConfig) {
         bindEvents();
         if (self.selectedDates.length || self.config.noCalendar) {
             if (self.config.enableTime) {
-                setHoursFromDate(self.config.noCalendar
-                    ? self.latestSelectedDateObj || self.config.minDate
-                    : undefined);
+                setHoursFromDate(self.config.noCalendar ? self.latestSelectedDateObj : undefined);
             }
             updateValue(false);
         }
@@ -97,12 +95,14 @@ function FlatpickrInstance(element, instanceConfig) {
     }
     function updateTime(e) {
         if (self.selectedDates.length === 0) {
-            const defaultDate = self.config.minDate !== undefined
-                ? new Date(self.config.minDate.getTime())
-                : new Date();
-            const { hours, minutes, seconds } = getDefaultHours();
-            defaultDate.setHours(hours, minutes, seconds, 0);
-            self.setDate(defaultDate, false);
+            const defaultDate = self.config.minDate === undefined ||
+                compareDates(new Date(), self.config.minDate) >= 0
+                ? new Date()
+                : new Date(self.config.minDate.getTime());
+            const defaults = getDefaultHours(self.config);
+            defaultDate.setHours(defaults.hours, defaults.minutes, defaults.seconds, defaultDate.getMilliseconds());
+            self.selectedDates = [defaultDate];
+            self.latestSelectedDateObj = defaultDate;
         }
         if (e !== undefined && e.type !== "blur") {
             timeWrapper(e);
@@ -162,8 +162,8 @@ function FlatpickrInstance(element, instanceConfig) {
                 ? self.config.minTime
                 : self.config.minDate;
             hours = Math.max(hours, minTime.getHours());
-            if (hours === minTime.getHours())
-                minutes = Math.max(minutes, minTime.getMinutes());
+            if (hours === minTime.getHours() && minutes < minTime.getMinutes())
+                minutes = minTime.getMinutes();
             if (minutes === minTime.getMinutes())
                 seconds = Math.max(seconds, minTime.getSeconds());
         }
@@ -174,30 +174,6 @@ function FlatpickrInstance(element, instanceConfig) {
         if (date) {
             setHours(date.getHours(), date.getMinutes(), date.getSeconds());
         }
-    }
-    function getDefaultHours() {
-        let hours = self.config.defaultHour;
-        let minutes = self.config.defaultMinute;
-        let seconds = self.config.defaultSeconds;
-        if (self.config.minDate !== undefined) {
-            const minHr = self.config.minDate.getHours();
-            const minMinutes = self.config.minDate.getMinutes();
-            hours = Math.max(hours, minHr);
-            if (hours === minHr)
-                minutes = Math.max(minMinutes, minutes);
-            if (hours === minHr && minutes === minMinutes)
-                seconds = self.config.minDate.getSeconds();
-        }
-        if (self.config.maxDate !== undefined) {
-            const maxHr = self.config.maxDate.getHours();
-            const maxMinutes = self.config.maxDate.getMinutes();
-            hours = Math.min(hours, maxHr);
-            if (hours === maxHr)
-                minutes = Math.min(maxMinutes, minutes);
-            if (hours === maxHr && minutes === maxMinutes)
-                seconds = self.config.maxDate.getSeconds();
-        }
-        return { hours, minutes, seconds };
     }
     function setHours(hours, minutes, seconds) {
         if (self.latestSelectedDateObj !== undefined) {
@@ -229,10 +205,7 @@ function FlatpickrInstance(element, instanceConfig) {
             return element.forEach((el) => bind(el, event, handler, options));
         element.addEventListener(event, handler, options);
         self._handlers.push({
-            element: element,
-            event,
-            handler,
-            options,
+            remove: () => element.removeEventListener(event, handler),
         });
     }
     function triggerChange() {
@@ -263,8 +236,10 @@ function FlatpickrInstance(element, instanceConfig) {
         else
             bind(window.document, "mousedown", documentClick);
         bind(window.document, "focus", documentClick, { capture: true });
-        bind(self._input, "focus", self.open);
-        bind(self._input, "mousedown", self.open);
+        if (self.config.clickOpens === true) {
+            bind(self._input, "focus", self.open);
+            bind(self._input, "click", self.open);
+        }
         if (self.daysContainer !== undefined) {
             bind(self.monthNav, "click", onMonthNavClick);
             bind(self.monthNav, ["keyup", "increment"], onYearInput);
@@ -660,6 +635,7 @@ function FlatpickrInstance(element, instanceConfig) {
         self.calendarContainer.classList.add("hasTime");
         if (self.config.noCalendar)
             self.calendarContainer.classList.add("noCalendar");
+        const defaults = getDefaultHours(self.config);
         self.timeContainer = createElement("div", "flatpickr-time");
         self.timeContainer.tabIndex = -1;
         const separator = createElement("span", "flatpickr-time-separator", ":");
@@ -675,11 +651,11 @@ function FlatpickrInstance(element, instanceConfig) {
         self.hourElement.value = pad(self.latestSelectedDateObj
             ? self.latestSelectedDateObj.getHours()
             : self.config.time_24hr
-                ? self.config.defaultHour
-                : military2ampm(self.config.defaultHour));
+                ? defaults.hours
+                : military2ampm(defaults.hours));
         self.minuteElement.value = pad(self.latestSelectedDateObj
             ? self.latestSelectedDateObj.getMinutes()
-            : self.config.defaultMinute);
+            : defaults.minutes);
         self.hourElement.setAttribute("step", self.config.hourIncrement.toString());
         self.minuteElement.setAttribute("step", self.config.minuteIncrement.toString());
         self.hourElement.setAttribute("min", self.config.time_24hr ? "0" : "1");
@@ -699,7 +675,7 @@ function FlatpickrInstance(element, instanceConfig) {
             self.secondElement = secondInput.getElementsByTagName("input")[0];
             self.secondElement.value = pad(self.latestSelectedDateObj
                 ? self.latestSelectedDateObj.getSeconds()
-                : self.config.defaultSeconds);
+                : defaults.seconds);
             self.secondElement.setAttribute("step", self.minuteElement.getAttribute("step"));
             self.secondElement.setAttribute("min", "0");
             self.secondElement.setAttribute("max", "59");
@@ -789,7 +765,7 @@ function FlatpickrInstance(element, instanceConfig) {
             self.currentMonth = self._initialDate.getMonth();
         }
         if (self.config.enableTime === true) {
-            const { hours, minutes, seconds } = getDefaultHours();
+            const { hours, minutes, seconds } = getDefaultHours(self.config);
             setHours(hours, minutes, seconds);
         }
         self.redraw();
@@ -812,8 +788,7 @@ function FlatpickrInstance(element, instanceConfig) {
         if (self.config !== undefined)
             triggerEvent("onDestroy");
         for (let i = self._handlers.length; i--;) {
-            const h = self._handlers[i];
-            h.element.removeEventListener(h.event, h.handler, h.options);
+            self._handlers[i].remove();
         }
         self._handlers = [];
         if (self.mobileInput) {
@@ -1207,7 +1182,9 @@ function FlatpickrInstance(element, instanceConfig) {
             if (e) {
                 e.preventDefault();
                 const eventTarget = getEventTarget(e);
-                eventTarget && eventTarget.blur();
+                if (eventTarget) {
+                    eventTarget.blur();
+                }
             }
             if (self.mobileInput !== undefined) {
                 self.mobileInput.focus();
@@ -1216,8 +1193,9 @@ function FlatpickrInstance(element, instanceConfig) {
             triggerEvent("onOpen");
             return;
         }
-        if (self._input.disabled || self.config.inline || !self.config.clickOpens)
+        else if (self._input.disabled || self.config.inline) {
             return;
+        }
         const wasOpen = self.isOpen;
         self.isOpen = true;
         if (!wasOpen) {
@@ -1571,6 +1549,18 @@ function FlatpickrInstance(element, instanceConfig) {
         showMonths: [buildMonths, setCalendarWidth, buildWeekdays],
         minDate: [jumpToDate],
         maxDate: [jumpToDate],
+        clickOpens: [
+            () => {
+                if (self.config.clickOpens === true) {
+                    bind(self._input, "focus", self.open);
+                    bind(self._input, "click", self.open);
+                }
+                else {
+                    self._input.removeEventListener("focus", self.open);
+                    self._input.removeEventListener("click", self.open);
+                }
+            },
+        ],
     };
     function set(option, value) {
         if (option !== null && typeof option === "object") {
