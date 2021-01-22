@@ -372,6 +372,15 @@ pre {
   margin: 0 0.5em;
 }
 
+.builder-component .component-btn-group {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: -3px;
+}
+
+.component-btn-group .component-settings-button.usa-button {
+  margin: 3px;
+}
 .component-btn-group .usa-button.component-settings-button-paste {
   display: none;
 }

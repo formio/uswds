@@ -1,6 +1,6 @@
-<div class="builder-component" ref="dragComponent" tabindex="0">
+<div aria-label="{{ctx.childComponent.label}} {{ctx.childComponent.type}} container" class="builder-component" ref="dragComponent" tabindex="0">
   {% if (!ctx.disableBuilderActions) { %}
-  <div role="application" class="component-btn-group" data-noattach="true" ref="buttonGroup">
+  <div aria-label="Action buttons. Use up and down arrows to navigate through action buttons" tabindex="0" role="application" class="component-btn-group" data-noattach="true" ref="buttonGroup">
     <div
       aria-label="Remove button. Click to remove component from the form"
       tabindex="-1"
@@ -45,4 +45,3 @@
   {% } %}
   {{ctx.html}}
 </div>
-
