@@ -2,8 +2,11 @@ import { Components } from 'formiojs';
 
 const RadioComponent = Components.components.radio;
 
-export default class USWDSRadioComponent extends RadioComponent {
-  get noInputLabel() {
-    return true;
-  }
+const render = RadioComponent.prototype.render;
+
+RadioComponent.prototype.render = function() {
+  this.noField = true;
+  return render.call(this);
 }
+
+export default RadioComponent;

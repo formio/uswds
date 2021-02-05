@@ -1,4 +1,3 @@
-{% if (!ctx.self.noInputLabel) { %}
 <div class="usa-label {{ctx.label.className}} {{ctx.label.hidden ? 'usa-sr-only' : ''}}">
   <label
     ref="label"
@@ -14,4 +13,3 @@
     <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></span>
   {% } %}
 </div>
-{% } %}
