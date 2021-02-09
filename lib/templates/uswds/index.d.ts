@@ -2,6 +2,9 @@ declare const _default: {
     address: {
         form: string;
     };
+    alert: {
+        form: string;
+    };
     builder: {
         form: string;
     };
@@ -58,6 +61,9 @@ declare const _default: {
     editgrid: {
         form: string;
         html: string;
+    };
+    errorsList: {
+        form: string;
     };
     field: {
         form: string;

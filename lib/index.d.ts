@@ -5,6 +5,9 @@ declare const _default: {
             address: {
                 form: string;
             };
+            alert: {
+                form: string;
+            };
             builder: {
                 form: string;
             };
@@ -61,6 +64,9 @@ declare const _default: {
             editgrid: {
                 form: string;
                 html: string;
+            };
+            errorsList: {
+                form: string;
             };
             field: {
                 form: string;
@@ -165,8 +171,9 @@ declare const _default: {
     };
     components: {
         select: typeof import("./components/Select").default;
-        radio: typeof import("./components/Radio").default;
+        radio: import("formiojs").ClassWithEditForm<typeof import("formiojs/types/components/_classes/field/field").Field>;
         button: typeof import("./components/Button").default;
+        checkbox: typeof import("./components/Checkbox").default;
     };
 };
 export default _default;

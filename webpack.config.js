@@ -8,8 +8,12 @@ module.exports = {
     libraryExport: 'default',
     path: path.resolve(__dirname, 'dist'),
     filename: 'uswds.js',
+    environment: {
+      arrowFunction: false
+    },
   },
   mode: 'development',
+  target: 'es5',
   performance: { hints: false },
   externals: {
     formiojs: 'Formio'
