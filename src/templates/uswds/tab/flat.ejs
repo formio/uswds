@@ -1,9 +1,9 @@
 {% ctx.component.components.forEach(function(tab, index) { %}
-  <div class="margin-bottom-2 usa-card">
-    <div class="usa-card-header bg-base-lightest">
-      <h4 class="margin-bottom-0 usa-card-title">{{ ctx.t(tab.label) }}</h4>
+  <div class="margin-bottom-2 formio-usa-card">
+    <div class="formio-usa-card-header bg-base-lightest">
+      <h4 class="margin-bottom-0 formio-usa-card-title">{{ ctx.t(tab.label) }}</h4>
     </div>
-    <div class="usa-card-body">
+    <div class="formio-usa-card-body">
       {{ ctx.tabComponents[index] }}
     </div>
   </div>

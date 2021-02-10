@@ -6,11 +6,11 @@
     <ol class="display-flex padding-105 bg-base-lightest usa-list--unstyled margin-bottom-2">
       {% ctx.pages.forEach(function(page, pageIndex) { %}
       <li class="margin-right-1">
-        <span title="{{page.title}}" class="usa-tag {% if (pageIndex === ctx.self.page) { %}bg-primary{% } else { %}bg-primary-light{% } %} wizard-page-label" ref="gotoPage">{{page.title}}</span>
+        <span title="{{page.title}}" class="usa-tag {% if (pageIndex === ctx.self.page) { %}bg-primary{% } else { %}bg-violet{% } %} wizard-page-label" ref="gotoPage">{{page.title}}</span>
       </li>
       {% }) %}
       <li class="margin-right-1">
-        <span title="{{ctx.t('Create Page')}}" class="usa-tag bg-mint wizard-page-label" ref="addPage">
+        <span title="{{ctx.t('Create Page')}}" class="usa-tag bg-green wizard-page-label" ref="addPage">
           <i class="{{ctx.iconClass('plus')}}"></i> {{ctx.t('Page')}}
         </span>
       </li>
