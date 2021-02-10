@@ -1,16 +1,20 @@
-<div aria-label="Wizard" id="{{ ctx.wizardKey }}-header">
-  <div ref="{{ ctx.wizardKey }}-progressbar" class="stepper-row" tabindex="0" aria-label="Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}">
+<div class="usa-step-indicator usa-step-indicator--no-labels" aria-label="Wizard" id="{{ ctx.wizardKey }}-header">
+  <ol ref="{{ ctx.wizardKey }}-progressbar" class="usa-step-indicator__segments" tabindex="0" aria-label="Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}">
     {% ctx.panels.forEach(function(panel, index) { %}
-    <div data-index="{{index}}" class="stepper-item {{ctx.currentPage >= index ? 'stepper-item-active' : ''}}"></div>
+    <li data-index="{{index}}" class="usa-step-indicator__segment {{ctx.currentPage === index ? 'usa-step-indicator__segment--current' : ''}} {{ctx.currentPage > index ? 'usa-step-indicator__segment--complete' : ''}}"></li>
     {% }) %}
-  </div>
-  <div class="stepper-info"
+  </ol>
+  <div class="usa-step-indicator__header"
        tabindex="-1"
        aria-label="Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}"
   >
-    <span class="usa-sr-only">Progress bar, step</span>
-    <span class="stepper-info-step">{{ctx.currentPage + 1}}</span>
-    <span class="stepper-info-total">of {{ctx.panels.length}}</span>
-    <span class="stepper-info-text">{{ctx.panels[ctx.currentPage].title}}</span>
+    <div class="usa-step-indicator__heading">
+      <span class="usa-sr-only">Progress bar, step</span>
+      <span class="usa-step-indicator__heading-counter">
+        <span class="usa-step-indicator__current-step">{{ctx.currentPage + 1}}</span>
+        <span class="usa-step-indicator__total-steps">of {{ctx.panels.length}}</span>
+      </span>
+      <span class="usa-step-indicator__heading-text">{{ctx.panels[ctx.currentPage].title}}</span>
+    </div>
   </div>
 </div>
