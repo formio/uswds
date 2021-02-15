@@ -45,11 +45,19 @@ span[role="link"] {
   }
 }
 
-.builder-component .component-btn-group {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: -3px;
-}
+.builder-component {
+  margin: -3px;
+
+  & .formio-form-group {
+    padding: 3px;
+  }
+
+  & .component-btn-group {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 0;
+  }
+} 
 
 .component-btn-group .component-settings-button.usa-button {
   margin: 3px;
