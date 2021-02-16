@@ -463,10 +463,12 @@ ul.usa-sidenav {
   margin-top: 1rem;
 
   & .usa-step-indicator__segments {
+    outline-width: 1px !important;
+    outline-offset: 2px !important;
     padding: 1px;
 
     & .usa-step-indicator__segment {
-      max-width: initial;
+      max-width: none;
     }
   }
 }
