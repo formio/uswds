@@ -46,22 +46,23 @@ span[role="link"] {
 }
 
 .builder-component {
-  margin: -3px;
+  padding: 3px;
+  margin: -3px -3px 20px -3px;
 
   & .formio-form-group {
-    padding: 3px;
+    margin-bottom: 0;
   }
 
   & .component-btn-group {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 0;
   }
 } 
 
 .component-btn-group .component-settings-button.usa-button {
   margin: 3px;
 }
+
 .component-btn-group .usa-button.component-settings-button-paste {
   display: none;
 }
