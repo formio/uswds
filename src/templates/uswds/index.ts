@@ -50,6 +50,7 @@ import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
 import size from './size';
+import cssClasses from './cssClasses';
 
 export default {
   address,
@@ -104,4 +105,5 @@ export default {
   wizardHeader,
   wizardNav,
   size,
+  cssClasses,
 };
