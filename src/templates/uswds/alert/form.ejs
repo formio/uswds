@@ -1,8 +1,4 @@
-<div
-  {% for (var attr in ctx.attrs) { %}
-    {{attr}}="{{ctx.attrs[attr]}}"
-  {% } %}
->
+<div id="{{ctx.attrs.id}}" class="usa-alert usa-alert--{{ctx.type === 'danger' ? 'error' : ctx.type}} usa-alert--no-icon">
   {{ctx.message}}
   <span class="usa-sr-only" id="hotkey-i-{{ctx.form._id}}">{{ctx.t('errorListHotkey')}}</span>
 </div>
