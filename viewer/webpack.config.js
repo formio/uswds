@@ -13,7 +13,10 @@ module.exports = {
     filename: 'formio.form.min.js'
   },
   plugins: [
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/
+    }),
     new webpack.DefinePlugin({
       __VERSION__: `"${packageJson.version}"`
     })

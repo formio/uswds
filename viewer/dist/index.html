@@ -202,7 +202,7 @@
   if (!query.autoPageBreak || query.autoPageBreak !== 'none') {
     var style = document.createElement('style');
     style.setAttribute('style', 'text/css');
-    style.innerHTML = ".formio-component, .usa-form-group { page-break-inside:avoid; } " +
+    style.innerHTML = ".formio-component, .formio-form-group { page-break-inside:avoid; } " +
       ".formio-component-form { page-break-inside:auto; }";
     document.getElementsByTagName('head')[0].appendChild(style);
   }

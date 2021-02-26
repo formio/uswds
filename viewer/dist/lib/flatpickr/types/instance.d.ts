@@ -76,7 +76,12 @@ export declare type Instance = Elements & Formatting & {
     parseDate: (date: Date | string | number, givenFormat?: string, timeless?: boolean) => Date | undefined;
     formatDate: (dateObj: Date, frmt: string) => string;
     _handlers: {
-        remove: () => void;
+        event: string;
+        element: Element;
+        handler: (e?: Event) => void;
+        options?: {
+            capture?: boolean;
+        };
     }[];
     _bind: <E extends Element>(element: E | E[], event: string | string[], handler: (e?: any) => void) => void;
     _createElement: <E extends HTMLElement>(tag: keyof HTMLElementTagNameMap, className: string, content?: string) => E;

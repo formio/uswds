@@ -16,8 +16,3 @@ export declare const isBetween: (ts: number, ts1: number, ts2: number) => boolea
 export declare const duration: {
     DAY: number;
 };
-export declare function getDefaultHours(config: ParsedOptions): {
-    hours: number;
-    minutes: number;
-    seconds: number;
-};
