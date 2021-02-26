@@ -167,6 +167,11 @@ declare const _default: {
                 form: string;
             };
             size: (size: any) => "" | "mobile-lg" | "tablet" | "desktop";
+            cssClasses: {
+                'formio-tab-panel-active': string;
+                'formio-tab-link-active': string;
+                'formio-tab-link-container-active': string;
+            };
         };
     };
     components: {
