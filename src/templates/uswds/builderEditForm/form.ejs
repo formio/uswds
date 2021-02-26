@@ -25,18 +25,18 @@
   </div>
   {% if (ctx.preview) { %}
   <div class="grid-col mobile:grid-col-6">
-    <div class="usa-card preview-panel">
-      <div class="usa-card-header">
-        <h4 class="usa-card-title margin-bottom-0">{{ctx.t('Preview')}}</h4>
+    <div class="formio-usa-card preview-panel">
+      <div class="formio-usa-card-header">
+        <h4 class="formio-usa-card-title margin-bottom-0">{{ctx.t('Preview')}}</h4>
       </div>
-      <div class="usa-card-body">
+      <div class="formio-usa-card-body">
         <div class="component-preview" ref="preview">
           {{ctx.preview}}
         </div>
       </div>
     </div>
     {% if (ctx.componentInfo.help) { %}
-    <div class="usa-card usa-card-body bg-base-lightest formio-settings-help">
+    <div class="formio-usa-card formio-usa-card-body bg-base-lightest formio-settings-help">
       {{ ctx.t(ctx.componentInfo.help) }}
     </div>
     {% } %}

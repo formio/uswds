@@ -1,7 +1,7 @@
-<div class="usa-card">
+<div class="formio-usa-card">
   <ul role="navigation" class="usa-sidenav">
     {% ctx.component.components.forEach(function(tab, index) { %}
-    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'active' : ''}} border-top-0" role="presentation" ref="{{ctx.tabLikey}}">
+    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'usa-current' : ''}} border-top-0" role="presentation" ref="{{ctx.tabLikey}}">
       <a href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
     </li>
     {% }) %}
@@ -10,7 +10,7 @@
   {% ctx.component.components.forEach(function(tab, index) { %}
   <div
     role="tabpanel"
-    class="usa-card-body"
+    class="formio-usa-card-body"
     style="display: {{ctx.currentTab === index ? 'block' : 'none'}}"
     ref="{{ctx.tabKey}}"
   >

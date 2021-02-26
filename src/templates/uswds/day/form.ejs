@@ -12,7 +12,7 @@
     {% } %}
   >
     {% if (ctx.dayFirst && ctx.showDay) { %}
-    <div class="usa-form-group usa-form-group--day flex-1">
+    <div class="formio-form-group usa-form-group--day flex-1">
       <label for="{{ctx.component.key}}-day"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.day.required) { %}field-required{% } %}"
       >{{ctx.t('Day')}}</label>
@@ -30,7 +30,7 @@
     {% } %}
 
     {% if (ctx.showMonth) { %}
-    <div class="usa-form-group usa-form-group--month flex-1">
+    <div class="formio-form-group usa-form-group--month flex-1">
       <label for="{{ctx.component.key}}-month"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.month.required) { %}field-required{% } %}"
       >{{ctx.t('Month')}}</label>
@@ -48,7 +48,7 @@
     {% } %}
 
     {% if (!ctx.dayFirst && ctx.showDay) { %}
-    <div class="usa-form-group usa-form-group--day flex-1">
+    <div class="formio-form-group usa-form-group--day flex-1">
       <label for="{{ctx.component.key}}-day"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.day.required) { %}field-required{% } %}"
       >{{ctx.t('Day')}}</label>
@@ -66,7 +66,7 @@
     {% } %}
 
     {% if (ctx.showYear) { %}
-    <div class="usa-form-group usa-form-group--year flex-1">
+    <div class="formio-form-group usa-form-group--year flex-1">
       <label for="{{ctx.component.key}}-year"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.year.required) { %}field-required{% } %}"
       >{{ctx.t('Year')}}</label>

@@ -3,12 +3,12 @@
   <legend ref="header" class="usa-sr-only">
     {{ctx.t(ctx.component.legend)}}
   </legend>
-  <span class="usa-legend__wrapper usa-legend">
+  <span class="legend-wrapper usa-legend">
     <span class="position-relative {{ctx.component.collapsible ? 'formio-clickable' : ''}}">
       {{ctx.t(ctx.component.legend)}}
     </span>
     {% if (ctx.component.tooltip) { %}
-      <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0" aria-label="{{ctx.component.tooltip}}"></span>
+      <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></span>
     {% } %}
   </span>
   {% } %}
