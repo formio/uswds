@@ -7,7 +7,7 @@
   <{{ctx.input.type}}
     id="{{ctx.instance.id}}-{{ctx.component.key}}"
     ref="input"
-    class="usa-checkbox__input"
+    class="usa-checkbox__input {{ctx.component.tileView ? 'usa-checkbox__input--tile' : ''}}"
     {% for (var attr in ctx.input.attr) { %}
     {{attr}}="{{ctx.input.attr[attr]}}"
     {% } %}
@@ -24,10 +24,10 @@
   >
     {{ctx.input.label}}
     {{ctx.input.content}}
+    {% if (ctx.component.tooltip) { %}
+    <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></span>
+    {% } %}
   </label>
-  {% if (ctx.component.tooltip) { %}
-  <span ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></span>
-  {% } %}
 </div>
 
 {% if (ctx.component.description) { %}
