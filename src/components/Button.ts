@@ -13,17 +13,22 @@ export default class USWDSButtonComponent extends ButtonComponent {
         info.attr.class += ' usa-button--secondary';
         break;
       case 'info':
+      case 'accent-cool':
         info.attr.class += ' usa-button--accent-cool';
         break;
       case 'success':
-        info.attr.class += ' usa-button--primary';
+        info.attr.class += ' bg-green';
         break;
       case 'danger':
-        info.attr.class += ' usa-button--secondary-vivid';
+        info.attr.class += ' bg-secondary-vivid';
         break;
       case 'warning':
         info.attr.class += ' usa-button--accent-warm';
         break;
+      case 'base':
+        info.attr.class += ' usa-button--base';
+      case 'outline':
+        info.attr.class += ' usa-button--outline';
     }
     if (this.component.customClass) {
       info.attr.class += ` ${this.component.customClass}`;
