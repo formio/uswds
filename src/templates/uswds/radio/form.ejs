@@ -24,7 +24,7 @@
   <div class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}} {{ctx.inline ? 'display-inline float-left margin-right-1' : ''}}" ref="wrapper">
     <{{ctx.input.type}}
       ref="input"
-      class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}}__input"
+      class="usa-{{ctx.component.type === "selectboxes" ? "checkbox" : "radio"}}__input {{ctx.component.tileView ? ctx.component.type === 'selectboxes' ? 'usa-checkbox__input--tile' : 'usa-radio__input--tile' : ''}}"
       {% for (var attr in ctx.input.attr) { %}
       {{attr}}="{{ctx.input.attr[attr]}}"
       {% } %}

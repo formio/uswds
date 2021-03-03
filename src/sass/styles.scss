@@ -419,16 +419,12 @@ ul.usa-sidenav {
   }
 }
 
-.usa-checkbox .usa-checkbox__label {
-  display: inline;
+.usa-checkbox .usa-checkbox__input--tile + .usa-checkbox__label {
+  padding-left: 0.5rem;
 }
 
 .usa-checkbox__input:disabled + .usa-checkbox__label {
   color: #71767a !important;
-}
-
-.usa-fieldset .usa-checkbox .usa-checkbox__label {
-  display: inherit;
 }
 
 .usa-fieldset .usa-legend {
