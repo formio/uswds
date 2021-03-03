@@ -1,5 +1,10 @@
-<table class="usa-table{{!ctx.component.bordered ? ' usa-table--borderless' : ''}}">
+<table class="usa-table
+  {{!ctx.component.bordered ? ' usa-table--borderless' : ''}}
+  {{ ctx.component.striped ? 'usa-table--striped' : ''}}
+">
+  {% if (!ctx.component.hideLabel) { %}
   <caption>{{ctx.t(ctx.component.label)}}</caption>
+  {% } %}
   {% if (ctx.component.header && ctx.component.header.length > 0) { %}
   <thead>
     <tr>
