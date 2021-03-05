@@ -28,8 +28,8 @@
     "eventemitter2": "^6.4.4",
     "flatpickr": "4.6.6",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.13.0-rc.13",
-    "i18next": "^19.8.4",
+    "formiojs": "^4.13.0-rc.15",
+    "i18next": "19.8.7",
     "seamless": "^1.4.1",
     "uswds": "^2.10.2"
   },
