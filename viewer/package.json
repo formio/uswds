@@ -1,6 +1,6 @@
 {
   "name": "uswds-viewer",
-  "version": "2.0.4",
+  "version": "2.1.0-rc.1",
   "description": "A Form.io form viewer application for US Web Design Standards",
   "main": "index.js",
   "scripts": {
@@ -20,26 +20,26 @@
   },
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
-    "@formio/premium": "github:formio/premium#v1.15.4",
-    "@formio/uswds": "github:formio/uswds#v2.2.0",
-    "@formio/vpat": "github:formio/vpat#v2.1.0",
+    "@formio/premium": "github:formio/premium#v1.16.0-rc.2",
+    "@formio/uswds": "github:formio/uswds#v2.3.0-rc.2",
+    "@formio/vpat": "github:formio/vpat#v2.2.0",
     "autocompleter": "^6.1.0",
-    "core-js": "^3.9.0",
+    "core-js": "^3.9.1",
     "eventemitter2": "^6.4.4",
     "flatpickr": "4.6.6",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.12.7",
+    "formiojs": "^4.13.0-rc.13",
     "i18next": "^19.8.4",
     "seamless": "^1.4.1",
-    "uswds": "^2.10.1"
+    "uswds": "^2.10.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
-    "@babel/core": "^7.13.1",
+    "@babel/core": "^7.13.8",
     "@babel/plugin-proposal-export-default-from": "^7.12.13",
-    "@babel/plugin-proposal-optional-chaining": "^7.13.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.8",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-env": "^7.13.9",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "del": "^6.0.0",
@@ -53,7 +53,7 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.2",
     "vinyl-source-stream": "^2.0.0",
-    "webpack": "^5.24.2",
+    "webpack": "^5.24.3",
     "webpack-auto-inject-version": "^1.2.2",
     "webpack-cli": "^4.5.0"
   }
