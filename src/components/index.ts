@@ -1,7 +1,7 @@
 import USWDSSelectComponent from './Select';
-import USWDSRadioComponent from './Radio';
+import USWDSRadioComponent from './Radio/Radio';
 import USWDSButtonComponent from './Button';
-import USWDSCheckboxComponent from './Checkbox';
+import USWDSCheckboxComponent from './Checkbox/Checkbox';
 
 export default {
   select: USWDSSelectComponent,
