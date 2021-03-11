@@ -27,8 +27,10 @@ export default class USWDSButtonComponent extends ButtonComponent {
         break;
       case 'base':
         info.attr.class += ' usa-button--base';
+        break;
       case 'outline':
         info.attr.class += ' usa-button--outline';
+        break;
     }
     if (this.component.customClass) {
       info.attr.class += ` ${this.component.customClass}`;
