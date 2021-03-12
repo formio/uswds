@@ -132,12 +132,6 @@ span[role="link"] {
 
 .formio-form-group {
   margin-bottom: 20px;
-  .usa-checkbox__label, .usa-radio__label {
-    @include firefox-only {
-      padding-left: 0rem;
-      text-indent: 0rem;
-    }
-  }
   @media print {
     page-break-inside: avoid;
   }
@@ -417,10 +411,6 @@ ul.usa-sidenav {
   & td {
     background-color: inherit;
   }
-}
-
-.usa-checkbox .usa-checkbox__input--tile + .usa-checkbox__label {
-  padding-left: 0.5rem;
 }
 
 .usa-checkbox__input:disabled + .usa-checkbox__label {
