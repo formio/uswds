@@ -413,6 +413,11 @@ ul.usa-sidenav {
   }
 }
 
+.usa-checkbox .usa-checkbox__input--tile + .usa-checkbox__label {
+  padding-left: 0.5rem;
+  text-indent: 0;
+}
+
 .usa-checkbox__input:disabled + .usa-checkbox__label {
   color: #71767a !important;
 }
