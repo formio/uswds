@@ -1,6 +1,9 @@
 import { Components } from 'formiojs';
+import editForm from './Radio.form';
 
 const RadioComponent = Components.components.radio;
+
+RadioComponent.editForm = editForm;
 
 const render = RadioComponent.prototype.render;
 
