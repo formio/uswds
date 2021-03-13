@@ -178,7 +178,8 @@ declare const _default: {
         select: typeof import("./components/Select").default;
         radio: import("formiojs").ClassWithEditForm<typeof import("formiojs/types/components/_classes/field/field").Field>;
         button: typeof import("./components/Button").default;
-        checkbox: typeof import("./components/Checkbox").default;
+        checkbox: typeof import("./components/Checkbox/Checkbox").default;
+        selectboxes: typeof import("./components/selectboxes/SelectBoxes").default;
     };
 };
 export default _default;
