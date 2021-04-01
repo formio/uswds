@@ -10,14 +10,14 @@
       >
         {{ctx.t(ctx.component.title)}}
         {% if (ctx.component.tooltip) { %}
-          <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
+          <i ref="tooltip" data-tooltip="{{ctx.component.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
         {% } %}
       </div>
     {% } else { %}
       <div class="usa-accordion__button non-collapsible-panel--button">
         {{ctx.t(ctx.component.title)}}
         {% if (ctx.component.tooltip) { %}
-          <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
+          <i ref="tooltip" data-tooltip="{{ctx.component.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-based" tabindex="0"></i>
         {% } %}
       </div>
     {% } %}
