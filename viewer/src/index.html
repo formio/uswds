@@ -147,6 +147,15 @@
             white-space: pre-wrap;
         }
 
+        .formio-form, .formio-component-panel {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formio-component-columns.formio-form-group {
+            page-break-inside: auto;
+        }
+
         .formio-component.formio-component-datagrid {
             page-break-inside: auto;
         }
