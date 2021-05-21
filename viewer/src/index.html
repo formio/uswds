@@ -147,9 +147,12 @@
             white-space: pre-wrap;
         }
 
-        .formio-form, .formio-component-panel {
-            display: flex;
-            flex-direction: column;
+        .formio-component-panel, .formio-component-panel .card-body {
+            break-inside: auto !important;
+        }
+
+        .formio-component-panel .card {
+            display: block !important;
         }
 
         .formio-component-well.formio-form-group {
