@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.3.3-rc.1
+### Fixed
+ - FIO-3104: Fixes an issue where usa-button class makes buttons to be always visible event when they have formio-hidden class
+
+### Changed
+ - Upgrade dependencies.
+
 ## 2.3.2
 ### Fixed
  - FIO-2643 Fixed tooltips displaying 'null'
