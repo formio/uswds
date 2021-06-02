@@ -57,7 +57,7 @@ span[role="link"] {
     display: flex;
     flex-direction: row-reverse;
   }
-} 
+}
 
 .component-btn-group .component-settings-button.usa-button {
   margin: 3px;
@@ -553,5 +553,13 @@ ul.usa-sidenav {
     box-shadow: 0 0 0 2px $color-light, inset 0 0 0 3px $color-lightest;
     -webkit-print-color-adjust: exact;
     text-indent: 0;
+  }
+}
+
+.usa-button {
+  &.formio-hidden {
+    background-color: initial;
+    border: none;
+    box-shadow: none;
   }
 }
