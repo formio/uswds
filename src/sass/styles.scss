@@ -128,6 +128,13 @@ span[role="link"] {
   }
 }
 
+.formio-dialog-content .usa-label {
+  padding-right: 30px;
+  label {
+    padding-right: 0;
+  }
+}
+
 .formio-dialog-buttons {
   display: flex;
   justify-content: flex-end;
