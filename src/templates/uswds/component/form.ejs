@@ -1,6 +1,10 @@
 <div
   id="{{ctx.id}}"
-  class="{{ctx.component.customClass}} formio-component-{{ctx.component.type}} formio-form-group {{!ctx.self.hasInput ? 'usa-prose ' : ''}}{{!ctx.visible ? 'formio-hidden' : ''}}"
+  class="{{ctx.component.type !== 'button' ? ctx.component.customClass : ''}}
+    formio-component-{{ctx.component.type}}
+    formio-form-group
+    {{!ctx.self.hasInput ? 'usa-prose' : ''}}
+    {{!ctx.visible ? 'formio-hidden' : ''}}"
   {% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %}
   ref="component"
 >
