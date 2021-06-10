@@ -8,7 +8,7 @@
       {% ctx.columns.forEach(function(col) { %}
         <th scope="col" class="{{col.validate && col.validate.required ? 'field-required' : ''}}">
           {{ col.hideLabel ? '' : ctx.t(col.label || col.title) }}
-          {% if (col.tooltip) { %} <i ref="tooltip" class="{{ctx.iconClass('question-sign')}} text-base"></i>{% } %}
+          {% if (col.tooltip) { %} <i ref="tooltip" data-tooltip="{{ctx.component.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-base"></i>{% } %}
         </th>
       {% }) %}
       {% if (ctx.hasExtraColumn) { %}

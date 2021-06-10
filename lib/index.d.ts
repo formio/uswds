@@ -167,13 +167,19 @@ declare const _default: {
                 form: string;
             };
             size: (size: any) => "" | "mobile-lg" | "tablet" | "desktop";
+            cssClasses: {
+                'formio-tab-panel-active': string;
+                'formio-tab-link-active': string;
+                'formio-tab-link-container-active': string;
+            };
         };
     };
     components: {
         select: typeof import("./components/Select").default;
         radio: import("formiojs").ClassWithEditForm<typeof import("formiojs/types/components/_classes/field/field").Field>;
         button: typeof import("./components/Button").default;
-        checkbox: typeof import("./components/Checkbox").default;
+        checkbox: typeof import("./components/Checkbox/Checkbox").default;
+        selectboxes: typeof import("./components/selectboxes/SelectBoxes").default;
     };
 };
 export default _default;

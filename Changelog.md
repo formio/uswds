@@ -4,6 +4,36 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.3.3-rc.1
+### Fixed
+ - FIO-3104: Fixes an issue where usa-button class makes buttons to be always visible event when they have formio-hidden class
+
+### Changed
+ - Upgrade dependencies.
+
+## 2.3.2
+### Fixed
+ - FIO-2643 Fixed tooltips displaying 'null'
+
+### Changed
+ - Upgrade formiojs@4.13.0-rc.26
+
+## 2.3.1
+### Fixed
+ - https://github.com/formio/uswds/pull/185
+
+## 2.3.0-rc.2
+### Changed
+ - Upgrade formiojs@4.13.0-rc.13
+
+## 2.3.0-rc.1
+### Changed
+ - https://github.com/formio/uswds/pull/176
+
+## 2.2.0
+### Changed
+ - No changes. Released 2.2.0-rc.1 as 2.2.0
+
 ## 2.2.0-rc.1
 ### Changed
  - Upgrade formiojs@4.13.0-rc.6

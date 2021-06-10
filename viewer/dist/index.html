@@ -147,6 +147,34 @@
             white-space: pre-wrap;
         }
 
+        .formio-component-panel, .formio-component-panel .card-body {
+            break-inside: auto !important;
+        }
+
+        .formio-component-panel .card {
+            display: block !important;
+        }
+
+        .formio-component-well.formio-form-group {
+            page-break-inside: auto;
+        }
+
+        .formio-component-tabs.formio-form-group {
+            page-break-inside: auto;
+        }
+
+        .formio-component-columns.formio-form-group {
+            page-break-inside: auto;
+        }
+
+        .formio-component.formio-component-datagrid {
+            page-break-inside: auto;
+        }
+
+        .formio-component.formio-component-datagrid tr {
+            page-break-inside: avoid;
+        }
+
         .fa-spin-custom, .glyphicon-spin {
             -webkit-animation: spin 1000ms infinite linear;
             animation: spin 1000ms infinite linear;
@@ -202,7 +230,7 @@
   if (!query.autoPageBreak || query.autoPageBreak !== 'none') {
     var style = document.createElement('style');
     style.setAttribute('style', 'text/css');
-    style.innerHTML = ".formio-component, .usa-form-group { page-break-inside:avoid; } " +
+    style.innerHTML = ".formio-component, .formio-form-group { page-break-inside:avoid; } " +
       ".formio-component-form { page-break-inside:auto; }";
     document.getElementsByTagName('head')[0].appendChild(style);
   }
