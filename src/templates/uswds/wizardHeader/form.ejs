@@ -12,6 +12,9 @@
         <span class="usa-step-indicator__total-steps">of {{ctx.panels.length}}</span>
       </span>
       <span class="usa-step-indicator__heading-text">{{ctx.panels[ctx.currentPage].title}}</span>
+      {% if (ctx.panels[ctx.currentPage].tooltip) { %}
+      <i ref="{{ctx.wizardKey}}-tooltip" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{ctx.panels[ctx.currentPage].tooltip}}"></i>
+      {% } %}
     </div>
   </div>
   <div class="usa-sr-only" ref="{{ ctx.wizardKey }}-progressbar" tabindex="-1">Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}</div>
