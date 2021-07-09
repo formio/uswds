@@ -19,17 +19,6 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./lib/components/Button.js":
-/*!**********************************!*\
-  !*** ./lib/components/Button.js ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar ButtonComponent = formiojs_1.Components.components.button;\nvar FieldComponent = formiojs_1.Components.components.field;\nvar USWDSButtonComponent = /** @class */ (function (_super) {\n    __extends(USWDSButtonComponent, _super);\n    function USWDSButtonComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSButtonComponent.prototype.getInputInfo = function () {\n        var info = this.inputInfo;\n        info.attr.class = 'usa-button';\n        switch (this.component.theme) {\n            case 'secondary':\n                info.attr.class += ' usa-button--secondary';\n                break;\n            case 'info':\n            case 'accent-cool':\n                info.attr.class += ' usa-button--accent-cool';\n                break;\n            case 'success':\n                info.attr.class += ' bg-green';\n                break;\n            case 'danger':\n                info.attr.class += ' bg-secondary-vivid';\n                break;\n            case 'warning':\n                info.attr.class += ' usa-button--accent-warm';\n                break;\n            case 'base':\n                info.attr.class += ' usa-button--base';\n                break;\n            case 'outline':\n                info.attr.class += ' usa-button--outline';\n                break;\n        }\n        if (this.component.customClass) {\n            info.attr.class += \" \" + this.component.customClass;\n        }\n        return info;\n    };\n    USWDSButtonComponent.prototype.render = function () {\n        if (this.viewOnly || this.options.hideButtons) {\n            this._visible = false;\n        }\n        return FieldComponent.prototype.render.call(this, this.renderTemplate('button', {\n            component: this.component,\n            input: this.getInputInfo(),\n        }));\n    };\n    return USWDSButtonComponent;\n}(ButtonComponent));\nexports.default = USWDSButtonComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/Button.js?");
-
-/***/ }),
-
 /***/ "./lib/components/Checkbox/Checkbox.form.js":
 /*!**************************************************!*\
   !*** ./lib/components/Checkbox/Checkbox.form.js ***!
@@ -85,6 +74,39 @@ eval("\nvar __extends = (this && this.__extends) || (function () {\n    var exte
 
 /***/ }),
 
+/***/ "./lib/components/button/Button.form.js":
+/*!**********************************************!*\
+  !*** ./lib/components/button/Button.form.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from) {\n    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)\n        to[j] = from[i];\n    return to;\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar baseEditForm = formiojs_1.Components.components.button.editForm;\nvar Button_edit_display_1 = __webpack_require__(/*! ./editForm/Button.edit.display */ \"./lib/components/button/editForm/Button.edit.display.js\");\nfunction default_1() {\n    var extend = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        extend[_i] = arguments[_i];\n    }\n    return baseEditForm.apply(void 0, __spreadArray([[\n            {\n                key: 'display',\n                components: Button_edit_display_1.default,\n            },\n        ]], extend));\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.form.js?");
+
+/***/ }),
+
+/***/ "./lib/components/button/Button.js":
+/*!*****************************************!*\
+  !*** ./lib/components/button/Button.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar Button_form_1 = __webpack_require__(/*! ./Button.form */ \"./lib/components/button/Button.form.js\");\nvar ButtonComponent = formiojs_1.Components.components.button;\nvar FieldComponent = formiojs_1.Components.components.field;\nvar USWDSButtonComponent = /** @class */ (function (_super) {\n    __extends(USWDSButtonComponent, _super);\n    function USWDSButtonComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSButtonComponent.prototype.getInputInfo = function () {\n        var info = this.inputInfo;\n        info.attr.class = 'usa-button';\n        switch (this.component.theme) {\n            case 'secondary':\n                info.attr.class += ' usa-button--secondary';\n                break;\n            case 'info':\n            case 'accent-cool':\n                info.attr.class += ' usa-button--accent-cool';\n                break;\n            case 'success':\n                info.attr.class += ' bg-green';\n                break;\n            case 'danger':\n                info.attr.class += ' bg-secondary-vivid';\n                break;\n            case 'warning':\n                info.attr.class += ' usa-button--accent-warm';\n                break;\n            case 'base':\n                info.attr.class += ' usa-button--base';\n                break;\n            case 'outline':\n                info.attr.class += ' usa-button--outline';\n                break;\n        }\n        if (this.component.customClass) {\n            info.attr.class += \" \" + this.component.customClass;\n        }\n        return info;\n    };\n    USWDSButtonComponent.prototype.render = function () {\n        if (this.viewOnly || this.options.hideButtons) {\n            this._visible = false;\n        }\n        return FieldComponent.prototype.render.call(this, this.renderTemplate('button', {\n            component: this.component,\n            input: this.getInputInfo(),\n        }));\n    };\n    USWDSButtonComponent.editForm = Button_form_1.default;\n    return USWDSButtonComponent;\n}(ButtonComponent));\nexports.default = USWDSButtonComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.js?");
+
+/***/ }),
+
+/***/ "./lib/components/button/editForm/Button.edit.display.js":
+/*!***************************************************************!*\
+  !*** ./lib/components/button/editForm/Button.edit.display.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.default = [\n    {\n        type: 'select',\n        key: 'theme',\n        overrideEditForm: true,\n        label: 'Theme',\n        input: true,\n        tooltip: 'The color theme of this button.',\n        dataSrc: 'values',\n        weight: 140,\n        data: {\n            values: [\n                { label: 'Default', value: 'primary' },\n                { label: 'Secondary', value: 'secondary' },\n                { label: 'Accent Cool', value: 'accent-cool' },\n                { label: 'Base', value: 'base' },\n                { label: 'Outline', value: 'outline' },\n            ],\n        },\n    },\n];\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/editForm/Button.edit.display.js?");
+
+/***/ }),
+
 /***/ "./lib/components/index.js":
 /*!*********************************!*\
   !*** ./lib/components/index.js ***!
@@ -92,7 +114,7 @@ eval("\nvar __extends = (this && this.__extends) || (function () {\n    var exte
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar Select_1 = __webpack_require__(/*! ./Select */ \"./lib/components/Select.js\");\nvar Radio_1 = __webpack_require__(/*! ./Radio/Radio */ \"./lib/components/Radio/Radio.js\");\nvar Button_1 = __webpack_require__(/*! ./Button */ \"./lib/components/Button.js\");\nvar Checkbox_1 = __webpack_require__(/*! ./Checkbox/Checkbox */ \"./lib/components/Checkbox/Checkbox.js\");\nvar SelectBoxes_1 = __webpack_require__(/*! ./selectboxes/SelectBoxes */ \"./lib/components/selectboxes/SelectBoxes.js\");\nexports.default = {\n    select: Select_1.default,\n    radio: Radio_1.default,\n    button: Button_1.default,\n    checkbox: Checkbox_1.default,\n    selectboxes: SelectBoxes_1.default\n};\n\n\n//# sourceURL=webpack://uswds/./lib/components/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar Select_1 = __webpack_require__(/*! ./Select */ \"./lib/components/Select.js\");\nvar Radio_1 = __webpack_require__(/*! ./Radio/Radio */ \"./lib/components/Radio/Radio.js\");\nvar Button_1 = __webpack_require__(/*! ./button/Button */ \"./lib/components/button/Button.js\");\nvar Checkbox_1 = __webpack_require__(/*! ./Checkbox/Checkbox */ \"./lib/components/Checkbox/Checkbox.js\");\nvar SelectBoxes_1 = __webpack_require__(/*! ./selectboxes/SelectBoxes */ \"./lib/components/selectboxes/SelectBoxes.js\");\nexports.default = {\n    select: Select_1.default,\n    radio: Radio_1.default,\n    button: Button_1.default,\n    checkbox: Checkbox_1.default,\n    selectboxes: SelectBoxes_1.default\n};\n\n\n//# sourceURL=webpack://uswds/./lib/components/index.js?");
 
 /***/ }),
 
@@ -429,7 +451,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
   \***************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.default=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div\\n  id=\"' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'\"\\n  class=\"' +\n((__t = (ctx.component.customClass)) == null ? '' : __t) +\n' formio-component-' +\n((__t = (ctx.component.type)) == null ? '' : __t) +\n' formio-form-group ' +\n((__t = (!ctx.self.hasInput ? 'usa-prose ' : '')) == null ? '' : __t) +\n'' +\n((__t = (!ctx.visible ? 'formio-hidden' : '')) == null ? '' : __t) +\n'\"\\n  ';\n if (ctx.styles) { ;\n__p += ' styles=\"' +\n((__t = (ctx.styles)) == null ? '' : __t) +\n'\"';\n } ;\n__p += '\\n  ref=\"component\"\\n>\\n  ';\n if (ctx.visible) { ;\n__p += '\\n  ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n  ';\n } ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/component/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports.default=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div\\n  id=\"' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'\"\\n  class=\"' +\n((__t = (ctx.component.type !== 'button' ? ctx.component.customClass : '')) == null ? '' : __t) +\n'\\n    formio-component-' +\n((__t = (ctx.component.type)) == null ? '' : __t) +\n'\\n    formio-form-group\\n    ' +\n((__t = (!ctx.self.hasInput ? 'usa-prose' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = (!ctx.visible ? 'formio-hidden' : '')) == null ? '' : __t) +\n'\"\\n  ';\n if (ctx.styles) { ;\n__p += ' styles=\"' +\n((__t = (ctx.styles)) == null ? '' : __t) +\n'\"';\n } ;\n__p += '\\n  ref=\"component\"\\n>\\n  ';\n if (ctx.visible) { ;\n__p += '\\n  ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n  ';\n } ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/component/form.ejs.js?");
 
 /***/ }),
 

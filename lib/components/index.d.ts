@@ -1,5 +1,5 @@
 import USWDSSelectComponent from './Select';
-import USWDSButtonComponent from './Button';
+import USWDSButtonComponent from './button/Button';
 import USWDSCheckboxComponent from './Checkbox/Checkbox';
 import USWDSSelectBoxesComponent from './selectboxes/SelectBoxes';
 declare const _default: {
