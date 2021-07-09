@@ -1,6 +1,6 @@
 import USWDSSelectComponent from './Select';
 import USWDSRadioComponent from './Radio/Radio';
-import USWDSButtonComponent from './Button';
+import USWDSButtonComponent from './button/Button';
 import USWDSCheckboxComponent from './Checkbox/Checkbox';
 import USWDSSelectBoxesComponent from './selectboxes/SelectBoxes';
 
