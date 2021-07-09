@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const insert = require('gulp-insert');
 const rename = require('gulp-rename');
 const template = require('gulp-template');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 
 // Clean lib folder.
