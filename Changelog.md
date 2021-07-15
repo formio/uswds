@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.3.5
+### Fixed
+ - FIO-1627: Added tooltip to wizard header
+
 ## 2.3.4
 ### Fixed
  - FIO-3210 Fixed button component to have correct options and builder and to correctly display custom classes
