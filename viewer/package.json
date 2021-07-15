@@ -1,6 +1,6 @@
 {
   "name": "uswds-viewer",
-  "version": "2.1.4",
+  "version": "2.1.5-rc.1",
   "description": "A Form.io form viewer application for US Web Design Standards",
   "main": "index.js",
   "scripts": {
@@ -20,16 +20,16 @@
   },
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
-    "@formio/premium": "github:formio/premium#v1.16.3",
-    "@formio/uswds": "github:formio/uswds#v2.3.4",
-    "@formio/vpat": "github:formio/vpat#v2.3.3",
+    "@formio/premium": "github:formio/premium#v1.16.4-rc.1",
+    "@formio/uswds": "github:formio/uswds#v2.3.5",
+    "@formio/vpat": "github:formio/vpat#v2.3.4",
     "autocompleter": "^6.1.0",
     "core-js": "^3.15.2",
     "eventemitter2": "^6.4.4",
     "flatpickr": "4.6.6",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.13.3",
-    "i18next": "^20.3.2",
+    "formiojs": "^4.13.5-rc.1",
+    "i18next": "^20.3.3",
     "seamless": "^1.4.1",
     "uswds": "^2.12.0"
   },
@@ -53,7 +53,7 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.2",
     "vinyl-source-stream": "^2.0.0",
-    "webpack": "^5.42.1",
+    "webpack": "^5.44.0",
     "webpack-auto-inject-version": "^1.2.2",
     "webpack-cli": "^4.7.2"
   }
