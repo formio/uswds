@@ -1,5 +1,15 @@
 export default {
   'formio-tab-panel-active': 'usa-current',
   'formio-tab-link-active': 'usa-current',
-  'formio-tab-link-container-active': 'usa-current'
+  'formio-tab-link-container-active': 'usa-current',
+  'sr-only': 'usa-sr-only',
+  'formio-form-error': 'usa-form-group--error',
+  'formio-label-error': 'usa-label--error',
+  'formio-input-success': 'usa-input--success',
+  'formio-input-error': 'usa-input--error',
+  'formio-modal-save': 'usa-error',
+  'formio-alert-danger': 'usa-alert usa-alert--error usa-alert--no-icon',
+  'formio-alert-success': 'usa-alert usa-alert--success usa-alert--no-icon',
+  'formio-modal-cancel-button': 'usa-button usa-button--secondary',
+  'formio-modal-confirm-button': 'usa-button',
 };
