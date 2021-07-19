@@ -13,7 +13,7 @@
       </span>
       <span class="usa-step-indicator__heading-text">{{ctx.panels[ctx.currentPage].title}}</span>
       {% if (ctx.panels[ctx.currentPage].tooltip) { %}
-      <i ref="{{ctx.wizardKey}}-tooltip" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{ctx.panels[ctx.currentPage].tooltip}}"></i>
+      <i ref="{{ctx.wizardKey}}-tooltip" class="{{ctx.iconClass('question-sign')}} text-muted" data-tooltip="{{ctx.panels[ctx.currentPage].tooltip}}" tabindex="0"></i>
       {% } %}
     </div>
   </div>
