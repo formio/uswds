@@ -1,6 +1,6 @@
 {
   "name": "@formio/uswds",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "description": "US Web Design System templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "@types/chai": "^4.2.21",
     "@types/ejs": "^3.0.7",
     "@types/mocha": "^8.2.3",
-    "@types/node": "^16.3.2",
+    "@types/node": "^16.3.3",
     "@types/sinon": "^10.0.2",
     "chai": "^4.3.4",
     "del": "^6.0.0",
