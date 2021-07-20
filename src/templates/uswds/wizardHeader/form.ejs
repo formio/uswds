@@ -4,6 +4,7 @@
     <li data-index="{{index}}" class="usa-step-indicator__segment {{ctx.currentPage === index ? 'usa-step-indicator__segment--current' : ''}} {{ctx.currentPage > index ? 'usa-step-indicator__segment--complete' : ''}}"></li>
     {% }) %}
   </ol>
+  <div class="usa-sr-only" ref="{{ ctx.wizardKey }}-progressbar" tabindex="-1">Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}</div>
   <div class="usa-step-indicator__header">
     <div class="usa-step-indicator__heading">
       <span class="usa-sr-only">Progress bar, step</span>
@@ -17,5 +18,4 @@
       {% } %}
     </div>
   </div>
-  <div class="usa-sr-only" ref="{{ ctx.wizardKey }}-progressbar" tabindex="-1">Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}</div>
 </div>
