@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.3.7
+### Fixed
+ - FIO-1627 Changed focus order in wizard header for tooltip to be included into intuitive flow
+
 ## 2.3.6
 ### Fixed
  - FIO-1627 Fixed wizard panel tooltip not being focusable
