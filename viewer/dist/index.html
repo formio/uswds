@@ -32,7 +32,6 @@
     </script>
     <script id="loader" type="text/template"><div class="loader-wrapper"><div class="loader text-center"></div></div></script>
     <script src="lib/formiojs/formio.form.min.js"></script>
-    <script src="lib/seamless/seamless.child.min.js"></script>
     <script type="text/javascript">
       var query = {};
       var parts = [];
@@ -240,7 +239,6 @@
     <div id="formio"></div>
 </div>
 <script type="text/javascript">
-  window.seamless.connect({container: 'div.main', allowStyleInjection: true});
   var mainElem = document.getElementById('main');
   var preFormElem = document.getElementById('preform');
   var loader = document.getElementById('loader');
