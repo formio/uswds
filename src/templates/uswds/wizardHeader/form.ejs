@@ -1,4 +1,4 @@
-<div class="usa-step-indicator usa-step-indicator--no-labels" aria-label="Wizard" id="{{ ctx.wizardKey }}-header">
+<div class="usa-step-indicator usa-step-indicator--no-labels" ref="{{ ctx.wizardKey }}-header" aria-label="Wizard" id="{{ ctx.wizardKey }}-header">
   <ol class="usa-step-indicator__segments" tabindex="0" aria-label="Progress bar, Step {{ctx.currentPage + 1}} of {{ctx.panels.length}}, {{ctx.panels[ctx.currentPage].title}}">
     {% ctx.panels.forEach(function(panel, index) { %}
     <li data-index="{{index}}" class="usa-step-indicator__segment {{ctx.currentPage === index ? 'usa-step-indicator__segment--current' : ''}} {{ctx.currentPage > index ? 'usa-step-indicator__segment--complete' : ''}}"></li>
