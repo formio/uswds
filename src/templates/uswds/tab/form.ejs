@@ -1,7 +1,7 @@
 <div class="formio-usa-card">
-  <ul role="navigation" class="usa-sidenav">
+  <ul role="tablist" class="usa-sidenav">
     {% ctx.component.components.forEach(function(tab, index) { %}
-    <li class="usa-sidenav__item {{ctx.currentTab === index ? 'usa-current' : ''}} border-top-0" role="presentation" ref="{{ctx.tabLikey}}">
+    <li role="tab" class="usa-sidenav__item {{ctx.currentTab === index ? 'usa-current' : ''}} border-top-0" ref="{{ctx.tabLikey}}">
       <a href="#{{tab.key}}" ref="{{ctx.tabLinkKey}}">{{ctx.t(tab.label)}}</a>
     </li>
     {% }) %}

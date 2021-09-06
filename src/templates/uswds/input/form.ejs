@@ -44,6 +44,13 @@
 {% if (ctx.prefix || ctx.suffix) { %}
 </div>
 {% } %}
-{% if (ctx.component.showCharCount) { %}
-<span aria-live="polite" class="text-base float-right" ref="charcount"></span>
+{% if (ctx.component.showCharCount || ctx.component.showWordCount) { %}
+<div class="{{ctx.component.description ? 'pull-right' : 'text-right'}}">
+  {% if (ctx.component.showCharCount) { %}
+  <span aria-live="polite" class="text-muted" ref="charcount"></span>
+  {% } %}
+  {% if (ctx.component.showWordCount) { %}
+  <span aria-live="polite" class="text-muted" ref="wordcount"></span>
+  {% } %}
+</div>
 {% } %}

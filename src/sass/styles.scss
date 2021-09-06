@@ -106,9 +106,11 @@ span[role="link"] {
 }
 
 .formio-dialog.formio-dialog-theme-default {
-  & .formio-dialog-content {
-    padding: 1.5em 1em 1em !important;
+  & .component-edit-container {
+    padding: 0.6em;
+  }
 
+  & .formio-dialog-content {
     & .formio-dialog-close {
       right: 4px;
       top: 4px;
@@ -126,7 +128,16 @@ span[role="link"] {
   }
 }
 
+.formio-dialog-content .usa-label {
+  padding-right: 30px;
+  label {
+    padding-right: 0;
+  }
+}
+
 .formio-dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
   margin: 0 -0.5rem;
 }
 
@@ -201,7 +212,7 @@ span[role="link"] {
   & .usa-input, .usa-textarea {
     position: relative;
     z-index: 1;
-    width: auto;
+    width: 1%;
     min-width: 50px;
     flex-grow: 1;
     margin-top: 0;
@@ -294,11 +305,11 @@ span[role="link"] {
   }
 }
 
-.tooltip__trigger {
+.formio-tooltip__trigger {
   cursor: pointer;
 }
 
-.tooltip__body {
+.formio-tooltip__body {
   background-color: $color-tooltip;
   border-radius: 0.25rem;
   bottom: 0;
@@ -313,7 +324,7 @@ span[role="link"] {
   white-space: pre;
   z-index: 1000;
 
-  &.is-set {
+  &.formio-tooltip--is-set {
     display: block;
   }
 
@@ -340,7 +351,7 @@ span[role="link"] {
   }
 }
 
-.tooltip__wrapper {
+.formio-tooltip__wrapper {
   position: relative;
   & > span {
     font-weight: normal;
