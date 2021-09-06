@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.4.0-rc.1
+### Changed
+ - Upgrade formiojs@4.14.0-rc.23
+
+### Fixed
+ - FIO-3656 Fixed issue when columns were not auto collapsing in some cases
+ - FIO-3519 Made 'scroll on top' option in wizard to scroll to the top of progressbar
+ - Changes for 2.4.0 uswds release
+
 ## 2.3.8
 ### Fixed
  - FIO-3598 Rolled back USWDS version to fix issues with radio and checkboxes
