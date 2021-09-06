@@ -2,8 +2,7 @@
   id="{{ctx.id}}"
   class="{{ctx.component.type !== 'button' ? ctx.component.customClass : ''}}
     formio-component-{{ctx.component.type}}
-    formio-form-group
-    {{!ctx.self.hasInput ? 'usa-prose' : ''}}
+    {{!ctx.self.hasInput ? 'usa-prose' : 'formio-form-group'}}
     {{!ctx.visible ? 'formio-hidden' : ''}}"
   {% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %}
   ref="component"
