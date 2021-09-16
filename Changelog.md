@@ -11,7 +11,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
  - FIO-3656 Fixed issue when columns were not auto collapsing in some cases
  - FIO-3519 Made 'scroll on top' option in wizard to scroll to the top of progressbar
- - Changes for 2.4.0 uswds release
+ - Changes for 2.4.0 uswds release:
+ - FIO-3208 Fixed issue when description was displaying under charcount
+ - FIO-3206 Fixed styles for labels
+ - FIO-2648 Adjusted uswds styles to work with vpat
+ - FIO-2546 Fixed focus outline of builder modal buttons, which were not fully visible for Content component
+ - FIO-2544 Fixed issue when suffixes and prefixes were displayed wrong on a big scale
+ - FIO-2535 Fixed modal buttons that were displaying outside of modal window in FMG
 
 ## 2.3.8
 ### Fixed
