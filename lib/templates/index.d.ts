@@ -1,5 +1,6 @@
 declare const _default: {
     uswds: {
+        transform(type: any, text: any): any;
         address: {
             form: string;
         };
@@ -179,6 +180,7 @@ declare const _default: {
             'formio-alert-success': string;
             'formio-modal-cancel-button': string;
             'formio-modal-confirm-button': string;
+            'form-control ui fluid selection dropdown': string;
         };
     };
 };

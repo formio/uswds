@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.4.0-rc.2
+### Fixed
+ - FIO-3758: Duplication of radio ids inside nested forms
+ - FIO-3782 Fixed outline for choicesjs select in PDF
+
 ## 2.4.0-rc.1
 ### Changed
  - Upgrade formiojs@4.14.0-rc.23

@@ -1,4 +1,5 @@
 declare const _default: {
+    transform(type: any, text: any): any;
     address: {
         form: string;
     };
@@ -178,6 +179,7 @@ declare const _default: {
         'formio-alert-success': string;
         'formio-modal-cancel-button': string;
         'formio-modal-confirm-button': string;
+        'form-control ui fluid selection dropdown': string;
     };
 };
 export default _default;
