@@ -111,6 +111,10 @@ span[role=link]:hover {
   display: initial;
 }
 
+.formio-hidden {
+  margin: 0;
+}
+
 .formio-panel-content.usa-accordion__content {
   overflow: visible;
 }
