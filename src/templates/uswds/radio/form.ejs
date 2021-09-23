@@ -32,10 +32,10 @@
       {% if (ctx.value && (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value]))) { %}
       checked=true
       {% } %}
-      id="{{ctx.instance.root?.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}"
+      id="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}"
       aria-required="{{ctx.input.component.validate.required}}"
     >
-    <label class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__label" : "usa-radio__label"}}" for="{{ctx.instance.root?.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}">{{ctx.t(item.label)}}</label>
+    <label class="{{ctx.component.type === "selectboxes" ? "usa-checkbox__label" : "usa-radio__label"}}" for="{{ctx.instance.root && ctx.instance.root.id}}-{{ctx.id}}-{{ctx.row}}-{{item.value}}">{{ctx.t(item.label)}}</label>
   </div>
   {% }) %}
 
