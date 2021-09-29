@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.3.9
+### Changed
+ - No changes.
+
 ## 2.3.9-rc.2
 ### Fixed
  - FIO-3656 Fixed issue when columns were not auto collapsing in some cases
