@@ -17,7 +17,9 @@ import container from './container';
 import datagrid from './datagrid';
 import day from './day';
 import dialog from './dialog';
+import dynamicWizard from './dynamicWizard';
 import editgrid from './editgrid';
+import editgridTable from './editgridTable';
 import errorsList from './errorsList';
 import field from './field';
 import fieldset from './fieldset';
@@ -72,7 +74,9 @@ export default {
   datagrid,
   day,
   dialog,
+  dynamicWizard,
   editgrid,
+  editgridTable,
   errorsList,
   field,
   fieldset,
