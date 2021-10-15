@@ -15,6 +15,7 @@ Or if you would like to embed directly within your website, you can use the foll
 ```html
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/css/uswds.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.form.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/uswds/uswds.min.css">
@@ -40,6 +41,7 @@ In addition to being a Form Renderer, you can also use this library to embed the
 ```html
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/css/uswds.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/uswds/uswds.min.css">
