@@ -32,6 +32,8 @@ Or if you would like to embed directly within your website, you can use the foll
 </html>
 ```
 
+You can try out this by going to the following JSFiddle - https://jsfiddle.net/travistidwell/yrwp9m24/1/
+
 ## Form Builder
 In addition to being a Form Renderer, you can also use this library to embed the Form.io Form Builder within your own application using the following.
 
