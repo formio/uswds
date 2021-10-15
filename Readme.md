@@ -15,12 +15,12 @@ Or if you would like to embed directly within your website, you can use the foll
 ```html
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.6.0/css/uswds.min.css">
-        <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
-        <link rel="stylesheet" href="dist/uswds.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.6.0/js/uswds.min.js"></script>
-        <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
-        <script src="dist/uswds.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/css/uswds.min.css">
+        <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.form.min.css">
+        <link rel="stylesheet" href="https://cdn.form.io/uswds/uswds.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/js/uswds.min.js"></script>
+        <script src="https://cdn.form.io/formiojs/formio.form.min.js"></script>
+        <script src="https://cdn.form.io/uswds/uswds.min.js"></script>
     </head>
     <body>
         <div id="formio"></div>
@@ -38,12 +38,12 @@ In addition to being a Form Renderer, you can also use this library to embed the
 ```html
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.6.0/css/uswds.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/css/uswds.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
-        <link rel="stylesheet" href="dist/uswds.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.6.0/js/uswds.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.form.io/uswds/uswds.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/2.11.2/js/uswds.min.js"></script>
         <script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
-        <script src="dist/uswds.js"></script>
+        <script src="https://cdn.form.io/uswds/uswds.min.js"></script>
     </head>
     <body>
         <div id="builder"></div>
