@@ -388,11 +388,6 @@ ul.usa-sidenav {
   background-color: inherit;
 }
 
-.usa-checkbox .usa-checkbox__input--tile + .usa-checkbox__label {
-  padding-left: 0.5rem;
-  text-indent: 0;
-}
-
 .usa-checkbox__input:disabled + .usa-checkbox__label {
   color: #71767a !important;
 }
@@ -422,6 +417,10 @@ ul.usa-sidenav {
   box-shadow: 0 0 0 2px #c9c9c9, inset 0 0 0 3px #fff;
 }
 
+.usa-radio, .usa-checkbox {
+  background: none !important;
+}
+
 .usa-step-indicator {
   margin-top: 1rem;
 }
@@ -432,6 +431,10 @@ ul.usa-sidenav {
 }
 .usa-step-indicator .usa-step-indicator__segments .usa-step-indicator__segment {
   max-width: none;
+}
+
+div[ref=modalContents] .usa-form-group--error {
+  margin-top: 0;
 }
 
 @media print {
