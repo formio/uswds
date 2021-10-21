@@ -60,15 +60,15 @@
 {% } %}
 {% if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { %}
   {% if (ctx.self.useWebViewCamera) { %}
-    <div class="border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2">
+    <div class="fileSelector border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2">
       <button class="usa-button usa-button--accent-cool" ref="galleryButton"><i class="fa fa-book"></i> {{ctx.t('Gallery')}}</button>
       <button class="usa-button usa-button--accent-cool" ref="cameraButton"><i class="fa fa-camera"></i> {{ctx.t('Camera')}}</button>
     </div>
   {% } else if (!ctx.self.cameraMode) { %}
-    <div class="border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2" ref="fileDrop">
+    <div class="fileSelector border-dashed border-width-1px text-center padding-2 margin-top-2 margin-bottom-2" ref="fileDrop">
       <i class="{{ctx.iconClass('cloud-upload')}}"></i> {{ctx.t('Drop files to attach,')}}
         {% if (ctx.self.imageUpload) { %}
-          <a href="#" ref="toggleCameraMode"><i class="fa fa-camera"></i> {{ctx.t('Use Camera,')}}</a>
+          <a href="#" ref="toggleCameraMode"><i class="fa fa-camera"></i>{{ctx.t('use camera,')}}</a>
         {% } %}
         {{ctx.t('or')}}
         <a href="#" ref="fileBrowse" class="browse">
@@ -77,7 +77,7 @@
     </div>
   {% } else { %}
     <div>
-      <video class="video" autoplay="true" ref="videoPlayer"></video>
+      <video class="video" autoplay="true" ref="videoPlayer" tabindex="-1"></video>
     </div>
     <button class="usa-button usa-button--accent-cool" ref="takePictureButton"><i class="fa fa-camera"></i> {{ctx.t('Take Picture')}}</button>
     <button class="usa-button usa-button--accent-cool" ref="toggleCameraMode">{{ctx.t('Switch to file upload')}}</button>
