@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.4.1-rc.1
+### Fixed
+ - FIO-4082, FIO-2984, FIO-4098: Fixed styles for checkbox, file, error indication
+
 ## 2.4.0
 ### Changed
  - Official Release
