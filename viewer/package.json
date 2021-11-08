@@ -21,27 +21,27 @@
   "homepage": "https://github.com/formio/formio-viewer#readme",
   "dependencies": {
     "@formio/premium": "github:formio/premium#v1.16.4",
-    "@formio/uswds": "github:formio/uswds#v2.3.8",
-    "@formio/vpat": "github:formio/vpat#v2.3.4",
+    "@formio/uswds": "github:formio/uswds#v2.4.1",
+    "@formio/vpat": "github:formio/vpat#v2.4.1",
     "autocompleter": "^6.1.2",
-    "core-js": "^3.16.0",
-    "eventemitter2": "^6.4.4",
+    "core-js": "^3.19.1",
+    "eventemitter2": "^6.4.5",
     "flatpickr": "4.6.6",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.13.5",
+    "formiojs": "^4.13.9",
     "i18next": "^20.3.5",
     "seamless": "^1.4.1",
-    "uswds": "2.11.2"
+    "uswds": "^2.12.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/plugin-proposal-export-default-from": "^7.14.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-export-default-from": "^7.16.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.16.0",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-env": "^7.16.0",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -53,8 +53,8 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.2",
     "vinyl-source-stream": "^2.0.0",
-    "webpack": "^5.49.0",
+    "webpack": "^5.62.1",
     "webpack-auto-inject-version": "^1.2.2",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.9.1"
   }
 }

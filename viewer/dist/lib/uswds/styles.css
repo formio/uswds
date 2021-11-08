@@ -79,8 +79,8 @@ span[role=link]:hover {
   margin: 0.5em 0 0.3em;
 }
 
-.formio-dialog.formio-dialog-theme-default .formio-dialog-content {
-  padding: 1.5em 1em 1em !important;
+.formio-dialog.formio-dialog-theme-default .component-edit-container {
+  padding: 0.6em;
 }
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content .formio-dialog-close {
   right: 4px;
@@ -95,7 +95,16 @@ span[role=link]:hover {
   color: #6b6b6b;
 }
 
+.formio-dialog-content .usa-label {
+  padding-right: 30px;
+}
+.formio-dialog-content .usa-label label {
+  padding-right: 0;
+}
+
 .formio-dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
   margin: 0 -0.5rem;
 }
 
@@ -109,6 +118,10 @@ span[role=link]:hover {
 }
 .formio-form-group > .usa-label > label {
   display: initial;
+}
+
+.formio-hidden {
+  margin: 0;
 }
 
 .formio-panel-content.usa-accordion__content {
@@ -172,7 +185,7 @@ span[role=link]:hover {
 .input-group .usa-input, .input-group .usa-textarea {
   position: relative;
   z-index: 1;
-  width: auto;
+  width: 1%;
   min-width: 50px;
   flex-grow: 1;
   margin-top: 0;
@@ -263,11 +276,11 @@ span[role=link]:hover {
   transition: width 0.6s ease;
 }
 
-.tooltip__trigger {
+.formio-tooltip__trigger {
   cursor: pointer;
 }
 
-.tooltip__body {
+.formio-tooltip__body {
   background-color: #1b1b1b;
   border-radius: 0.25rem;
   bottom: 0;
@@ -282,32 +295,32 @@ span[role=link]:hover {
   white-space: pre;
   z-index: 1000;
 }
-.tooltip__body.is-set {
+.formio-tooltip__body.formio-tooltip--is-set {
   display: block;
 }
-.tooltip__body--whitespace {
+.formio-tooltip__body--whitespace {
   white-space: normal;
   width: 250px;
 }
-.tooltip__body--right {
+.formio-tooltip__body--right {
   top: auto;
   transform: translateX(0);
 }
-.tooltip__body--left {
+.formio-tooltip__body--left {
   top: auto;
   left: 0;
   right: auto;
   transform: translateX(0);
 }
-.tooltip__body--bottom {
+.formio-tooltip__body--bottom {
   bottom: auto;
   top: 0;
 }
 
-.tooltip__wrapper {
+.formio-tooltip__wrapper {
   position: relative;
 }
-.tooltip__wrapper > span {
+.formio-tooltip__wrapper > span {
   font-weight: normal;
 }
 
@@ -375,11 +388,6 @@ ul.usa-sidenav {
   background-color: inherit;
 }
 
-.usa-checkbox .usa-checkbox__input--tile + .usa-checkbox__label {
-  padding-left: 0.5rem;
-  text-indent: 0;
-}
-
 .usa-checkbox__input:disabled + .usa-checkbox__label {
   color: #71767a !important;
 }
@@ -409,6 +417,10 @@ ul.usa-sidenav {
   box-shadow: 0 0 0 2px #c9c9c9, inset 0 0 0 3px #fff;
 }
 
+.usa-radio, .usa-checkbox {
+  background: none !important;
+}
+
 .usa-step-indicator {
   margin-top: 1rem;
 }
@@ -419,6 +431,10 @@ ul.usa-sidenav {
 }
 .usa-step-indicator .usa-step-indicator__segments .usa-step-indicator__segment {
   max-width: none;
+}
+
+div[ref=modalContents] .usa-form-group--error {
+  margin-top: 0;
 }
 
 @media print {
