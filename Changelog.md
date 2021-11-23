@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 2.4.2-rc.1]
+### Fixed
+ - FIO-4081 Fixed incorrect file pattern message
+ - FIO-3990 Fixed issue with checkboxes inside of Fieldset in DataGrid
+
 ## 2.4.1
 ### Changed
  - Official Release
