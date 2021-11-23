@@ -5,7 +5,7 @@
 
 <div class="usa-checkbox">
   <{{ctx.input.type}}
-    id="{{ctx.instance.id}}-{{ctx.component.key}}"
+    id="{{ctx.id}}-{{ctx.input.attr.name}}"
     ref="input"
     class="usa-checkbox__input {{ctx.component.tileView ? 'usa-checkbox__input--tile' : ''}}"
     {% for (var attr in ctx.input.attr) { %}
@@ -20,7 +20,7 @@
   <label
     ref="label"
     class="{{ctx.input.labelClass}} usa-checkbox__label"
-    for="{{ctx.instance.id}}-{{ctx.component.key}}"
+    for="{{ctx.id}}-{{ctx.input.attr.name}}"
   >
     {{ctx.input.label}}
     {{ctx.input.content}}
