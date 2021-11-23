@@ -1,7 +1,6 @@
 <span tabindex="-1" class="usa-sr-only" id="invisible-{{ctx.instance.id}}-{{ctx.component.key}}"></span>
 {% if (!ctx.self.imageUpload) { %}
-  <div class='filePattern'>{{ctx.t('Allowed file types:')}} {{ctx.allowedFileTypes}}</div>
-
+  <div class='filePattern'>{{(!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern}}</div>
   <ul class="usa-list--unstyled">
     <li class="position-relative display-block padding-105 border-1px">
       <div class="grid-row">
@@ -72,7 +71,10 @@
         {% } %}
         {{ctx.t('or')}}
         <a href="#" ref="fileBrowse" class="browse">
-          <span>{{ctx.t('browse')}}</span><span class="usa-sr-only">{{ctx.t('Browse to attach file for' + ctx.component.label + '. ' + ctx.t('Allowed file types:') + ctx.allowedFileTypes)}}</span>
+          <span>{{ctx.t('browse')}}</span>
+          <span class="usa-sr-only">
+            {{(!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern}}
+          </span>
         </a>
     </div>
   {% } else { %}
