@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var del = require('del');
+var inlineSource = require('gulp-inline-source');
 gulp.task('clean', () => del(['dist/*']));
 gulp.task('html', () => gulp.src('./src/index.html').pipe(gulp.dest('dist')));
 gulp.task('assets', () => gulp.src('./src/assets/**/*').pipe(gulp.dest('dist/assets')));
@@ -23,6 +24,11 @@ gulp.task('build', gulp.series('clean', gulp.parallel(
   'uswds-img',
   'uswds-fonts',
 )));
+gulp.task('inlinesource', function () {
+  return gulp.src('./dist/*.html')
+      .pipe(inlineSource())
+      .pipe(gulp.dest('./dist'));
+});
 
 const s3 = require("gulp-s3");
 gulp.task('deploy', function () {
