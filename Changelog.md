@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 2.4.3-rc.1]
+### Changed
+ - FIO-4314: Fixes viewer not having script and style resources
+
 ## 2.4.2
 ### Changed
  - Official Release
