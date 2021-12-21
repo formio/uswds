@@ -7,11 +7,9 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - attach_workspace:
-          at:
-            viewer
       - run:
           name: Install npm modules
+          root: viewer
           command: npm ci
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
@@ -19,9 +17,10 @@ jobs:
             - node_modules
       - run:
           name: Build
+          root: viewer
           command: npm run build
       - persist_to_workspace:
-          root: dist
+          root: viewer/dist
           paths:
             - index.html
             - assets/*
@@ -38,14 +37,13 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - attach_workspace:
-          at:
-            viewer
       - run: 
           name: Docker Build
+          root: viewer
           command: docker build --no-cache -t $IMAGE_PATH .
       - run:
           name: deploy
+          root: viewer
           command: |
             if [[ $CIRCLE_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+ ]]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
