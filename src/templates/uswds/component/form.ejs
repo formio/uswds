@@ -4,7 +4,7 @@
     formio-component-{{ctx.component.type}}
     {{!ctx.self.hasInput ? 'usa-prose' : 'formio-form-group'}}
     {{!ctx.visible ? 'formio-hidden' : ''}}"
-  {% if (ctx.styles) { %} styles="{{ctx.styles}}"{% } %}
+  {% if (ctx.styles) { %} style="{{ctx.styles}}"{% } %}
   ref="component"
 >
   {% if (ctx.visible) { %}
