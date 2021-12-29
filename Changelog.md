@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 2.4.4-rc.1]
+### Fixed
+ - Styles declaration on the component template.
+
 ## 2.4.3
 ### Changed
  - Official Release
