@@ -1,0 +1,71 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Authenticate with PKG registry
+          command: echo "//pkg.form.io/:_authToken=$PKG_TOKEN" > ~/.npmrc
+      - run:
+          name: Install npm modules
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - index.html
+            - assets/*
+            - lib/*
+
+  docker:
+    environment:
+      IMAGE_PATH: formio/uswds-viewer
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - setup_remote_docker:
+          version: 19.03.13
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: 
+          name: Docker Build
+          command: docker build --no-cache -t $IMAGE_PATH .
+      - run:
+          name: deploy
+          command: |
+            if [[ $CIRCLE_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+              docker login -u $DOCKER_USER -p $DOCKER_PASS
+              docker tag $IMAGE_PATH $IMAGE_PATH:$CIRCLE_TAG
+              docker push $IMAGE_PATH:$CIRCLE_TAG
+              if [[ $CIRCLE_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                docker push $IMAGE_PATH
+              fi
+            fi
+
+workflows:
+  version: 2.1
+  do-build:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - docker:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+.*/
+            branches:
+              ignore: /.*/
