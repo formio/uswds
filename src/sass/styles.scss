@@ -105,6 +105,17 @@ span[role="link"] {
   margin: 0.5em 0 0.3em;
 }
 
+.formio-component-survey .usa-radio {
+  & .usa-radio__label {
+    height: 20px;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+  }
+}
+
 .formio-dialog.formio-dialog-theme-default {
   & .component-edit-container {
     padding: 0.6em;
