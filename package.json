@@ -37,6 +37,7 @@
     "@types/node": "^16.10.2",
     "@types/sinon": "^10.0.4",
     "chai": "^4.3.4",
+    "copy-props": "^3.0.1",
     "del": "^6.0.0",
     "formiojs": "^4.14.0-rc.30",
     "gulp": "^4.0.2",
