@@ -34,16 +34,7 @@
       <label for="{{ctx.component.key}}-month"
         class="usa-label {% if (ctx.component.hideInputLabels) { %}usa-sr-only{% } %} {% if(ctx.component.fields.month.required) { %}field-required{% } %}"
       >{{ctx.t('Month')}}</label>
-
-      <input class="usa-input usa-input--inline"
-        ref="month"
-        name="month"
-        id="{{ctx.component.key}}-month"
-        {% if (ctx.component.fields.month.placeholder) { %}placeholder="{{ctx.component.fields.month.placeholder}}"{% } %}
-        {% if (ctx.component.description) { %}
-        aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
-        {% } %}
-        type="number" min="1" max="12" step="1" value="">
+      <div>{{ctx.month}}</div>
     </div>
     {% } %}
 
