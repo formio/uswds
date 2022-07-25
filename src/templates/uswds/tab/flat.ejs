@@ -3,7 +3,7 @@
     <div class="formio-usa-card-header bg-base-lightest">
       <h4 class="margin-bottom-0 formio-usa-card-title">{{ ctx.t(tab.label) }}</h4>
     </div>
-    <div class="formio-usa-card-body">
+    <div class="formio-usa-card-body" ref="{{ctx.tabKey}}">
       {{ ctx.tabComponents[index] }}
     </div>
   </div>
