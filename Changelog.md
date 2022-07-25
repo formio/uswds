@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased: 2.4.7-rc.1]
 ### Fixed
  - FIO-5276: fixed template for Day component
+ - FIO-5275: Select comp provide submitted data on PDF
 
 ## 2.4.6
 ### Changed
