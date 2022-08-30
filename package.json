@@ -1,6 +1,6 @@
 {
   "name": "@formio/uswds",
-  "version": "2.4.7",
+  "version": "2.4.8-rc.1",
   "description": "US Web Design System templates for form.io",
   "main": "lib/index.js",
   "scripts": {
