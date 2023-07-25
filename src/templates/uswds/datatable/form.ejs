@@ -1,0 +1,36 @@
+<div ref="tableContainer"></div>
+<div class="formio-component-modal-wrapper formio-component-modal-wrapper-{{ ctx.component.type }}" ref="componentModalWrapper">
+  <div class="formio-dialog formio-dialog-theme-default component-rendering-hidden" ref="dataTableModalWrapper">
+    <div class="formio-dialog-overlay" ref="dataTableModalOverlay"></div>
+    <div class="formio-dialog-content" ref="dataTableModalContents">
+      <div ref="dataTableModalContents">
+        <div class="editgrid-listgroup">
+          {% if (ctx.header) { %}
+          <div>
+            {{ctx.header}}
+          </div>
+          {% } %}
+          {% ctx.rows.forEach(function(row, rowIndex) { %}
+          <div class="margin-bottom-1" ref="{{ctx.ref.row}}">
+            {{row}}
+            {% if (ctx.openRows[rowIndex] && !ctx.readOnly) { %}
+            <div class="editgrid-actions">
+              <button class="usa-button usa-button--accent-cool" ref="{{ctx.ref.saveRow}}">{{ctx.t(ctx.component.saveRow || 'Save')}}</button>
+              {% if (ctx.component.removeRow) { %}
+              <button class="usa-button usa-button--secondary" ref="{{ctx.ref.cancelRow}}">{{ctx.t(ctx.component.removeRow || 'Cancel')}}</button>
+              {% } %}
+            </div>
+            {% } %}
+            <div class="usa-has-error">
+              <div class="editgrid-row-error text-base">
+                {{ctx.errors[rowIndex]}}
+              </div>
+            </div>
+          </div>
+          {% }) %}
+        </div>
+      </div>
+      <button class="formio-dialog-close float-right" aria-label="close" ref="dataTableModalClose"></button>
+    </div>
+  </div>
+</div>

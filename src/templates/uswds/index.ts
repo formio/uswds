@@ -15,6 +15,7 @@ import component from './component';
 import componentModal from './componentModal';
 import container from './container';
 import datagrid from './datagrid';
+import datatable from './datatable';
 import day from './day';
 import dialog from './dialog';
 import editgrid from './editgrid';
@@ -80,6 +81,7 @@ export default {
   componentModal,
   container,
   datagrid,
+  datatable,
   day,
   dialog,
   editgrid,
