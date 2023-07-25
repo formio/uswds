@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased: 2.5.0-rc.1]
 ### Changed
  - Increment minor version.
+ - FIO-6551 Added USWDS support for DataTable
 
 ## 2.4.8
 ### Changed
