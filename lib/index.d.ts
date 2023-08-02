@@ -1,5 +1,4 @@
 declare const _default: {
-    framework: string;
     templates: {
         uswds: {
             transform(type: any, text: any): any;
@@ -53,6 +52,10 @@ declare const _default: {
                 form: string;
             };
             datagrid: {
+                form: string;
+                html: string;
+            };
+            datatable: {
                 form: string;
                 html: string;
             };
@@ -191,8 +194,9 @@ declare const _default: {
         select: typeof import("./components/Select").default;
         radio: import("formiojs").ClassWithEditForm<typeof import("formiojs/types/components/_classes/field/field").Field>;
         button: typeof import("./components/button/Button").default;
-        checkbox: typeof import("./components/Checkbox/Checkbox").default;
+        checkbox: typeof import("./components/checkbox/Checkbox").default;
         selectboxes: typeof import("./components/selectboxes/SelectBoxes").default;
     };
+    framework: string;
 };
 export default _default;

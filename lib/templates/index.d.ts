@@ -54,6 +54,10 @@ declare const _default: {
             form: string;
             html: string;
         };
+        datatable: {
+            form: string;
+            html: string;
+        };
         day: {
             form: string;
         };
