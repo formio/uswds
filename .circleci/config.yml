@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install npm modules
           root: viewer
-          command: npm ci
+          command: yarn install --frozen-lockfile
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Build
           root: viewer
-          command: npm run build
+          command: yarn build
       - persist_to_workspace:
           root: viewer/dist
           paths:
@@ -37,7 +37,7 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - run: 
+      - run:
           name: Docker Build
           root: viewer
           command: docker build --no-cache -t $IMAGE_PATH .
