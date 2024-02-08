@@ -63,8 +63,5 @@
   "bugs": {
     "url": "https://github.com/formio/uswds/issues"
   },
-  "homepage": "https://github.com/formio/uswds#readme",
-  "engines": {
-    "node": ">=14.0.0 <18.0.0"
-  }
+  "homepage": "https://github.com/formio/uswds#readme"
 }
