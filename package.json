@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "build": "gulp build && tsc && webpack && webpack --config webpack.prod.js",
     "lint": "tslint -p .",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "pre-commit": [
     "lint"
@@ -63,5 +63,8 @@
   "bugs": {
     "url": "https://github.com/formio/uswds/issues"
   },
-  "homepage": "https://github.com/formio/uswds#readme"
+  "homepage": "https://github.com/formio/uswds#readme",
+  "engines": {
+    "node": ">=14.0.0 <18.0.0"
+  }
 }
