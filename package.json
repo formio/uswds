@@ -7,7 +7,9 @@
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
     "test": "mocha --require ts-node/register --reporter spec \"./{,!(node_modules)/**/}*.spec.ts",
     "watch": "tsc -w",
-    "build": "gulp build && tsc && webpack && webpack --config webpack.prod.js",
+    "bundle:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack",
+    "bundle:prod": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.prod.js",
+    "build": "gulp build && tsc && yarn bundle:prod && yarn bundle:dev",
     "lint": "tslint -p .",
     "prepublish": "yarn build"
   },
