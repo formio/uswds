@@ -1,0 +1,73 @@
+<div class="data-grid-wrapper data-grid-uswds-wrapper">
+  <div class="data-grid">
+    <span class="menu-container">
+      <div class="dropdown" ref="menu"></div>
+    </span>
+    <div style="position: relative; max-width: 86vw; display: flex; align-items: center; justify-content: space-between">
+        {% if (ctx.component.enableRowSelect) { %}
+        <div style="min-height: 20px" >
+            {% if (ctx.selectedRows) { %}
+            <span style=" font-size: 13px">{{ctx.selectedRows}} selected</span>
+            {% } %}
+        </div>
+        {% } %}
+        <div ref="pagination" class="formio-pagination" style="margin-left: auto"></div>
+    </div>
+    <div class="usa-table-container--scrollable margin-y-1">
+      <div class="spinner-wrapper" ref="loader">
+        <div class="spinner-grow"></div>
+      </div>
+      <table class="formio-grid {{ ctx.classes }} usa-table">
+        <thead>
+          <tr>
+            {% if (!ctx.component.components.length) { %}
+              <th>No components have been set up to display in the Data Table. "Table View" must be checked for components to render.</th>
+            {% } %}
+              {% if (ctx.component.enableRowSelect) { %}
+              <th style="width: 2rem" scope="col" role="columnheader">
+                  <input type="checkbox" name="selectAll" id="selectAll" ref="selectAll" title="select All" {{ctx.selectedAll && 'checked'}} >
+                  <span style="display: none">({{ctx.selectedRows}} of <span ref="totalRows"></span>)</span>
+              </th>
+              {% } %}
+            {% ctx.component.components.forEach(function(comp, i) { %}
+              {% if (comp.show) { %}
+              <th scope="col" role="columnheader" class="text-center">
+                <span>{{ comp.label || comp.key }}</span>
+                {% if (ctx.options.sortable && comp.sortable) { %}
+                <span class="sort-btn {{ (ctx.component.sort.key === comp.key || ctx.component.sort.key === comp.columnQueryProperty) ? 'sorted' : '' }}" ref="sort">
+                  {{ ctx.component.sort.isAsc ? '↑' : '↓' }}
+                </span>
+                {% } %}
+                <span class="menu">
+                  <div class="menu-container">
+                    <span class="menu-btn{{ (ctx.component.filters[comp.key] || ctx.component.filters[comp.columnQueryProperty]) ? ' filters-applied' : '' }}" ref="menuBtn">⋮</span>
+                  </div>
+                </span>
+              </th>
+              {% } %}
+            {% }); %}
+            {% if ((ctx.component.showEditBtn || ctx.component.showDeleteBtn || ctx.component.showDeleteAllBtn) 
+              && ctx.data.length
+              && !ctx.options.pdf) { %}
+            <th class="formio-grid-ops position-sticky padding-0 border-left-0" style="background-color: white; ">
+              <div class="text-center">
+                <span>Actions</span>
+                {% if (ctx.component.showDeleteAllBtn && ctx.data.length) { %}
+                <button class="usa-button delete-all-btn {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="deleteAll"><i class="fa fa-trash"></i></button>
+                {% } %}
+              </div>
+            </th>
+            {% } %}
+          </tr>
+        </thead>
+        <tbody ref="tbody"></tbody>
+      </table>
+    </div>
+    <div class="formio-grid-bottom" {{ctx.component.showAddBtn ? 'style="margin-top: 10px"' : ""}}>
+      <div ref="paginationBottom"></div>
+      {% if (ctx.component.showAddBtn && !ctx.options.pdf) { %}
+        <button class="usa-button formio-new-button {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="addRow">+</button>
+      {% } %}
+    </div>
+  </div>
+</div>
