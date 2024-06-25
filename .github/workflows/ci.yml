@@ -70,7 +70,7 @@ jobs:
             package.json
 
   publish:
-    needs: build
+    needs: build-test
     if: github.event.pull_request.base.ref == 'master'
     runs-on: ubuntu-latest
     steps:
