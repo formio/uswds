@@ -55,19 +55,39 @@ jobs:
               ./deployment/scripts/createVersion.sh $CIRCLE_TAG
             fi
 
+############################################################
+## Disables Circle CI (Comment/Remove to re-enable CircleCI)
+############################################################
 workflows:
-  version: 2.1
-  do-build:
+  version: 2
+  build_workflow:
     jobs:
       - build:
           filters:
             tags:
-              only: /.*/
-      - docker:
-          requires:
-            - build
-          filters:
-            tags:
-              only: /^\d+\.\d+\.\d+.*/
+              ignore: /.*/
             branches:
               ignore: /.*/
+      - docker:
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              ignore: /.*/
+
+# workflows:
+#   version: 2.1
+#   do-build:
+#     jobs:
+#       - build:
+#           filters:
+#             tags:
+#               only: /.*/
+#       - docker:
+#           requires:
+#             - build
+#           filters:
+#             tags:
+#               only: /^\d+\.\d+\.\d+.*/
+#             branches:
+#               ignore: /.*/
