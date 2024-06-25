@@ -122,4 +122,4 @@ jobs:
       - name: Publish to npm
         run: |
           npm version $NEW_VERSION
-          yarn publish --ignore-scripts --dry-run --tag dev
+          yarn publish --ignore-scripts --tag dev
