@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
-    "test": "mocha --require ts-node/register --reporter spec \"./{,!(node_modules)/**/}*.spec.ts",
+    "test": "mocha --require ts-node/register --reporter spec \"./{,!(node_modules)/**/}*.spec.ts\"",
     "watch": "tsc -w",
     "bundle:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack",
     "bundle:prod": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.prod.js",
