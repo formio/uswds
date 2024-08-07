@@ -33,6 +33,7 @@
     "Standards"
   ],
   "devDependencies": {
+    "@formio/js": "5.0.0-rc.69",
     "@types/chai": "^4.2.22",
     "@types/ejs": "^3.1.0",
     "@types/mocha": "^9.0.0",
@@ -41,7 +42,6 @@
     "chai": "^4.3.4",
     "copy-props": "^3.0.1",
     "del": "^6.0.0",
-    "@formio/js": "^5.0.0-rc.69",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-insert": "^0.5.0",
