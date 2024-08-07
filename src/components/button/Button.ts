@@ -1,4 +1,4 @@
-import { Components } from 'formiojs';
+import { Components } from '@formio/js';
 import editForm from './Button.form';
 
 const ButtonComponent = Components.components.button;

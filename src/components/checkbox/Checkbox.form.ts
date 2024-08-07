@@ -1,4 +1,4 @@
-import { Components } from 'formiojs';
+import { Components } from '@formio/js';
 const baseEditForm = (Components as any).components.checkbox.editForm;
 
 export default function(...extend) {

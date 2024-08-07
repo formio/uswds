@@ -41,7 +41,7 @@
     "chai": "^4.3.4",
     "copy-props": "^3.0.1",
     "del": "^6.0.0",
-    "formiojs": "^4.14.0-rc.30",
+    "@formio/js": "^5.0.0-rc.69",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-insert": "^0.5.0",

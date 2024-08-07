@@ -1,4 +1,4 @@
-import { Components } from 'formiojs';
+import { Components } from '@formio/js';
 
 const SelectComponent = Components.components.select as any;
 
