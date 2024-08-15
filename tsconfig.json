@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "module": "commonjs",
     "preserveConstEnums": true,
     "outDir": "lib",
     "noImplicitAny": false,
+    "skipLibCheck": true,
     "sourceMap": false,
     "declaration": true,
     "rootDir": "src"

@@ -16,6 +16,6 @@ module.exports = {
   target: 'es5',
   performance: { hints: false },
   externals: {
-    formiojs: 'Formio'
+    '@formio/js': 'Formio'
   },
 };
