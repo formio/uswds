@@ -15,7 +15,7 @@
 		exports["uswds"] = factory(require("Formio"));
 	else
 		root["uswds"] = factory(root["Formio"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE_formiojs__) {
+})(self, function(__WEBPACK_EXTERNAL_MODULE__formio_js__) {
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -26,7 +26,7 @@ return /******/ (function() { // webpackBootstrap
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar SelectComponent = formiojs_1.Components.components.select;\nvar USWDSSelectComponent = /** @class */ (function (_super) {\n    __extends(USWDSSelectComponent, _super);\n    function USWDSSelectComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSSelectComponent.prototype.choicesOptions = function () {\n        var choicesOptions = _super.prototype.choicesOptions.call(this);\n        choicesOptions.classNames.containerInner += ' usa-select maxw-full';\n        return choicesOptions;\n    };\n    return USWDSSelectComponent;\n}(SelectComponent));\nexports.default = USWDSSelectComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/Select.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst SelectComponent = js_1.Components.components.select;\nclass USWDSSelectComponent extends SelectComponent {\n    choicesOptions() {\n        const choicesOptions = super.choicesOptions();\n        choicesOptions.classNames.containerInner += ' usa-select maxw-full';\n        return choicesOptions;\n    }\n}\nexports.default = USWDSSelectComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/Select.js?");
 
 /***/ }),
 
@@ -37,7 +37,7 @@ eval("\nvar __extends = (this && this.__extends) || (function () {\n    var exte
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {\n    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {\n        if (ar || !(i in from)) {\n            if (!ar) ar = Array.prototype.slice.call(from, 0, i);\n            ar[i] = from[i];\n        }\n    }\n    return to.concat(ar || Array.prototype.slice.call(from));\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar baseEditForm = formiojs_1.Components.components.button.editForm;\nvar Button_edit_display_1 = __webpack_require__(/*! ./editForm/Button.edit.display */ \"./lib/components/button/editForm/Button.edit.display.js\");\nfunction default_1() {\n    var extend = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        extend[_i] = arguments[_i];\n    }\n    return baseEditForm.apply(void 0, __spreadArray([[\n            {\n                key: 'display',\n                components: Button_edit_display_1.default,\n            },\n        ]], extend, false));\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.form.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst baseEditForm = js_1.Components.components.button.editForm;\nconst Button_edit_display_1 = __webpack_require__(/*! ./editForm/Button.edit.display */ \"./lib/components/button/editForm/Button.edit.display.js\");\nfunction default_1(...extend) {\n    return baseEditForm([\n        {\n            key: 'display',\n            components: Button_edit_display_1.default,\n        },\n    ], ...extend);\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.form.js?");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar Button_form_1 = __webpack_require__(/*! ./Button.form */ \"./lib/components/button/Button.form.js\");\nvar ButtonComponent = formiojs_1.Components.components.button;\nvar FieldComponent = formiojs_1.Components.components.field;\nvar USWDSButtonComponent = /** @class */ (function (_super) {\n    __extends(USWDSButtonComponent, _super);\n    function USWDSButtonComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSButtonComponent.prototype.getInputInfo = function () {\n        var info = this.inputInfo;\n        info.attr.class = 'usa-button';\n        switch (this.component.theme) {\n            case 'secondary':\n                info.attr.class += ' usa-button--secondary';\n                break;\n            case 'info':\n            case 'accent-cool':\n                info.attr.class += ' usa-button--accent-cool';\n                break;\n            case 'success':\n                info.attr.class += ' bg-green';\n                break;\n            case 'danger':\n                info.attr.class += ' bg-secondary-vivid';\n                break;\n            case 'warning':\n                info.attr.class += ' usa-button--accent-warm';\n                break;\n            case 'base':\n                info.attr.class += ' usa-button--base';\n                break;\n            case 'outline':\n                info.attr.class += ' usa-button--outline';\n                break;\n        }\n        if (this.component.customClass) {\n            info.attr.class += \" \".concat(this.component.customClass);\n        }\n        return info;\n    };\n    USWDSButtonComponent.prototype.render = function () {\n        if (this.viewOnly || this.options.hideButtons) {\n            this._visible = false;\n        }\n        return FieldComponent.prototype.render.call(this, this.renderTemplate('button', {\n            component: this.component,\n            input: this.getInputInfo(),\n        }));\n    };\n    USWDSButtonComponent.editForm = Button_form_1.default;\n    return USWDSButtonComponent;\n}(ButtonComponent));\nexports.default = USWDSButtonComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst Button_form_1 = __webpack_require__(/*! ./Button.form */ \"./lib/components/button/Button.form.js\");\nconst ButtonComponent = js_1.Components.components.button;\nconst FieldComponent = js_1.Components.components.field;\nclass USWDSButtonComponent extends ButtonComponent {\n    getInputInfo() {\n        const info = this.inputInfo;\n        info.attr.class = 'usa-button';\n        switch (this.component.theme) {\n            case 'secondary':\n                info.attr.class += ' usa-button--secondary';\n                break;\n            case 'info':\n            case 'accent-cool':\n                info.attr.class += ' usa-button--accent-cool';\n                break;\n            case 'success':\n                info.attr.class += ' bg-green';\n                break;\n            case 'danger':\n                info.attr.class += ' bg-secondary-vivid';\n                break;\n            case 'warning':\n                info.attr.class += ' usa-button--accent-warm';\n                break;\n            case 'base':\n                info.attr.class += ' usa-button--base';\n                break;\n            case 'outline':\n                info.attr.class += ' usa-button--outline';\n                break;\n        }\n        if (this.component.customClass) {\n            info.attr.class += ` ${this.component.customClass}`;\n        }\n        return info;\n    }\n    render() {\n        if (this.viewOnly || this.options.hideButtons) {\n            this._visible = false;\n        }\n        return FieldComponent.prototype.render.call(this, this.renderTemplate('button', {\n            component: this.component,\n            input: this.getInputInfo(),\n        }));\n    }\n}\nexports.default = USWDSButtonComponent;\nUSWDSButtonComponent.editForm = Button_form_1.default;\n\n\n//# sourceURL=webpack://uswds/./lib/components/button/Button.js?");
 
 /***/ }),
 
@@ -70,7 +70,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {\n    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {\n        if (ar || !(i in from)) {\n            if (!ar) ar = Array.prototype.slice.call(from, 0, i);\n            ar[i] = from[i];\n        }\n    }\n    return to.concat(ar || Array.prototype.slice.call(from));\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar baseEditForm = formiojs_1.Components.components.checkbox.editForm;\nfunction default_1() {\n    var extend = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        extend[_i] = arguments[_i];\n    }\n    return baseEditForm.apply(void 0, __spreadArray([[\n            {\n                key: 'display',\n                components: [\n                    {\n                        type: 'checkbox',\n                        input: true,\n                        weight: 1000,\n                        label: 'Tile view',\n                        tooltip: 'Tile view for this component',\n                        key: 'tileView',\n                    },\n                ],\n            },\n        ]], extend, false));\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/checkbox/Checkbox.form.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst baseEditForm = js_1.Components.components.checkbox.editForm;\nfunction default_1(...extend) {\n    return baseEditForm([\n        {\n            key: 'display',\n            components: [\n                {\n                    type: 'checkbox',\n                    input: true,\n                    weight: 1000,\n                    label: 'Tile view',\n                    tooltip: 'Tile view for this component',\n                    key: 'tileView',\n                },\n            ],\n        },\n    ], ...extend);\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/checkbox/Checkbox.form.js?");
 
 /***/ }),
 
@@ -81,7 +81,7 @@ eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar Checkbox_form_1 = __webpack_require__(/*! ./Checkbox.form */ \"./lib/components/checkbox/Checkbox.form.js\");\nvar CheckboxComponent = formiojs_1.Components.components.checkbox;\nvar USWDSCheckboxComponent = /** @class */ (function (_super) {\n    __extends(USWDSCheckboxComponent, _super);\n    function USWDSCheckboxComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSCheckboxComponent.prototype.render = function (element) {\n        this.noField = true;\n        return _super.prototype.render.call(this, element);\n    };\n    USWDSCheckboxComponent.editForm = Checkbox_form_1.default;\n    return USWDSCheckboxComponent;\n}(CheckboxComponent));\nexports.default = USWDSCheckboxComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/checkbox/Checkbox.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst Checkbox_form_1 = __webpack_require__(/*! ./Checkbox.form */ \"./lib/components/checkbox/Checkbox.form.js\");\nconst CheckboxComponent = js_1.Components.components.checkbox;\nclass USWDSCheckboxComponent extends CheckboxComponent {\n    render(element) {\n        this.noField = true;\n        return super.render(element);\n    }\n}\nexports.default = USWDSCheckboxComponent;\nUSWDSCheckboxComponent.editForm = Checkbox_form_1.default;\n\n\n//# sourceURL=webpack://uswds/./lib/components/checkbox/Checkbox.js?");
 
 /***/ }),
 
@@ -92,7 +92,7 @@ eval("\nvar __extends = (this && this.__extends) || (function () {\n    var exte
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar Select_1 = __webpack_require__(/*! ./Select */ \"./lib/components/Select.js\");\nvar Radio_1 = __webpack_require__(/*! ./radio/Radio */ \"./lib/components/radio/Radio.js\");\nvar Button_1 = __webpack_require__(/*! ./button/Button */ \"./lib/components/button/Button.js\");\nvar Checkbox_1 = __webpack_require__(/*! ./checkbox/Checkbox */ \"./lib/components/checkbox/Checkbox.js\");\nvar SelectBoxes_1 = __webpack_require__(/*! ./selectboxes/SelectBoxes */ \"./lib/components/selectboxes/SelectBoxes.js\");\nexports.default = {\n    select: Select_1.default,\n    radio: Radio_1.default,\n    button: Button_1.default,\n    checkbox: Checkbox_1.default,\n    selectboxes: SelectBoxes_1.default\n};\n\n\n//# sourceURL=webpack://uswds/./lib/components/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst Select_1 = __webpack_require__(/*! ./Select */ \"./lib/components/Select.js\");\nconst Radio_1 = __webpack_require__(/*! ./radio/Radio */ \"./lib/components/radio/Radio.js\");\nconst Button_1 = __webpack_require__(/*! ./button/Button */ \"./lib/components/button/Button.js\");\nconst Checkbox_1 = __webpack_require__(/*! ./checkbox/Checkbox */ \"./lib/components/checkbox/Checkbox.js\");\nconst SelectBoxes_1 = __webpack_require__(/*! ./selectboxes/SelectBoxes */ \"./lib/components/selectboxes/SelectBoxes.js\");\nexports.default = {\n    select: Select_1.default,\n    radio: Radio_1.default,\n    button: Button_1.default,\n    checkbox: Checkbox_1.default,\n    selectboxes: SelectBoxes_1.default\n};\n\n\n//# sourceURL=webpack://uswds/./lib/components/index.js?");
 
 /***/ }),
 
@@ -103,7 +103,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {\n    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {\n        if (ar || !(i in from)) {\n            if (!ar) ar = Array.prototype.slice.call(from, 0, i);\n            ar[i] = from[i];\n        }\n    }\n    return to.concat(ar || Array.prototype.slice.call(from));\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar baseEditForm = formiojs_1.Components.components.radio.editForm;\nfunction default_1() {\n    var extend = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        extend[_i] = arguments[_i];\n    }\n    return baseEditForm.apply(void 0, __spreadArray([[\n            {\n                key: 'display',\n                components: [\n                    {\n                        type: 'checkbox',\n                        input: true,\n                        weight: 1000,\n                        label: 'Tile view',\n                        tooltip: 'Tile view for this component',\n                        key: 'tileView',\n                    },\n                ],\n            },\n        ]], extend, false));\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/radio/Radio.form.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst baseEditForm = js_1.Components.components.radio.editForm;\nfunction default_1(...extend) {\n    return baseEditForm([\n        {\n            key: 'display',\n            components: [\n                {\n                    type: 'checkbox',\n                    input: true,\n                    weight: 1000,\n                    label: 'Tile view',\n                    tooltip: 'Tile view for this component',\n                    key: 'tileView',\n                },\n            ],\n        },\n    ], ...extend);\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/radio/Radio.form.js?");
 
 /***/ }),
 
@@ -114,7 +114,7 @@ eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar Radio_form_1 = __webpack_require__(/*! ./Radio.form */ \"./lib/components/radio/Radio.form.js\");\nvar RadioComponent = formiojs_1.Components.components.radio;\nRadioComponent.editForm = Radio_form_1.default;\nvar render = RadioComponent.prototype.render;\nRadioComponent.prototype.render = function () {\n    this.noField = true;\n    return render.call(this);\n};\nexports.default = RadioComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/radio/Radio.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst Radio_form_1 = __webpack_require__(/*! ./Radio.form */ \"./lib/components/radio/Radio.form.js\");\nconst RadioComponent = js_1.Components.components.radio;\nRadioComponent.editForm = Radio_form_1.default;\nconst render = RadioComponent.prototype.render;\nRadioComponent.prototype.render = function () {\n    this.noField = true;\n    return render.call(this);\n};\nexports.default = RadioComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/radio/Radio.js?");
 
 /***/ }),
 
@@ -125,7 +125,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {\n    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {\n        if (ar || !(i in from)) {\n            if (!ar) ar = Array.prototype.slice.call(from, 0, i);\n            ar[i] = from[i];\n        }\n    }\n    return to.concat(ar || Array.prototype.slice.call(from));\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar baseEditForm = formiojs_1.Components.components.selectboxes.editForm;\nfunction default_1() {\n    var extend = [];\n    for (var _i = 0; _i < arguments.length; _i++) {\n        extend[_i] = arguments[_i];\n    }\n    return baseEditForm.apply(void 0, __spreadArray([[\n            {\n                key: 'display',\n                components: [\n                    {\n                        type: 'checkbox',\n                        input: true,\n                        weight: 1000,\n                        label: 'Tile view',\n                        tooltip: 'Tile view for this component',\n                        key: 'tileView',\n                    },\n                ],\n            },\n        ]], extend, false));\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/selectboxes/SelectBoxes.form.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst baseEditForm = js_1.Components.components.selectboxes.editForm;\nfunction default_1(...extend) {\n    return baseEditForm([\n        {\n            key: 'display',\n            components: [\n                {\n                    type: 'checkbox',\n                    input: true,\n                    weight: 1000,\n                    label: 'Tile view',\n                    tooltip: 'Tile view for this component',\n                    key: 'tileView',\n                },\n            ],\n        },\n    ], ...extend);\n}\nexports.default = default_1;\n\n\n//# sourceURL=webpack://uswds/./lib/components/selectboxes/SelectBoxes.form.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("\nvar __spreadArray = (this && this.__spreadArray) || function (to, from, 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        if (typeof b !== \"function\" && b !== null)\n            throw new TypeError(\"Class extends value \" + String(b) + \" is not a constructor or null\");\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar formiojs_1 = __webpack_require__(/*! formiojs */ \"formiojs\");\nvar SelectBoxes_form_1 = __webpack_require__(/*! ./SelectBoxes.form */ \"./lib/components/selectboxes/SelectBoxes.form.js\");\nvar SelectBoxesComponent = formiojs_1.Components.components.selectboxes;\nvar USWDSSelectBoxesComponent = /** @class */ (function (_super) {\n    __extends(USWDSSelectBoxesComponent, _super);\n    function USWDSSelectBoxesComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    USWDSSelectBoxesComponent.editForm = SelectBoxes_form_1.default;\n    return USWDSSelectBoxesComponent;\n}(SelectBoxesComponent));\nexports.default = USWDSSelectBoxesComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/selectboxes/SelectBoxes.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst SelectBoxes_form_1 = __webpack_require__(/*! ./SelectBoxes.form */ \"./lib/components/selectboxes/SelectBoxes.form.js\");\nconst SelectBoxesComponent = js_1.Components.components.selectboxes;\nclass USWDSSelectBoxesComponent extends SelectBoxesComponent {\n}\nexports.default = USWDSSelectBoxesComponent;\nUSWDSSelectBoxesComponent.editForm = SelectBoxes_form_1.default;\n\n\n//# sourceURL=webpack://uswds/./lib/components/selectboxes/SelectBoxes.js?");
 
 /***/ }),
 
@@ -147,7 +147,7 @@ eval("\nvar __extends = (this && this.__extends) || (function () {\n    var exte
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar templates_1 = __webpack_require__(/*! ./templates */ \"./lib/templates/index.js\");\nvar components_1 = __webpack_require__(/*! ./components */ \"./lib/components/index.js\");\nexports.default = {\n    templates: templates_1.default,\n    components: components_1.default,\n    framework: 'uswds',\n};\n\n\n//# sourceURL=webpack://uswds/./lib/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst templates_1 = __webpack_require__(/*! ./templates */ \"./lib/templates/index.js\");\nconst components_1 = __webpack_require__(/*! ./components */ \"./lib/components/index.js\");\nexports.default = {\n    templates: templates_1.default,\n    components: components_1.default,\n    framework: 'uswds',\n};\n\n\n//# sourceURL=webpack://uswds/./lib/index.js?");
 
 /***/ }),
 
@@ -158,7 +158,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar uswds_1 = __webpack_require__(/*! ./uswds */ \"./lib/templates/uswds/index.js\");\nexports.default = {\n    uswds: uswds_1.default,\n};\n\n\n//# sourceURL=webpack://uswds/./lib/templates/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst uswds_1 = __webpack_require__(/*! ./uswds */ \"./lib/templates/uswds/index.js\");\nexports.default = {\n    uswds: uswds_1.default,\n};\n\n\n//# sourceURL=webpack://uswds/./lib/templates/index.js?");
 
 /***/ }),
 
@@ -179,7 +179,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/address/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/address/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/address/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/address/index.js?");
 
 /***/ }),
 
@@ -200,7 +200,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/alert/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/alert/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/alert/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/alert/index.js?");
 
 /***/ }),
 
@@ -221,7 +221,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builder/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builder/index.js?");
 
 /***/ }),
 
@@ -242,7 +242,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderComponent/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderComponent/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderComponent/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderComponent/index.js?");
 
 /***/ }),
 
@@ -263,7 +263,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderComponents/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderComponents/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderComponents/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderComponents/index.js?");
 
 /***/ }),
 
@@ -284,7 +284,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderEditForm/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderEditForm/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderEditForm/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderEditForm/index.js?");
 
 /***/ }),
 
@@ -305,7 +305,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderPlaceholder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderPlaceholder/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderPlaceholder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderPlaceholder/index.js?");
 
 /***/ }),
 
@@ -326,7 +326,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderSidebar/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderSidebar/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderSidebar/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderSidebar/index.js?");
 
 /***/ }),
 
@@ -347,7 +347,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderSidebarGroup/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderSidebarGroup/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderSidebarGroup/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderSidebarGroup/index.js?");
 
 /***/ }),
 
@@ -368,7 +368,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderWizard/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderWizard/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/builderWizard/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/builderWizard/index.js?");
 
 /***/ }),
 
@@ -389,7 +389,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/button/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/button/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/button/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/button/index.js?");
 
 /***/ }),
 
@@ -420,7 +420,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/checkbox/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/checkbox/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/checkbox/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/checkbox/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/checkbox/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/checkbox/index.js?");
 
 /***/ }),
 
@@ -441,7 +441,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/columns/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/columns/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/columns/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/columns/index.js?");
 
 /***/ }),
 
@@ -462,7 +462,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/component/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/component/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/component/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/component/index.js?");
 
 /***/ }),
 
@@ -483,7 +483,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/componentModal/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/componentModal/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/componentModal/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/componentModal/index.js?");
 
 /***/ }),
 
@@ -504,7 +504,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/container/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/container/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/container/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/container/index.js?");
 
 /***/ }),
 
@@ -546,7 +546,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/datagrid/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/datagrid/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/datagrid/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/datagrid/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/datagrid/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/datagrid/index.js?");
 
 /***/ }),
 
@@ -577,7 +577,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/datatable/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/datatable/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/datatable/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/datatable/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/datatable/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/datatable/index.js?");
 
 /***/ }),
 
@@ -598,7 +598,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/day/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/day/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/day/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/day/index.js?");
 
 /***/ }),
 
@@ -619,7 +619,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/dialog/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/dialog/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/dialog/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/dialog/index.js?");
 
 /***/ }),
 
@@ -650,7 +650,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/editgrid/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/editgrid/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/editgrid/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/editgrid/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/editgrid/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/editgrid/index.js?");
 
 /***/ }),
 
@@ -671,7 +671,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/errorsList/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/errorsList/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/errorsList/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/errorsList/index.js?");
 
 /***/ }),
 
@@ -702,7 +702,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/field/form.ejs.js\");\nvar align_ejs_1 = __webpack_require__(/*! ./align.ejs */ \"./lib/templates/uswds/field/align.ejs.js\");\nexports.default = { form: form_ejs_1.default, align: align_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/field/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/field/form.ejs.js\");\nconst align_ejs_1 = __webpack_require__(/*! ./align.ejs */ \"./lib/templates/uswds/field/align.ejs.js\");\nexports.default = { form: form_ejs_1.default, align: align_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/field/index.js?");
 
 /***/ }),
 
@@ -723,7 +723,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/fieldset/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/fieldset/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/fieldset/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/fieldset/index.js?");
 
 /***/ }),
 
@@ -744,7 +744,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/file/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/file/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/file/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/file/index.js?");
 
 /***/ }),
 
@@ -765,7 +765,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/html/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/html/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/html/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/html/index.js?");
 
 /***/ }),
 
@@ -786,7 +786,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/icon/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/icon/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/icon/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/icon/index.js?");
 
 /***/ }),
 
@@ -797,7 +797,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar address_1 = __webpack_require__(/*! ./address */ \"./lib/templates/uswds/address/index.js\");\nvar alert_1 = __webpack_require__(/*! ./alert */ \"./lib/templates/uswds/alert/index.js\");\nvar builder_1 = __webpack_require__(/*! ./builder */ \"./lib/templates/uswds/builder/index.js\");\nvar builderComponent_1 = __webpack_require__(/*! ./builderComponent */ \"./lib/templates/uswds/builderComponent/index.js\");\nvar builderComponents_1 = __webpack_require__(/*! ./builderComponents */ \"./lib/templates/uswds/builderComponents/index.js\");\nvar builderEditForm_1 = __webpack_require__(/*! ./builderEditForm */ \"./lib/templates/uswds/builderEditForm/index.js\");\nvar builderPlaceholder_1 = __webpack_require__(/*! ./builderPlaceholder */ \"./lib/templates/uswds/builderPlaceholder/index.js\");\nvar builderSidebar_1 = __webpack_require__(/*! ./builderSidebar */ \"./lib/templates/uswds/builderSidebar/index.js\");\nvar builderSidebarGroup_1 = __webpack_require__(/*! ./builderSidebarGroup */ \"./lib/templates/uswds/builderSidebarGroup/index.js\");\nvar builderWizard_1 = __webpack_require__(/*! ./builderWizard */ \"./lib/templates/uswds/builderWizard/index.js\");\nvar button_1 = __webpack_require__(/*! ./button */ \"./lib/templates/uswds/button/index.js\");\nvar checkbox_1 = __webpack_require__(/*! ./checkbox */ \"./lib/templates/uswds/checkbox/index.js\");\nvar columns_1 = __webpack_require__(/*! ./columns */ \"./lib/templates/uswds/columns/index.js\");\nvar component_1 = __webpack_require__(/*! ./component */ \"./lib/templates/uswds/component/index.js\");\nvar componentModal_1 = __webpack_require__(/*! ./componentModal */ \"./lib/templates/uswds/componentModal/index.js\");\nvar container_1 = __webpack_require__(/*! ./container */ \"./lib/templates/uswds/container/index.js\");\nvar datagrid_1 = __webpack_require__(/*! ./datagrid */ \"./lib/templates/uswds/datagrid/index.js\");\nvar datatable_1 = __webpack_require__(/*! ./datatable */ \"./lib/templates/uswds/datatable/index.js\");\nvar day_1 = __webpack_require__(/*! ./day */ \"./lib/templates/uswds/day/index.js\");\nvar dialog_1 = __webpack_require__(/*! ./dialog */ \"./lib/templates/uswds/dialog/index.js\");\nvar editgrid_1 = __webpack_require__(/*! ./editgrid */ \"./lib/templates/uswds/editgrid/index.js\");\nvar errorsList_1 = __webpack_require__(/*! ./errorsList */ \"./lib/templates/uswds/errorsList/index.js\");\nvar field_1 = __webpack_require__(/*! ./field */ \"./lib/templates/uswds/field/index.js\");\nvar fieldset_1 = __webpack_require__(/*! ./fieldset */ \"./lib/templates/uswds/fieldset/index.js\");\nvar file_1 = __webpack_require__(/*! ./file */ \"./lib/templates/uswds/file/index.js\");\nvar html_1 = __webpack_require__(/*! ./html */ \"./lib/templates/uswds/html/index.js\");\nvar icon_1 = __webpack_require__(/*! ./icon */ \"./lib/templates/uswds/icon/index.js\");\nvar input_1 = __webpack_require__(/*! ./input */ \"./lib/templates/uswds/input/index.js\");\nvar label_1 = __webpack_require__(/*! ./label */ \"./lib/templates/uswds/label/index.js\");\nvar loader_1 = __webpack_require__(/*! ./loader */ \"./lib/templates/uswds/loader/index.js\");\nvar loading_1 = __webpack_require__(/*! ./loading */ \"./lib/templates/uswds/loading/index.js\");\nvar message_1 = __webpack_require__(/*! ./message */ \"./lib/templates/uswds/message/index.js\");\nvar modalPreview_1 = __webpack_require__(/*! ./modalPreview */ \"./lib/templates/uswds/modalPreview/index.js\");\nvar multiValueRow_1 = __webpack_require__(/*! ./multiValueRow */ \"./lib/templates/uswds/multiValueRow/index.js\");\nvar multiValueTable_1 = __webpack_require__(/*! ./multiValueTable */ \"./lib/templates/uswds/multiValueTable/index.js\");\nvar panel_1 = __webpack_require__(/*! ./panel */ \"./lib/templates/uswds/panel/index.js\");\nvar pdf_1 = __webpack_require__(/*! ./pdf */ \"./lib/templates/uswds/pdf/index.js\");\nvar pdfBuilder_1 = __webpack_require__(/*! ./pdfBuilder */ \"./lib/templates/uswds/pdfBuilder/index.js\");\nvar pdfBuilderUpload_1 = __webpack_require__(/*! ./pdfBuilderUpload */ \"./lib/templates/uswds/pdfBuilderUpload/index.js\");\nvar radio_1 = __webpack_require__(/*! ./radio */ \"./lib/templates/uswds/radio/index.js\");\nvar resourceAdd_1 = __webpack_require__(/*! ./resourceAdd */ \"./lib/templates/uswds/resourceAdd/index.js\");\nvar select_1 = __webpack_require__(/*! ./select */ \"./lib/templates/uswds/select/index.js\");\nvar selectOption_1 = __webpack_require__(/*! ./selectOption */ \"./lib/templates/uswds/selectOption/index.js\");\nvar survey_1 = __webpack_require__(/*! ./survey */ \"./lib/templates/uswds/survey/index.js\");\nvar tab_1 = __webpack_require__(/*! ./tab */ \"./lib/templates/uswds/tab/index.js\");\nvar table_1 = __webpack_require__(/*! ./table */ \"./lib/templates/uswds/table/index.js\");\nvar warning_1 = __webpack_require__(/*! ./warning */ \"./lib/templates/uswds/warning/index.js\");\nvar webform_1 = __webpack_require__(/*! ./webform */ \"./lib/templates/uswds/webform/index.js\");\nvar well_1 = __webpack_require__(/*! ./well */ \"./lib/templates/uswds/well/index.js\");\nvar wizard_1 = __webpack_require__(/*! ./wizard */ \"./lib/templates/uswds/wizard/index.js\");\nvar wizardHeader_1 = __webpack_require__(/*! ./wizardHeader */ \"./lib/templates/uswds/wizardHeader/index.js\");\nvar wizardNav_1 = __webpack_require__(/*! ./wizardNav */ \"./lib/templates/uswds/wizardNav/index.js\");\nvar size_1 = __webpack_require__(/*! ./size */ \"./lib/templates/uswds/size.js\");\nvar cssClasses_1 = __webpack_require__(/*! ./cssClasses */ \"./lib/templates/uswds/cssClasses.js\");\nexports.default = {\n    transform: function (type, text) {\n        if (!text) {\n            return text;\n        }\n        switch (type) {\n            case 'class':\n                return this.cssClasses.hasOwnProperty(text.toString()) ? this.cssClasses[text.toString()] : text;\n        }\n        return text;\n    },\n    address: address_1.default,\n    alert: alert_1.default,\n    builder: builder_1.default,\n    builderComponent: builderComponent_1.default,\n    builderComponents: builderComponents_1.default,\n    builderEditForm: builderEditForm_1.default,\n    builderPlaceholder: builderPlaceholder_1.default,\n    builderSidebar: builderSidebar_1.default,\n    builderSidebarGroup: builderSidebarGroup_1.default,\n    builderWizard: builderWizard_1.default,\n    button: button_1.default,\n    checkbox: checkbox_1.default,\n    columns: columns_1.default,\n    component: component_1.default,\n    componentModal: componentModal_1.default,\n    container: container_1.default,\n    datagrid: datagrid_1.default,\n    datatable: datatable_1.default,\n    day: day_1.default,\n    dialog: dialog_1.default,\n    editgrid: editgrid_1.default,\n    errorsList: errorsList_1.default,\n    field: field_1.default,\n    fieldset: fieldset_1.default,\n    file: file_1.default,\n    html: html_1.default,\n    icon: icon_1.default,\n    input: input_1.default,\n    label: label_1.default,\n    loader: loader_1.default,\n    loading: loading_1.default,\n    message: message_1.default,\n    modalPreview: modalPreview_1.default,\n    multiValueRow: multiValueRow_1.default,\n    multiValueTable: multiValueTable_1.default,\n    panel: panel_1.default,\n    pdf: pdf_1.default,\n    pdfBuilder: pdfBuilder_1.default,\n    pdfBuilderUpload: pdfBuilderUpload_1.default,\n    radio: radio_1.default,\n    resourceAdd: resourceAdd_1.default,\n    select: select_1.default,\n    selectOption: selectOption_1.default,\n    survey: survey_1.default,\n    tab: tab_1.default,\n    table: table_1.default,\n    warning: warning_1.default,\n    webform: webform_1.default,\n    well: well_1.default,\n    wizard: wizard_1.default,\n    wizardHeader: wizardHeader_1.default,\n    wizardNav: wizardNav_1.default,\n    size: size_1.default,\n    cssClasses: cssClasses_1.default,\n};\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst address_1 = __webpack_require__(/*! ./address */ \"./lib/templates/uswds/address/index.js\");\nconst alert_1 = __webpack_require__(/*! ./alert */ \"./lib/templates/uswds/alert/index.js\");\nconst builder_1 = __webpack_require__(/*! ./builder */ \"./lib/templates/uswds/builder/index.js\");\nconst builderComponent_1 = __webpack_require__(/*! ./builderComponent */ \"./lib/templates/uswds/builderComponent/index.js\");\nconst builderComponents_1 = __webpack_require__(/*! ./builderComponents */ \"./lib/templates/uswds/builderComponents/index.js\");\nconst builderEditForm_1 = __webpack_require__(/*! ./builderEditForm */ \"./lib/templates/uswds/builderEditForm/index.js\");\nconst builderPlaceholder_1 = __webpack_require__(/*! ./builderPlaceholder */ \"./lib/templates/uswds/builderPlaceholder/index.js\");\nconst builderSidebar_1 = __webpack_require__(/*! ./builderSidebar */ \"./lib/templates/uswds/builderSidebar/index.js\");\nconst builderSidebarGroup_1 = __webpack_require__(/*! ./builderSidebarGroup */ \"./lib/templates/uswds/builderSidebarGroup/index.js\");\nconst builderWizard_1 = __webpack_require__(/*! ./builderWizard */ \"./lib/templates/uswds/builderWizard/index.js\");\nconst button_1 = __webpack_require__(/*! ./button */ \"./lib/templates/uswds/button/index.js\");\nconst checkbox_1 = __webpack_require__(/*! ./checkbox */ \"./lib/templates/uswds/checkbox/index.js\");\nconst columns_1 = __webpack_require__(/*! ./columns */ \"./lib/templates/uswds/columns/index.js\");\nconst component_1 = __webpack_require__(/*! ./component */ \"./lib/templates/uswds/component/index.js\");\nconst componentModal_1 = __webpack_require__(/*! ./componentModal */ \"./lib/templates/uswds/componentModal/index.js\");\nconst container_1 = __webpack_require__(/*! ./container */ \"./lib/templates/uswds/container/index.js\");\nconst datagrid_1 = __webpack_require__(/*! ./datagrid */ \"./lib/templates/uswds/datagrid/index.js\");\nconst datatable_1 = __webpack_require__(/*! ./datatable */ \"./lib/templates/uswds/datatable/index.js\");\nconst day_1 = __webpack_require__(/*! ./day */ \"./lib/templates/uswds/day/index.js\");\nconst dialog_1 = __webpack_require__(/*! ./dialog */ \"./lib/templates/uswds/dialog/index.js\");\nconst editgrid_1 = __webpack_require__(/*! ./editgrid */ \"./lib/templates/uswds/editgrid/index.js\");\nconst errorsList_1 = __webpack_require__(/*! ./errorsList */ \"./lib/templates/uswds/errorsList/index.js\");\nconst field_1 = __webpack_require__(/*! ./field */ \"./lib/templates/uswds/field/index.js\");\nconst fieldset_1 = __webpack_require__(/*! ./fieldset */ \"./lib/templates/uswds/fieldset/index.js\");\nconst file_1 = __webpack_require__(/*! ./file */ \"./lib/templates/uswds/file/index.js\");\nconst html_1 = __webpack_require__(/*! ./html */ \"./lib/templates/uswds/html/index.js\");\nconst icon_1 = __webpack_require__(/*! ./icon */ \"./lib/templates/uswds/icon/index.js\");\nconst input_1 = __webpack_require__(/*! ./input */ \"./lib/templates/uswds/input/index.js\");\nconst label_1 = __webpack_require__(/*! ./label */ \"./lib/templates/uswds/label/index.js\");\nconst loader_1 = __webpack_require__(/*! ./loader */ \"./lib/templates/uswds/loader/index.js\");\nconst loading_1 = __webpack_require__(/*! ./loading */ \"./lib/templates/uswds/loading/index.js\");\nconst message_1 = __webpack_require__(/*! ./message */ \"./lib/templates/uswds/message/index.js\");\nconst modalPreview_1 = __webpack_require__(/*! ./modalPreview */ \"./lib/templates/uswds/modalPreview/index.js\");\nconst multiValueRow_1 = __webpack_require__(/*! ./multiValueRow */ \"./lib/templates/uswds/multiValueRow/index.js\");\nconst multiValueTable_1 = __webpack_require__(/*! ./multiValueTable */ \"./lib/templates/uswds/multiValueTable/index.js\");\nconst panel_1 = __webpack_require__(/*! ./panel */ \"./lib/templates/uswds/panel/index.js\");\nconst pdf_1 = __webpack_require__(/*! ./pdf */ \"./lib/templates/uswds/pdf/index.js\");\nconst pdfBuilder_1 = __webpack_require__(/*! ./pdfBuilder */ \"./lib/templates/uswds/pdfBuilder/index.js\");\nconst pdfBuilderUpload_1 = __webpack_require__(/*! ./pdfBuilderUpload */ \"./lib/templates/uswds/pdfBuilderUpload/index.js\");\nconst radio_1 = __webpack_require__(/*! ./radio */ \"./lib/templates/uswds/radio/index.js\");\nconst resourceAdd_1 = __webpack_require__(/*! ./resourceAdd */ \"./lib/templates/uswds/resourceAdd/index.js\");\nconst select_1 = __webpack_require__(/*! ./select */ \"./lib/templates/uswds/select/index.js\");\nconst selectOption_1 = __webpack_require__(/*! ./selectOption */ \"./lib/templates/uswds/selectOption/index.js\");\nconst survey_1 = __webpack_require__(/*! ./survey */ \"./lib/templates/uswds/survey/index.js\");\nconst tab_1 = __webpack_require__(/*! ./tab */ \"./lib/templates/uswds/tab/index.js\");\nconst table_1 = __webpack_require__(/*! ./table */ \"./lib/templates/uswds/table/index.js\");\nconst warning_1 = __webpack_require__(/*! ./warning */ \"./lib/templates/uswds/warning/index.js\");\nconst webform_1 = __webpack_require__(/*! ./webform */ \"./lib/templates/uswds/webform/index.js\");\nconst well_1 = __webpack_require__(/*! ./well */ \"./lib/templates/uswds/well/index.js\");\nconst wizard_1 = __webpack_require__(/*! ./wizard */ \"./lib/templates/uswds/wizard/index.js\");\nconst wizardHeader_1 = __webpack_require__(/*! ./wizardHeader */ \"./lib/templates/uswds/wizardHeader/index.js\");\nconst wizardNav_1 = __webpack_require__(/*! ./wizardNav */ \"./lib/templates/uswds/wizardNav/index.js\");\nconst size_1 = __webpack_require__(/*! ./size */ \"./lib/templates/uswds/size.js\");\nconst cssClasses_1 = __webpack_require__(/*! ./cssClasses */ \"./lib/templates/uswds/cssClasses.js\");\nexports.default = {\n    transform(type, text) {\n        if (!text) {\n            return text;\n        }\n        switch (type) {\n            case 'class':\n                return this.cssClasses.hasOwnProperty(text.toString()) ? this.cssClasses[text.toString()] : text;\n        }\n        return text;\n    },\n    address: address_1.default,\n    alert: alert_1.default,\n    builder: builder_1.default,\n    builderComponent: builderComponent_1.default,\n    builderComponents: builderComponents_1.default,\n    builderEditForm: builderEditForm_1.default,\n    builderPlaceholder: builderPlaceholder_1.default,\n    builderSidebar: builderSidebar_1.default,\n    builderSidebarGroup: builderSidebarGroup_1.default,\n    builderWizard: builderWizard_1.default,\n    button: button_1.default,\n    checkbox: checkbox_1.default,\n    columns: columns_1.default,\n    component: component_1.default,\n    componentModal: componentModal_1.default,\n    container: container_1.default,\n    datagrid: datagrid_1.default,\n    datatable: datatable_1.default,\n    day: day_1.default,\n    dialog: dialog_1.default,\n    editgrid: editgrid_1.default,\n    errorsList: errorsList_1.default,\n    field: field_1.default,\n    fieldset: fieldset_1.default,\n    file: file_1.default,\n    html: html_1.default,\n    icon: icon_1.default,\n    input: input_1.default,\n    label: label_1.default,\n    loader: loader_1.default,\n    loading: loading_1.default,\n    message: message_1.default,\n    modalPreview: modalPreview_1.default,\n    multiValueRow: multiValueRow_1.default,\n    multiValueTable: multiValueTable_1.default,\n    panel: panel_1.default,\n    pdf: pdf_1.default,\n    pdfBuilder: pdfBuilder_1.default,\n    pdfBuilderUpload: pdfBuilderUpload_1.default,\n    radio: radio_1.default,\n    resourceAdd: resourceAdd_1.default,\n    select: select_1.default,\n    selectOption: selectOption_1.default,\n    survey: survey_1.default,\n    tab: tab_1.default,\n    table: table_1.default,\n    warning: warning_1.default,\n    webform: webform_1.default,\n    well: well_1.default,\n    wizard: wizard_1.default,\n    wizardHeader: wizardHeader_1.default,\n    wizardNav: wizardNav_1.default,\n    size: size_1.default,\n    cssClasses: cssClasses_1.default,\n};\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/index.js?");
 
 /***/ }),
 
@@ -828,7 +828,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/input/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/input/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/input/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/input/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/input/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/input/index.js?");
 
 /***/ }),
 
@@ -849,7 +849,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/label/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/label/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/label/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/label/index.js?");
 
 /***/ }),
 
@@ -870,7 +870,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/loader/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/loader/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/loader/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/loader/index.js?");
 
 /***/ }),
 
@@ -891,7 +891,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/loading/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/loading/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/loading/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/loading/index.js?");
 
 /***/ }),
 
@@ -912,7 +912,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/message/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/message/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/message/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/message/index.js?");
 
 /***/ }),
 
@@ -933,7 +933,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/modalPreview/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/modalPreview/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/modalPreview/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/modalPreview/index.js?");
 
 /***/ }),
 
@@ -954,7 +954,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/multiValueRow/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/multiValueRow/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/multiValueRow/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/multiValueRow/index.js?");
 
 /***/ }),
 
@@ -975,7 +975,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/multiValueTable/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/multiValueTable/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/multiValueTable/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/multiValueTable/index.js?");
 
 /***/ }),
 
@@ -996,7 +996,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/panel/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/panel/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/panel/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/panel/index.js?");
 
 /***/ }),
 
@@ -1017,7 +1017,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdf/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdf/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdf/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdf/index.js?");
 
 /***/ }),
 
@@ -1038,7 +1038,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdfBuilder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdfBuilder/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdfBuilder/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdfBuilder/index.js?");
 
 /***/ }),
 
@@ -1059,7 +1059,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdfBuilderUpload/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdfBuilderUpload/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/pdfBuilderUpload/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/pdfBuilderUpload/index.js?");
 
 /***/ }),
 
@@ -1090,7 +1090,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/radio/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/radio/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/radio/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/radio/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/radio/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/radio/index.js?");
 
 /***/ }),
 
@@ -1111,7 +1111,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/resourceAdd/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/resourceAdd/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/resourceAdd/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/resourceAdd/index.js?");
 
 /***/ }),
 
@@ -1142,7 +1142,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/select/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/select/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/select/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/select/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/select/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/select/index.js?");
 
 /***/ }),
 
@@ -1173,7 +1173,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/selectOption/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/selectOption/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/selectOption/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/selectOption/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/selectOption/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/selectOption/index.js?");
 
 /***/ }),
 
@@ -1184,7 +1184,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.default = (function (size) {\n    switch (size) {\n        case 'xs': return '';\n        case 'sm': return 'mobile-lg';\n        case 'md': return 'tablet';\n        case 'lg': return 'desktop';\n        default: return 'tablet';\n    }\n});\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/size.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.default = (size) => {\n    switch (size) {\n        case 'xs': return '';\n        case 'sm': return 'mobile-lg';\n        case 'md': return 'tablet';\n        case 'lg': return 'desktop';\n        default: return 'tablet';\n    }\n};\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/size.js?");
 
 /***/ }),
 
@@ -1215,7 +1215,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/survey/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/survey/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/survey/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/survey/form.ejs.js\");\nconst html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./lib/templates/uswds/survey/html.ejs.js\");\nexports.default = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/survey/index.js?");
 
 /***/ }),
 
@@ -1246,7 +1246,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar flat_ejs_1 = __webpack_require__(/*! ./flat.ejs */ \"./lib/templates/uswds/tab/flat.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/tab/form.ejs.js\");\nexports.default = { flat: flat_ejs_1.default, form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/tab/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst flat_ejs_1 = __webpack_require__(/*! ./flat.ejs */ \"./lib/templates/uswds/tab/flat.ejs.js\");\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/tab/form.ejs.js\");\nexports.default = { flat: flat_ejs_1.default, form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/tab/index.js?");
 
 /***/ }),
 
@@ -1267,7 +1267,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/table/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/table/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/table/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/table/index.js?");
 
 /***/ }),
 
@@ -1288,7 +1288,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/warning/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/warning/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/warning/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/warning/index.js?");
 
 /***/ }),
 
@@ -1319,7 +1319,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./lib/templates/uswds/webform/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/webform/form.ejs.js\");\nexports.default = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/webform/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./lib/templates/uswds/webform/builder.ejs.js\");\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/webform/form.ejs.js\");\nexports.default = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/webform/index.js?");
 
 /***/ }),
 
@@ -1340,7 +1340,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/well/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/well/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/well/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/well/index.js?");
 
 /***/ }),
 
@@ -1371,7 +1371,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./lib/templates/uswds/wizard/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizard/form.ejs.js\");\nexports.default = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizard/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./lib/templates/uswds/wizard/builder.ejs.js\");\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizard/form.ejs.js\");\nexports.default = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizard/index.js?");
 
 /***/ }),
 
@@ -1392,7 +1392,7 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizardHeader/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizardHeader/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizardHeader/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizardHeader/index.js?");
 
 /***/ }),
 
@@ -1413,18 +1413,18 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizardNav/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizardNav/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./lib/templates/uswds/wizardNav/form.ejs.js\");\nexports.default = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://uswds/./lib/templates/uswds/wizardNav/index.js?");
 
 /***/ }),
 
-/***/ "formiojs":
+/***/ "@formio/js":
 /*!*************************!*\
   !*** external "Formio" ***!
   \*************************/
 /***/ (function(module) {
 
 "use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE_formiojs__;
+module.exports = __WEBPACK_EXTERNAL_MODULE__formio_js__;
 
 /***/ })
 
@@ -1448,7 +1448,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_formiojs__;
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

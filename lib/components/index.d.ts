@@ -4,7 +4,7 @@ import USWDSCheckboxComponent from './checkbox/Checkbox';
 import USWDSSelectBoxesComponent from './selectboxes/SelectBoxes';
 declare const _default: {
     select: typeof USWDSSelectComponent;
-    radio: import("formiojs").ClassWithEditForm<typeof import("formiojs/types/components/_classes/field/field").Field>;
+    radio: any;
     button: typeof USWDSButtonComponent;
     checkbox: typeof USWDSCheckboxComponent;
     selectboxes: typeof USWDSSelectBoxesComponent;
