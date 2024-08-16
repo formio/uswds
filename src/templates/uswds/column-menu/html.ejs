@@ -1,0 +1,58 @@
+<div class="dropdown" ref="menu">
+  <ul class="dropdown-menu" ref="dropdown">
+    {% if (ctx.options.sortable && ctx.component && ctx.component.sortable) { %}
+    <li class="dropdown-item" ref="sortAscending">↑ Sort Ascending</li>
+    <li class="dropdown-item" ref="sortDescending">↓ Sort Descending</li>
+    <li ref="rootItem" class="dropdown-divider"></li>
+    {% } %}
+    <li ref="rootItem" class="dropdown-item">
+      Columns <span class="arrow-right">›</span>
+      <ul ref="nestedDropdown" class="dropdown-menu">
+        {% ctx.components.forEach(function(comp) { %}
+        <li class="dropdown-item">
+          <div class="usa-checkbox">
+            <input
+                ref="checkbox"
+                {{ comp.show ? 'checked' : '' }}
+                {{ ctx.lastColumn && comp.show ? 'disabled' : '' }}
+                type="checkbox"
+                class="usa-checkbox__input"
+                id="{{comp.id}}-checkbox"
+            >
+            <label for="{{comp.id}}-checkbox" class="usa-checkbox__label">
+              {{ comp.label }}
+            </label>
+        </div>
+        </li>
+        {% }); %}
+      </ul>
+    </li>
+    {% if (ctx.options.filterable && ctx.component && ctx.component.filterable) { %}
+    <li ref="rootItem" class="dropdown-divider"></li>
+    <li ref="rootItem" class="dropdown-item">
+      Filter <span class="arrow-right">›</span>
+      <ul ref="nestedDropdown" class="dropdown-menu">
+        <form ref="filterForm" class="padding-x-2 padding-y-1">
+          Show items with value that:
+          <div class="formio-form-group">
+            <select ref="filterType" class="usa-select">
+              {% ctx.filterTypes.forEach(function(filterType) { %}
+                {% if (!(ctx.hideFilters.includes(ctx.component.key) && (['startsWith', 'contain', 'notContain', 'endsWith', 'matches' ].includes(filterType.type)))) { %}
+                  <option value="{{ filterType.type }}">{{ filterType.label }}</option>
+                {% } %}
+              {% }); %}
+            </select>
+          </div>
+          <div class="formio-form-group">
+            <input type="text" ref="filterInput" name="{{ ctx.component && ctx.component.key }}" class="form-control" placeholder="Filter">
+          </div>
+          <div class="display-flex justify-content-around margin-right-0">
+            <button ref="filterButton" type="button" class="usa-button">Filter</button>
+            <button ref="clearBtn" type="button" class="usa-button usa-button--secondary">Clear</button>
+          </div>
+        </form>
+      </ul>
+    </li>
+    {% } %}
+  </ul>
+</div>

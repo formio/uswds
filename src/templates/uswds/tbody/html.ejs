@@ -1,0 +1,47 @@
+<table>
+<tbody ref="tbody">
+  {% ctx.eachRow(function(row) { %}
+  <tr ref="row" scope="row">
+      {% if (ctx.component.enableRowSelect) { %}
+      <td style="text-align: center">
+          <input type="checkbox" ref="selectRow" title="select row">
+      </td>
+      {% } %}
+    {% row.forEach(function(rowComp) { %}
+      {% if (rowComp.component.show) { %}
+      <td
+        {{ ctx.component.cellMaxWidth ? 'style="max-width:'+ ctx.component.cellMaxWidth + ';"' : ''}}
+        {{ ctx.component.clipCells ? 'class="clip"' : ''}}>
+          {{ ctx.instance.hook('format', rowComp.component.key, rowComp.dataValue) }}
+      </td>
+      {% } %}
+    {% }); %}
+    {% if ((ctx.component.showEditBtn || ctx.component.showDeleteBtn || ctx.component.showDeleteAllBtn) && !ctx.options.pdf) { %}
+    <th class="formio-grid-ops formio-actions-col position-sticky" style="height: inherit;">
+      <div tabindex="0" class="row-menu-btn" style="height: 100%;">
+        <div class="dropdown" ref="menu">
+          <ul class="dropdown-menu padding-0" ref="dropdown">
+            {% if (ctx.component.showEditBtn) { %}
+            <li class="dropdown-item" ref="editRow">
+              <span class="formio-grid-ops-button" style="padding: 2px; font-size: 10px; line-height: 1.2em; width: 18px;">&#9999;</span>
+              Edit row
+            </li>
+            {% } %}
+            {% if (ctx.component.showDeleteBtn) { %}
+            <li class="dropdown-item {{ ctx.options.readOnly ? 'disabled' : '' }}" ref="deleteRow">
+              <span class="formio-grid-ops-button" style="padding: 2px; font-size: 14px; line-height: 1.2em; width: 18px;">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </span>
+              Delete row
+            </li>
+            {% } %}
+          </ul>
+        </div>
+        ⋮
+      </div>
+    </th>
+    {% } %}
+  </tr>
+  {% }); %}
+</tbody>
+</table>

@@ -186,5 +186,20 @@ declare const _default: {
         'formio-modal-confirm-button': string;
         'form-control ui fluid selection dropdown': string;
     };
+    grid: {
+        html: string;
+    };
+    pagination: {
+        html: string;
+    };
+    columnMenu: {
+        html: string;
+    };
+    tbody: {
+        html: string;
+    };
+    paginationBottom: {
+        html: string;
+    };
 };
 export default _default;

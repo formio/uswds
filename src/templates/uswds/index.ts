@@ -52,6 +52,11 @@ import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
 import size from './size';
 import cssClasses from './cssClasses';
+import grid from './grid';
+import pagination from './pagination';
+import columnMenu from './column-menu';
+import tbody from './tbody';
+import paginationBottom from './pagination-bottom';
 
 export default {
   transform(type, text) {
@@ -118,4 +123,9 @@ export default {
   wizardNav,
   size,
   cssClasses,
+  grid,
+  pagination,
+  columnMenu,
+  tbody,
+  paginationBottom
 };
