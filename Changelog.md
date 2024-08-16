@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [UNRELEASED: 2.6.0-rc.1]
+## [Uunreleased: 2.6.0-rc.1]
 ### Changed
-FIO-8729: upgraded to 5x renderer
+ - FIO-8729: upgraded to 5x renderer
+ - FIO-8507: GH Action To Publish USWDS To NPM
 
 ## 2.5.1
 ### Changed
