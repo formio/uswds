@@ -56,7 +56,14 @@
         <div class="grid-row flex-align-center">
           <div class="tablet:grid-col-{{ctx.columns.name}} word-wrap">
             <div>{{file.originalName || file.name}}</div>
-            <div class="status text-{{file.status === 'error' ? 'danger': file.status}}">{{ctx.t(file.message)}}</div>
+            <div class="
+              {% if (file.status === 'success') { %} text-green {% } %}
+              {% if (file.status === 'info') { %} text-cyan {% } %}
+              {% if (file.status === 'warning') { %} text-gold {% } %}
+              {% if (file.status === 'danger') { %} text-red {% } %}
+            ">
+              {{ctx.t(file.message)}}
+            </div>
           </div>
           <div class="tablet:grid-col-{{ctx.columns.size}}">{{ctx.fileSize(file.size)}}</div>
           {% if (ctx.self.hasTypes) { %}
@@ -80,13 +87,20 @@
           <div class="tablet:grid-col-{{ctx.columns.name}} word-wrap">
             <div>{{file.originalName || file.name}}</div>
             {% if (file.status === 'progress') { %}
-              <div class="status progress">
+              <div class="progress">
                 <div id="{{file.id}}" class="progress-bar" role="progressbar" aria-valuenow="{{file.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%" ref="progress">
                   <span class="usa-sr-only">{{file.progress}}% {{ctx.t('Complete')}}</span>
                 </div>
               </div>
             {% } else { %}
-              <div class="status text-{{file.status === 'error' ? 'danger': file.status}}">{{ctx.t(file.message)}}</div>
+              <div class="
+                {% if (file.status === 'success') { %} text-green {% } %}
+                {% if (file.status === 'info') { %} text-cyan {% } %}
+                {% if (file.status === 'warning') { %} text-gold {% } %}
+                {% if (file.status === 'danger') { %} text-red {% } %}
+              ">
+                {{ctx.t(file.message)}}
+              </div>
             {% } %}
           </div>
           <div class="tablet:grid-col-{{ctx.columns.size}}">{{ctx.fileSize(file.size)}}</div>
