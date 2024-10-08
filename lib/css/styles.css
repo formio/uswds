@@ -19,6 +19,7 @@ span[role=link]:hover {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 5px;
+  justify-content: flex-start;
 }
 
 .builder-component {
