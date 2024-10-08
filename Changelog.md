@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased: 2.6.0-rc.4]
+### Changed
+ - FIO-9166 Fixed alignment for the buttons in formbuilder
+   
 ## 2.6.0-rc.3
 ### Changed
  - FIO-8960: Updated file component template
