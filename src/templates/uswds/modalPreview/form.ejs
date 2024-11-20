@@ -4,7 +4,7 @@
 <div
   ref="modalMessageContainer"
   class="text-secondary-dark width-full formio-errors"
-></div>
+>{{ ctx.messages }}</div>
 <span class="usa-sr-only" ref="modalPreviewLiveRegion" aria-live="assertive"></span>
 <button lang="en" class="open-modal-button" ref="openModal" aria-labelledby="l-{{ctx.component.key}}">
   {{ ctx.previewText }}
