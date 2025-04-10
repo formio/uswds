@@ -18,7 +18,9 @@ import datagrid from './datagrid';
 import datatable from './datatable';
 import day from './day';
 import dialog from './dialog';
+import dynamicWizard from './dynamicWizard';
 import editgrid from './editgrid';
+import editgridTable from './editgridTable';
 import errorsList from './errorsList';
 import field from './field';
 import fieldset from './fieldset';
@@ -84,7 +86,9 @@ export default {
   datatable,
   day,
   dialog,
+  dynamicWizard,
   editgrid,
+  editgridTable,
   errorsList,
   field,
   fieldset,
