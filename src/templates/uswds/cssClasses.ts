@@ -10,6 +10,8 @@ export default {
   'formio-modal-save': 'usa-error',
   'formio-alert-danger': 'usa-alert usa-alert--error usa-alert--no-icon',
   'formio-alert-success': 'usa-alert usa-alert--success usa-alert--no-icon',
+  'formio-secondary-button': 'usa-button usa-button--secondary',
+  'formio-primary-button': 'usa-button',
   'formio-modal-cancel-button': 'usa-button usa-button--secondary',
   'formio-modal-confirm-button': 'usa-button',
   'form-control ui fluid selection dropdown': 'usa-select maxw-full',
