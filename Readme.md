@@ -15,6 +15,7 @@ Or if you would like to embed directly within your website, you can use the foll
 ```html
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.1.0/css/uswds.min.css">
         <link rel="stylesheet" href="https://cdn.form.io/js/formio.form.min.css">
