@@ -32,8 +32,11 @@
     "Design",
     "Standards"
   ],
+  "peerDependencies": {
+    "@formio/js": "^5.2.1-rc.15"
+  },
   "devDependencies": {
-    "@formio/js": "5.0.0-rc.69",
+    "@formio/js": "5.2.1-rc.15",
     "@types/chai": "^4.2.22",
     "@types/ejs": "^3.1.0",
     "@types/mocha": "^9.0.0",
