@@ -26,7 +26,7 @@ return /******/ (function() { // webpackBootstrap
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst SelectComponent = js_1.Components.components.select;\nclass USWDSSelectComponent extends SelectComponent {\n    choicesOptions() {\n        const choicesOptions = super.choicesOptions();\n        choicesOptions.classNames.containerInner += ' usa-select maxw-full';\n        return choicesOptions;\n    }\n}\nexports.default = USWDSSelectComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/Select.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst js_1 = __webpack_require__(/*! @formio/js */ \"@formio/js\");\nconst SelectComponent = js_1.Components.components.select;\nclass USWDSSelectComponent extends SelectComponent {\n    choicesOptions() {\n        const choicesOptions = super.choicesOptions();\n        choicesOptions.classNames.containerInner = [...choicesOptions.classNames.containerInner, 'usa-select', 'maxw-full'];\n        return choicesOptions;\n    }\n}\nexports.default = USWDSSelectComponent;\n\n\n//# sourceURL=webpack://uswds/./lib/components/Select.js?");
 
 /***/ }),
 
