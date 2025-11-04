@@ -52,6 +52,7 @@ import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
 import size from './size';
 import cssClasses from './cssClasses';
+import iconClass from './iconClass.js';
 
 export default {
   transform(type, text) {
@@ -118,4 +119,6 @@ export default {
   wizardNav,
   size,
   cssClasses,
+  iconClass,
+  defaultIconset: 'fa',
 };
