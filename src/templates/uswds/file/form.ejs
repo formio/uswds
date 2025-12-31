@@ -24,7 +24,7 @@
       <li class="position-relative display-block padding-105 border-1px margin-top-neg-1px">
         <div class="grid-row flex-align-center">
           <div class="tablet:grid-col-{{ctx.columns.name}} word-wrap">
-            {% if (ctx.component.uploadOnly) { %}
+            {% if (ctx.component.uploadOnly || ctx.options.pdf) { %}
               {{file.originalName || file.name}}
             {% } else { %}
               <a href="{{file.url || '#'}}" target="_blank" ref="fileLink" tabindex="0">
