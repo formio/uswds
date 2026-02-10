@@ -1,4 +1,14 @@
-<div id="{{ctx.attrs.id}}" class="usa-alert usa-alert--{{ctx.type === 'danger' ? 'error' : ctx.type}} usa-alert--no-icon">
+<div id="{{ctx.attrs.id}}" class="usa-alert usa-alert--{{ctx.type === 'danger' ? 'error' : ctx.type}} usa-alert--no-icon"
+  {% if (ctx.type === 'success' && !ctx.attrs['aria-live']) { %}
+    aria-live="polite"
+    aria-atomic="true"
+  {% } %}
+  {% for (var attr in ctx.attrs) { %}
+    {% if (attr !== 'id' && attr !== 'class') { %}
+      {{attr}}="{{ctx.attrs[attr]}}"
+    {% } %}
+  {% } %}
+>
   {{ctx.message}}
   <span class="usa-sr-only" id="hotkey-i-{{ctx.form._id}}">{{ctx.t('errorListHotkey')}}</span>
 </div>
