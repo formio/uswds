@@ -1,6 +1,6 @@
 <fieldset class="usa-fieldset">
   {% if (ctx.component.legend) { %}
-  <legend ref="header" class="usa-sr-only">
+  <legend ref="header" id="l-{{ctx.instance.id}}-legend" class="usa-sr-only">
     {{ctx.t(ctx.component.legend)}}
   </legend>
   <span class="legend-wrapper usa-legend">
