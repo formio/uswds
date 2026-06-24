@@ -2,6 +2,8 @@
 .nyc_output
 coverage
 node_modules
+lib
+dist
 npm-debug.log
 aws.json
 *~
