@@ -2,6 +2,12 @@
 
 This repository will change the rendering of forms in formio.js so that it uses html and classes compatible with the [United States Web Design System](https://designsystem.digital.gov/) framework.
 
+Official Documentation
+--------------------------
+For the latest documentation, release information, and guides, always refer to the official Form.io Help Documentation available here:
+
+**[https://help.form.io](https://help.form.io/dev/accessibility#templates-with-accessibility-control-module)**
+
 ## Usage
 
 ```javascript
@@ -34,7 +40,7 @@ Or if you would like to embed directly within your website, you can use the foll
 </html>
 ```
 
-You can try out this by going to the following JSFiddle - https://jsfiddle.net/travistidwell/yrwp9m24/1/
+You can try out this by going to the following JSFiddle - https://jsfiddle.net/travistidwell/yrwp9m24/1
 
 ## Form Builder
 In addition to being a Form Renderer, you can also use this library to embed the Form.io Form Builder within your own application using the following.
