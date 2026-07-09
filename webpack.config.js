@@ -9,13 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'uswds.js',
     environment: {
-      arrowFunction: false
+      arrowFunction: false,
     },
   },
   mode: 'development',
   target: 'es5',
   performance: { hints: false },
   externals: {
-    '@formio/js': 'Formio'
+    '@formio/js': 'Formio',
   },
 };

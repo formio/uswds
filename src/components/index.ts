@@ -9,5 +9,5 @@ export default {
   radio: USWDSRadioComponent,
   button: USWDSButtonComponent,
   checkbox: USWDSCheckboxComponent,
-  selectboxes: USWDSSelectBoxesComponent
+  selectboxes: USWDSSelectBoxesComponent,
 };

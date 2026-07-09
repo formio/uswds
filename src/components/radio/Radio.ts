@@ -7,9 +7,10 @@ RadioComponent.editForm = editForm;
 
 const render = RadioComponent.prototype.render;
 
-RadioComponent.prototype.render = function() {
+// GOTCHA(G-US02)
+RadioComponent.prototype.render = function () {
   this.noField = true;
   return render.call(this);
-}
+};
 
 export default RadioComponent;

@@ -61,7 +61,9 @@ export default {
     }
     switch (type) {
       case 'class':
-        return this.cssClasses.hasOwnProperty(text.toString()) ? this.cssClasses[text.toString()] : text;
+        return this.cssClasses.hasOwnProperty(text.toString())
+          ? this.cssClasses[text.toString()]
+          : text;
     }
     return text;
   },
@@ -119,6 +121,7 @@ export default {
   wizardNav,
   size,
   cssClasses,
+  // GOTCHA(G-US01)
   iconClass,
   defaultIconset: 'fa',
 };
