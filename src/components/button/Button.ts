@@ -44,9 +44,12 @@ export default class USWDSButtonComponent extends ButtonComponent {
     if (this.viewOnly || this.options.hideButtons) {
       this._visible = false;
     }
-    return FieldComponent.prototype.render.call(this, this.renderTemplate('button', {
-      component: this.component,
-      input: this.getInputInfo(),
-    }));
+    return FieldComponent.prototype.render.call(
+      this,
+      this.renderTemplate('button', {
+        component: this.component,
+        input: this.getInputInfo(),
+      }),
+    );
   }
 }

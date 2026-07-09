@@ -1,5 +1,6 @@
 <fieldset class="usa-fieldset">
   {% if (ctx.component.legend) { %}
+  {% /* GOTCHA(G-US03) */ %}
   <legend ref="header" id="l-{{ctx.instance.id}}-legend" class="usa-sr-only">
     {{ctx.t(ctx.component.legend)}}
   </legend>

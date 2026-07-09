@@ -10,14 +10,6 @@
     "declaration": true,
     "rootDir": "src"
   },
-  "include": [
-    "src/*.ts",
-    "src/*.ejs",
-    "src/**/*.ts",
-    "src/**/*.ejs"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["src/*.ts", "src/*.ejs", "src/**/*.ts", "src/**/*.ejs"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
