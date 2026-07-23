@@ -2,6 +2,7 @@
   class="usa-table datagrid-table"
   {% if (ctx.component.layoutFixed) { %}style="table-layout: fixed;"{% } %}
 >
+  <caption class="usa-sr-only">{{ctx.t(ctx.component.label)}}</caption>
   {% if (ctx.hasHeader) { %}
   <thead>
     <tr>
