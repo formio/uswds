@@ -2,6 +2,7 @@
   <legend class="usa-legend usa-sr-only">{{ctx.component.label}}</legend>
   <div class="usa-memorable-date display-flex"
     role="group"
+    ref="dayContainer"
     {% if (ctx.component.hideLabel) { %}
     aria-label="{{ctx.component.label}}"
     {% } else { %}
