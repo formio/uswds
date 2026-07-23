@@ -1,5 +1,33 @@
 # @formio/uswds
 
+## 2.9.0
+
+### Minor Changes
+
+- a03805a: force minor bump on remaining packages that didn't bump with initial build
+
+### Patch Changes
+
+- Updated dependencies [a03805a]
+  - @formio/js@5.5.0
+
+## 2.9.0-api99.1
+
+### Minor Changes
+
+- a03805a: force minor bump on remaining packages that didn't bump with initial build
+
+### Patch Changes
+
+- Updated dependencies [a03805a]
+  - @formio/js@5.5.0-api99.1
+
+## 2.8.4-api99.0
+
+### Patch Changes
+
+- @formio/js@5.4.4-api99.0
+
 ## 2.8.3
 
 ### Patch Changes
