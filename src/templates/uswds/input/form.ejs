@@ -13,6 +13,12 @@
 </div>
 {% } %}
 {% if (!ctx.component.editor && !ctx.component.wysiwyg) { %}
+{% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
+{% var isViewReadContext = ctx.instance.options && (ctx.instance.options.readOnly || ctx.instance.options.pdf); %}
+{% var viewAccessibleLabel = isViewReadContext && ctx.instance.getFormattedViewAccessibleLabel ? ctx.instance.getFormattedViewAccessibleLabel() : ''; %}
+{% var useAriaLabelOnly = isViewReadContext && viewAccessibleLabel; %}
+{% var ariaAttr = useAriaLabelOnly ? 'aria-label' : 'aria-labelledby'; %}
+{% var ariaValue = useAriaLabelOnly ? viewAccessibleLabel : ((fieldsetLegendIds ? fieldsetLegendIds + ' ' : '') + 'l-' + ctx.instance.id + '-' + ctx.component.key + (ctx.component.description ? ' d-' + ctx.instance.id + '-' + ctx.component.key : '')); %}
 <{{ctx.input.type}}
   class="usa-{{ctx.input.type === 'textarea' ? 'textarea' : 'input'}} maxw-full"
   ref="{{ctx.input.ref || 'input'}}"
@@ -20,7 +26,7 @@
   {{attr}}="{{ctx.input.attr[attr]}}"
   {% } %}
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
-  aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
+  {{ariaAttr}}="{{ariaValue}}"
   aria-required="{{ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required : ctx.component.fields[ctx.input.ref].required}}"
 >{{ctx.input.content}}</{{ctx.input.type}}>
 {% } %}
