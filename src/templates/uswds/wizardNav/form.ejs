@@ -7,6 +7,9 @@
   {% if (ctx.buttons.submit) { %}
   <li>
     <button class="usa-button btn-wizard-nav-submit" ref="{{ctx.wizardKey}}-submit" aria-label="{{ctx.t('submit')}} button. Click to submit the form">{{ctx.t('submit')}}</button>
+    <div ref="{{ctx.wizardKey}}-buttonMessageContainer">
+      <span class="help-block" ref="{{ctx.wizardKey}}-buttonMessage"></span>
+    </div>
   </li>
   {% } %}
   {% if (ctx.buttons.previous) { %}

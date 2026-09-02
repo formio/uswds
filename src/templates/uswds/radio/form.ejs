@@ -1,15 +1,24 @@
+{% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
+{% var isViewReadContext = ctx.instance.options && (ctx.instance.options.readOnly || ctx.instance.options.pdf); %}
+{% var viewAccessibleLabel = isViewReadContext && ctx.instance.getFormattedViewAccessibleLabel ? ctx.instance.getFormattedViewAccessibleLabel() : ''; %}
+{% var useAriaLabelOnly = isViewReadContext && viewAccessibleLabel; %}
+{% var ariaAttr = useAriaLabelOnly ? 'aria-label' : 'aria-labelledby'; %}
+{% var ariaValue = useAriaLabelOnly ? viewAccessibleLabel : ((fieldsetLegendIds ? fieldsetLegendIds + ' ' : '') + 'l-' + ctx.instance.id + '-' + ctx.component.key + (ctx.component.description ? ' d-' + ctx.instance.id + '-' + ctx.component.key : '')); %}
 <fieldset
   class="usa-fieldset"
   ref="radioGroup"
-  aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}} {% if (ctx.component.description) { %}d-{{ctx.instance.id}}-{{ctx.component.key}}{% } %}"
+  {{ariaAttr}}="{{ariaValue}}"
 >
   <legend id="l-{{ctx.instance.id}}-{{ctx.component.key}}" ref="label" class="usa-sr-only">
     {{ctx.t(ctx.component.label)}}
   </legend>
   <span class="legend-wrapper font-sans-md">
-    <span class="{{ctx.component.validate && ctx.component.validate.required ? ' field-required' : ''}}">
+    <span>
       {{ctx.t(ctx.component.label)}}
     </span>
+    {% if (ctx.component.validate && ctx.component.validate.required) { %}
+    <span class="required-star" aria-hidden="true">*</span>
+    {% } %}
     {% if (ctx.component.tooltip) { %}
       <span ref="tooltip" data-tooltip="{{ctx.component.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></span>
     {% } %}
