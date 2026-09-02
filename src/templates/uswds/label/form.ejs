@@ -1,12 +1,23 @@
-<div class="usa-label {{ctx.label.className}} {{ctx.label.hidden ? 'usa-sr-only' : ''}}">
+<div class="usa-label {% if (ctx.component.type !== 'container') { %}{{ctx.label.className}}{% } %} {{ctx.label.hidden ? 'usa-sr-only' : ''}}">
   <label
     ref="label"
     id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
     for="{{ctx.instance.id}}-{{ctx.component.key}}"
+    {% if (ctx.label.hidden) { %}
+    aria-hidden="true"
+    {% } %}
   >
+    {% if (!(ctx.component.type === 'container' && ctx.label.hidden && ctx.component.validate && ctx.component.validate.required)) { %}
     <span>{{ ctx.t(ctx.component.label) }}</span>
+    {% } %}
+    {% if (ctx.component.validate && ctx.component.validate.required && ctx.component.type === 'container') { %}
+    <span class='usa-sr-only'>, {{ctx.t('required', { field: ctx.t(ctx.component.label, { _userInput: true }) })}},</span>
+    {% } %}
     {% if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { %}
     <span class='usa-sr-only'>, {{ctx.t('numeric only')}},</span>
+    {% } %}
+    {% if (ctx.component.validate && ctx.component.validate.required && ctx.component.type === 'container') { %}
+    <span class="required-star" aria-hidden="true">*</span>
     {% } %}
   </label>
   {% if (ctx.component.tooltip && !ctx.label.hidden) { %}

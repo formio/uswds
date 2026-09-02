@@ -1,3 +1,9 @@
+{% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
+{% var isViewReadContext = ctx.instance.options && (ctx.instance.options.readOnly || ctx.instance.options.pdf); %}
+{% var viewAccessibleLabel = isViewReadContext && ctx.instance.getFormattedViewAccessibleLabel ? ctx.instance.getFormattedViewAccessibleLabel() : ''; %}
+{% var useAriaLabelOnly = isViewReadContext && viewAccessibleLabel; %}
+{% var ariaAttr = useAriaLabelOnly ? 'aria-label' : 'aria-labelledby'; %}
+{% var ariaValue = useAriaLabelOnly ? viewAccessibleLabel : ((fieldsetLegendIds ? fieldsetLegendIds + ' ' : '') + 'l-' + ctx.instance.id + '-' + ctx.component.key); %}
 <select
   ref="{{ctx.input.ref ? ctx.input.ref : 'selectContainer'}}"
   class="usa-select maxw-full {{ctx.disabled ? 'bg-base-lightest' : ''}}"
@@ -7,7 +13,7 @@
   {% if (!ctx.input.attr.id) { %}
   id="{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}
-  aria-labelledby="l-{{ctx.instance.id}}-{{ctx.component.key}}"
+  {{ariaAttr}}="{{ariaValue}}"
   {% if (ctx.component.description) { %}
   aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
   {% } %}

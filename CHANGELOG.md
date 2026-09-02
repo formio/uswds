@@ -1,5 +1,98 @@
 # @formio/uswds
 
+## 2.9.2
+
+### Patch Changes
+
+- bd1336c: FIO-11993: added the Data Grid screen-reader live region so Add row / Delete row announcements are emitted in the USWDS templates
+- cc30e15: change asterisks behavior
+- 2f45568: FIO-12012: fixed Form Builder groups expand/collapse in Form Manager with USWDS
+- 14b3fd4: FIO-11979: show the Submission Complete message under the Wizard submit
+- Updated dependencies [539fef1]
+- Updated dependencies [681539d]
+- Updated dependencies [cc30e15]
+- Updated dependencies [1c2bf19]
+- Updated dependencies [14b3fd4]
+  - @formio/js@5.5.2
+
+## 2.9.2-api99.2
+
+### Patch Changes
+
+- @formio/js@5.5.2-api99.2
+
+## 2.9.2-api99.1
+
+### Patch Changes
+
+- @formio/js@5.5.2-api99.1
+
+## 2.9.2-api99.0
+
+### Patch Changes
+
+- bd1336c: FIO-11993: added the Data Grid screen-reader live region so Add row / Delete row announcements are emitted in the USWDS templates
+- cc30e15: change asterisks behavior
+- 2f45568: FIO-12012: fixed Form Builder groups expand/collapse in Form Manager with USWDS
+- 14b3fd4: FIO-11979: show the Submission Complete message under the Wizard submit
+- Updated dependencies [539fef1]
+- Updated dependencies [681539d]
+- Updated dependencies [cc30e15]
+- Updated dependencies [1c2bf19]
+- Updated dependencies [14b3fd4]
+  - @formio/js@5.5.2-api99.0
+
+## 2.9.1
+
+### Patch Changes
+
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+- 3c302ee: FIO-12013 Fixed excessive label announcements in NVDA
+- Updated dependencies [8eb6855]
+- Updated dependencies [1d9fcee]
+- Updated dependencies [5d51d06]
+- Updated dependencies [6298b64]
+- Updated dependencies [3f8bcc1]
+- Updated dependencies [793d0d8]
+- Updated dependencies [2a0676a]
+- Updated dependencies [543b082]
+- Updated dependencies [5fa2592]
+- Updated dependencies [587b8b4]
+- Updated dependencies [dc60a11]
+- Updated dependencies [b20c6e2]
+- Updated dependencies [5ec8478]
+- Updated dependencies [eccfae0]
+  - @formio/js@5.5.1
+
+## 2.9.1-api99.1
+
+### Patch Changes
+
+- Updated dependencies [587b8b4]
+  - @formio/js@5.5.1-api99.1
+
+## 2.9.1-api99.0
+
+### Patch Changes
+
+- 793d0d8: FIO-11291: fixed Field Set Legend announcement by a screen reader for all Components within the field set on the View Submission page and PDF download
+- 3c302ee: FIO-12013 Fixed excessive label announcements in NVDA
+- Updated dependencies [8eb6855]
+- Updated dependencies [1d9fcee]
+- Updated dependencies [5d51d06]
+- Updated dependencies [6298b64]
+- Updated dependencies [3f8bcc1]
+- Updated dependencies [793d0d8]
+- Updated dependencies [82583ef]
+- Updated dependencies [2a0676a]
+- Updated dependencies [543b082]
+- Updated dependencies [5fa2592]
+- Updated dependencies [dc60a11]
+- Updated dependencies [b20c6e2]
+- Updated dependencies [5ec8478]
+- Updated dependencies [eccfae0]
+  - @formio/js@5.5.1-api99.0
+
 ## 2.9.0
 
 ### Minor Changes

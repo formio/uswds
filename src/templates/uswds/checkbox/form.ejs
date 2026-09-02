@@ -1,3 +1,9 @@
+{% var isViewReadContext = ctx.instance.options && (ctx.instance.options.readOnly || ctx.instance.options.pdf); %}
+{% var viewAccessibleLabel = isViewReadContext && ctx.instance.getFormattedViewAccessibleLabel ? ctx.instance.getFormattedViewAccessibleLabel() : ''; %}
+{% var fieldsetLegendIds = ctx.instance.getFieldsetLegendIds ? ctx.instance.getFieldsetLegendIds() : ''; %}
+{% var useAriaLabelOnly = isViewReadContext && viewAccessibleLabel; %}
+{% var ariaAttr = useAriaLabelOnly ? 'aria-label' : 'aria-labelledby'; %}
+{% var ariaValue = useAriaLabelOnly ? viewAccessibleLabel : ((fieldsetLegendIds ? fieldsetLegendIds + ' ' : '') + 'l-' + ctx.instance.id + '-' + ctx.component.key); %}
 <div
   ref="messageContainer"
   class="text-secondary-dark width-full margin-top-05 formio-errors"
@@ -12,6 +18,7 @@
     {{attr}}="{{ctx.input.attr[attr]}}"
     {% } %}
     {% if (ctx.checked) { %}checked=true{% } %}
+    {{ariaAttr}}="{{ariaValue}}"
     aria-required="{{ctx.component.validate.required}}"
     {% if (ctx.component.description) { %}
     aria-describedby="d-{{ctx.instance.id}}-{{ctx.component.key}}"
@@ -21,9 +28,13 @@
     ref="label"
     class="{{ctx.input.labelClass}} usa-checkbox__label"
     for="{{ctx.id}}-{{ctx.input.attr.name}}"
+    id="l-{{ctx.instance.id}}-{{ctx.component.key}}"
   >
     {{ctx.input.label}}
     {{ctx.input.content}}
+    {% if (ctx.component.validate && ctx.component.validate.required) { %}
+    <span class="required-star" aria-hidden="true">*</span>
+    {% } %}
     {% if (ctx.component.tooltip) { %}
     <span ref="tooltip" data-tooltip="{{ctx.component.tooltip}}" class="{{ctx.iconClass('question-sign')}} text-base" tabindex="0"></span>
     {% } %}
