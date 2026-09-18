@@ -1,5 +1,41 @@
 # @formio/uswds
 
+## 2.9.3
+
+### Patch Changes
+
+- 9fc1624: FIO-12003: fixed Wizard page error list announcement in USWDS templates
+- Updated dependencies [edd6949]
+- Updated dependencies [b35ca79]
+- Updated dependencies [f1c7ae2]
+- Updated dependencies [e3851de]
+- Updated dependencies [19617b9]
+- Updated dependencies [22325f8]
+- Updated dependencies [d96cc58]
+- Updated dependencies [2d41328]
+  - @formio/js@5.6.0
+
+## 2.9.3-api910.1
+
+### Patch Changes
+
+- Updated dependencies [22325f8]
+  - @formio/js@5.6.0-api910.1
+
+## 2.9.3-api910.0
+
+### Patch Changes
+
+- 9fc1624: FIO-12003: fixed Wizard page error list announcement in USWDS templates
+- Updated dependencies [edd6949]
+- Updated dependencies [b35ca79]
+- Updated dependencies [f1c7ae2]
+- Updated dependencies [e3851de]
+- Updated dependencies [19617b9]
+- Updated dependencies [d96cc58]
+- Updated dependencies [2d41328]
+  - @formio/js@5.6.0-api910.0
+
 ## 2.9.2
 
 ### Patch Changes

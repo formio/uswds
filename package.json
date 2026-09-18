@@ -1,6 +1,6 @@
 {
   "name": "@formio/uswds",
-  "version": "2.9.2",
+  "version": "2.9.3",
   "description": "US Web Design System templates for form.io",
   "main": "lib/index.js",
   "scripts": {
@@ -34,10 +34,10 @@
     "Standards"
   ],
   "peerDependencies": {
-    "@formio/js": "^5.5.2"
+    "@formio/js": "^5.6.0"
   },
   "devDependencies": {
-    "@formio/js": "^5.5.2",
+    "@formio/js": "^5.6.0",
     "@types/chai": "^4.2.22",
     "@types/ejs": "^3.1.0",
     "@types/mocha": "^9.0.0",
