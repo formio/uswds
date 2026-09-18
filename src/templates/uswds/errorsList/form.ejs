@@ -5,15 +5,14 @@
 <ul>
   {% ctx.errors.forEach(function(err) { %}
   <li>
-    <span
-      data-component-key = "{{err.keyOrPath}}"
-      ref = "errorRef"
-      tabIndex = "0"
-      role="link"
-    >
+    <span data-component-key="{{err.keyOrPath}}" ref="errorRef" tabIndex="0" role="link">
       {{err.message}}
+      {% if (err.errorPageTitle) { %}
+      <span class="usa-sr-only">. Click to navigate to the component within {{ err.errorPageTitle }} </span>
+      {% } else { %}
+      <span class="usa-sr-only">. {{ctx.t('errorsListNavigationMessage')}}</span>
+      {% } %}
     </span>
-    <span class="usa-sr-only">{{ctx.t('errorsListNavigationMessage')}}</span>
   </li>
   {% }) %}
 </ul>
