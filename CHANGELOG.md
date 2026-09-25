@@ -1,5 +1,19 @@
 # @formio/uswds
 
+## 2.9.4
+
+### Patch Changes
+
+- Updated dependencies [6d5f18f]
+  - @formio/js@5.6.1
+
+## 2.9.4-api911.0
+
+### Patch Changes
+
+- Updated dependencies [6d5f18f]
+  - @formio/js@5.6.1-api911.0
+
 ## 2.9.3
 
 ### Patch Changes
