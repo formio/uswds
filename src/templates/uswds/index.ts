@@ -52,7 +52,7 @@ import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
 import size from './size';
 import cssClasses from './cssClasses';
-import iconClass from './iconClass.js';
+import iconClassFn from './iconClass.js';
 
 export default {
   transform(type, text) {
@@ -121,7 +121,13 @@ export default {
   wizardNav,
   size,
   cssClasses,
-  // GOTCHA(G-US01)
-  iconClass,
+  // GOTCHA(G-US01): iconClass previously received no `iconset` argument from
+  // any .ejs call site, so it always resolved to `undefined`, producing
+  // broken class strings like `undefined undefined-remove-circle`.
+  // Wrapping it here so it defaults to `defaultIconset` fixes every call
+  // site without touching template markup.
+  iconClass(name, spinning = false) {
+    return iconClassFn(this.defaultIconset, name, spinning);
+  },
   defaultIconset: 'fa',
 };
